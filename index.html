@@ -1,1134 +1,455 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/src/style.css">
-
-  <title>Mentioo - Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wash & Wrap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css">
 </head>
+<body class="bg-black text-white z-2">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50">
+        <div class="max-w-[1150px] mx-auto pt-8 flex items-center justify-between ">
+            <div class="flex items-center">
+                <img src="img/logo.png" alt="Wash & Wrap" class="w-[120px] h-auto object-contain mr-10">
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-8 text-[14px] tracking-wider font-futura ml-20 mb-18">
+                <a href="#uvod" class="hover:text-magenta transition uppercase">Úvod</a>
+                <a href="#o-nas" class="hover:text-magenta transition uppercase">O nás</a>
+                <a href="#sluzby" class="hover:text-magenta transition uppercase">Služby</a>
+                <a href="#cenik" class="hover:text-magenta transition uppercase">Ceník</a>
+                <a href="#portfolio" class="hover:text-magenta transition uppercase">Portfolio</a>
+                <a href="#kontakt" class="hover:text-magenta transition uppercase">Kontakt</a>
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-4 mb-18">
+                <a href="tel:+420603298838" class="bg-magenta px-6 py-2.5 hover:opacity-90 transition font-magistral text-base mr-[10px]">
+                    +420 603 298 838
+                </a>
+                <a href="#" class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                    <i class="fab fa-facebook-f text-sm"></i>
+                </a>
+                <a href="#" class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                    <i class="fab fa-instagram text-sm"></i>
+                </a>
+            </div>
+            
+            <div class="hamburger lg:hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="#uvod" class="hover:text-magenta transition uppercase">Úvod</a>
+            <a href="#o-nas" class="hover:text-magenta transition uppercase">O nás</a>
+            <a href="#sluzby" class="hover:text-magenta transition uppercase">Služby</a>
+            <a href="#cenik" class="hover:text-magenta transition uppercase">Ceník</a>
+            <a href="#portfolio" class="hover:text-magenta transition uppercase">Portfolio</a>
+            <a href="#kontakt" class="hover:text-magenta transition uppercase">Kontakt</a>
+            <a href="tel:+420603298838" class="bg-magenta px-6 py-3 mt-4 text-center block">
+                +420 603 298 838
+            </a>
+        </div>
+    </nav>
 
-<body class="font-[Poppins] overflow-x-hidden">
-  <div class="bubble-field overflow-x-hidden overflow-y-hidden md:block hidden">
-    <div class="bubble w-[13px] h-[13px] top-[226px] left-[1868px]"></div>
-    <div class="bubble w-[13px] h-[13px] top-[611px] left-[49px]"></div>
-    <div class="bubble w-[14px] h-[14px] top-[1459px] left-[1816px]"></div>
-    <div class="bubble w-[13px] h-[13px] top-[1709px] left-[1586px]"></div>
+    <!-- Hero Section -->
+    <section id="uvod" class="relative h-screen flex items-end mb-20">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="img/wrap-bg.jpg" 
+                 alt="Red Lexus" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-1 max-w-7xl mx-auto px-8 w-full">
+            <div class="max-w-2xl">
+                <div class="section-label">
+                    <span class="font-futura" style="font-size: 17px;">WASH&WRAP</span>
+                    <div class="section-underline"></div>
+                </div>
+                <h1 class="font-magistral text-5xl lg:text-[65px] leading-none">
+                    RUČNÍ MYTÍ<br>
+                    <span class="text-magenta font-magistral">OCHRANA</span> LAKU<br>
+                    POLEPY AUT
+                </h1>
+            </div>
+            
+            <div class="absolute bottom-0 right-8 flex gap-3">
+                <button class="pagination-dot active">1</button>
+                <button class="pagination-dot">2</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="o-nas" class="py-20 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <!-- Images -->
+            <div class="grid grid-cols-2 gap-4 justify-items-center">
+                <img src="img/whyUS.png" 
+                     alt="Car detail" 
+                     class="about-image">
+                <img src="img/whyUS2.png" 
+                     alt="Wheel wash" 
+                     class="about-image">
+            </div>
+            
+            <!-- Content -->
+            <div>
+                <div class="section-label">
+                    <span class="font-futura">INFO O NÁS</span>
+                    <div class="section-underline"></div>
+                </div>
+                
+                <h2 class="section-title italic font-magistral">
+                    PROČ MY?
+                </h2>
+                
+                <div class="space-y-6 text-[20px] text-neutral-300 leading-relaxed font-futura">
+                    <p>Jsme tu pro vás již od roku 2015. Za <span class="font-bold text-white">více než 10 let</span> jsme vyčistili a ošetřili tisíce vozů, aplikovali stovky keramických ochran a zrealizovali řadu sofistikovaných projektů. Naše <span class="font-bold text-white">moderní mycí centrum v Brně</span> vzniklo na základě <span class="font-bold text-white">znalostí</span> dlouhodobých požadavků klientů a spojuje zkušenosti, špičkovou technologii a vášeň pro detail.</p>
+                    
+                    <div class="space-y-5 mt-10 pt-6">
+                        <div class="feature-item">
+                            <img src="img/arrows.png" alt="Arrow" class="w-6 h-6 mt-0.5">
+                            <p class="flex-1">Přistavení a vyzvednutí auta <span class="font-bold text-white">7 dní v týdnu, 24/7</span></p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/arrows.png" alt="Arrow" class="w-6 h-6 mt-0.5">
+                            <p class="flex-1">Služby na počkání a posezením v lounge u dobré kávy</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="img/arrows.png" alt="Arrow" class="w-6 h-6 mt-0.5">
+                            <p class="flex-1">Moderní centrum a špičkové zázemí na ploše <span class="font-bold text-white">přes 200 m²</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-year">2015</div>
+                <p class="timeline-text">Certifikace naší společnosti nonotechnologia Ceramic Pro.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2017</div>
+                <p class="timeline-text">Certifikace renovace laku systémem Rupes v Itálii.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2021</div>
+                <p class="timeline-text">Certifikace polepů fólií PPF KAVACA do sortimentu.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <p class="timeline-text">Certifikace polepů systém Ceramic Pro DYN u celofiního partnera.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <p class="timeline-text">Nová pobočka Wash&Wrap. Oficiální partnerem značky Ceramic Pro na Geddes slicu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="sluzby" class="py-20 px-8 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="section-label inline-block">
+                    <span class="font-futura">CO NABÍZÍME</span>
+                    <div class="section-underline mx-auto"></div>
+                </div>
+                <h2 class="section-title font-magistral">
+                    NAŠE SLUŽBY
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-number font-magistral text-[36px] text-white">01</div>
+                        <img src="img/detailni-myti.png" 
+                             alt="Detailní ruční mytí" 
+                             class="service-image">
+                        <div class="service-gradient"></div>
+                        <div class="service-content">
+                            <h3 class="service-title font-magistral">Detailní ruční mytí</h3>
+                        </div>
+                        <div class="service-overlay"></div>
+                        <div class="service-hover-content">
+                            <img src="img/services-hover.png" alt="Services Hover" class="services-hover-icon">
+                            <h3 class="font-magistral text-[30px] text-white">Detailní ruční mytí</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Profesionální ruční mytí vašeho vozu</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-number font-magistral text-[36px] text-white">02</div>
+                        <img src="img/renovace-laku.png" 
+                             alt="Renovace laku" 
+                             class="service-image">
+                        <div class="service-gradient"></div>
+                        <div class="service-content">
+                            <h3 class="service-title font-magistral">Renovace laku</h3>
+                        </div>
+                        <div class="service-overlay"></div>
+                        <div class="service-hover-content">
+                            <img src="img/services-hover.png" alt="Services Hover" class="services-hover-icon">
+                            <h3 class="font-magistral text-[30px] text-white">Renovace laku</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Obnovení lesku a ochrany vašeho laku</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-number font-magistral text-[36px] text-white">03</div>
+                        <img src="img/keramika.png" 
+                             alt="Keramická ochrana" 
+                             class="service-image">
+                        <div class="service-gradient"></div>
+                        <div class="service-content">
+                            <h3 class="service-title font-magistral">Keramická ochrana</h3>
+                        </div>
+                        <div class="service-overlay"></div>
+                        <div class="service-hover-content">
+                            <img src="img/services-hover.png" alt="Services Hover" class="services-hover-icon">
+                            <h3 class="font-magistral text-[30px] text-white">Keramická ochrana</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Dlouhodobá ochrana laku keramikou</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-number font-magistral text-[36px] text-white">04</div>
+                        <img src="img/PPF-folie.png" 
+                             alt="PPF fólie" 
+                             class="service-image">
+                        <div class="service-gradient"></div>
+                        <div class="service-content">
+                            <h3 class="service-title font-magistral">PPF fólie</h3>
+                        </div>
+                        <div class="service-overlay"></div>
+                        <div class="service-hover-content">
+                            <img src="img/services-hover.png" alt="Services Hover" class="services-hover-icon">
+                            <h3 class="font-magistral text-[30px] text-white">PPF fólie</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Ochranné fólie pro karoserii</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-number font-magistral text-[36px] text-white">05</div>
+                        <img src="img/barevna-folie.png" 
+                             alt="Barevné fólie" 
+                             class="service-image">
+                        <div class="service-gradient"></div>
+                        <div class="service-content">
+                            <h3 class="service-title font-magistral">Barevné fólie (wrap)</h3>
+                        </div>
+                        <div class="service-overlay"></div>
+                        <div class="service-hover-content">
+                            <img src="img/services-hover.png" alt="Services Hover" class="services-hover-icon">
+                            <h3 class="font-magistral text-[30px] text-white">Barevné fólie</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Nechte si navrhnout originální změnu barvy fólie (wrap)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-number font-magistral text-[36px] text-white">06</div>
+                        <img src="img/renovace-kuze.png" 
+                             alt="Renovace kůže" 
+                             class="service-image">
+                        <div class="service-gradient"></div>
+                        <div class="service-content">
+                            <h3 class="service-title font-magistral">Renovace kůže</h3>
+                        </div>
+                        <div class="service-overlay"></div>
+                        <div class="service-hover-content">
+                            <img src="img/services-hover.png" alt="Services Hover" class="services-hover-icon">
+                            <h3 class="font-magistral text-[30px] text-white">Renovace kůže</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Obnovení interiéru a kůže</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-sm text-neutral-400 mb-6 font-futura">Podívejte se na ceník kompletní služby v odstínech o ceník</p>
+                <a href="#cenik" class="cta-button font-futura">
+                    CENÍK SLUŽEB
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-20 px-0 bg-black"> <!-- Removed padding to make cards go to edges -->
+        <div class="max-w-full mx-auto"> <!-- Adjusted max-width to full -->
+            <div class="text-center mb-16">
+                <div class="section-label inline-block">
+                    <span class="font-futura">NAŠE PRÁCE</span>
+                    <div class="section-underline mx-auto"></div>
+                </div>
+                <h2 class="section-title italic font-magistral">
+                    PORTFOLIO
+                </h2>
+            </div>
+            
+            <div class="portfolio-slider">
+                <div class="portfolio-track flex gap-0"> <!-- Removed gap to make cards touch edges -->
+                    <div class="portfolio-item">
+                        <img src="img/porsche_1.png" 
+                             alt="Porsche" 
+                             class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <h3 class="font-magistral text-[30px] text-white">Porsche</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Lorem ipsum dolor sit amet</p>
+                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <img src="img/helicopter-2.png" 
+                             alt="Helicopter" 
+                             class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                            <div class="portfolio-hover-content">
+                                <h3 class="font-magistral text-[30px] text-white">Helicopter</h3>
+                                <p class="font-futura text-[20px] text-neutral-300">Lorem ipsum dolor sit amet</p>
+                                <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                            </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <img src="img/bmw-3.png" 
+                             alt="BMW" 
+                             class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <h3 class="font-magistral text-[30px] text-white">BMW</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Lorem ipsum dolor sit amet</p>
+                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <img src="img/porsche_4.png" 
+                             alt="Wheels" 
+                             class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <h3 class="font-magistral text-[30px] text-white">Wheels</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Lorem ipsum dolor sit amet</p>
+                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <img src="img/motor-5.png" 
+                             alt="Motorcycle" 
+                             class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <h3 class="font-magistral text-[30px] text-white">Motorcycle</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Lorem ipsum dolor sit amet</p>
+                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer class="py-12 px-8 bg-neutral-950">
+  <div class="max-w-[1500px] mx-auto flex flex-col md:flex-row justify-start gap-12 md:gap-10">
+
+    <!-- 1. Sloupec -->
+    <div class="flex-[1_1_0%]">
+      <img src="img/footerLogo.png" alt="Wash & Wrap" class="h-[50px] w-[260px] mb-6">
+      <div class="space-y-3 font-futura text-sm">
+        <div class="flex items-center gap-3">
+          <img src="img/arrows.png" alt="Arrow" class="w-6 h-6">
+          <p class="text-[18px] text-white"><strong>Kompletní péče</strong> o vůz na jednom místě</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="img/arrows.png" alt="Arrow" class="w-6 h-6">
+          <p class="text-[18px] text-white">Partnerství s přední automobilkou</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="img/arrows.png" alt="Arrow" class="w-6 h-6">
+          <p class="text-[18px] text-white">Oficiální zastoupení <strong>Ceramic Pro v ČR</strong></p>
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="img/arrows.png" alt="Arrow" class="w-6 h-6">
+          <p class="text-[18px] text-white">Odborný tým s více než <strong>10 lety praxe</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Sloupec -->
+    <div class="flex-[1_1_0%] mt-16">
+      <h3 class="font-futura text-[18px]  uppercase text-white">Zavolejte a objednejte se 24/7</h3>
+      <p class="text-[32px] font-magistral text-white">+420 603 298 838</p>
+      <div class="mt-4 space-y-1">
+        <p class="text-[18px] font-futura text-white ml-5"><strong>Otevírací doba:</strong> Po–Pá 8:00–17:00</p>
+        <p class="text-[18px] font-futura text-white">Garáže M-Palác, Heršpická 814/5a Brno</p>
+      </div>
+    </div>
+
+    <!-- 3. Sloupec -->
+    <div class="flex-[1_1_0%] mt-4">
+      <h3 class="font-magistral text-2xl mb-6  uppercase text-white">Kontakty</h3>
+      <div class="space-y-3 font-futura text-[18px] text-white">
+        <p>NanoHome s.r.o</p>
+        <p class="text-magenta font-futura">info@washwrap.cz</p>
+        <a href="https://www.washwrap.cz" target="_blank" class="text-magenta font-futura hover:text-white transition">www.washwrap.cz</a>
+        <p class="font-futura">IČO: 17833261</p>
+      </div>
+    </div>
+
+    <!-- 4. Sloupec -->
+    <div class="flex-[1_1_0%] mt-4">
+      <h3 class="font-magistral text-2xl mb-6 uppercase text-white">Odkazy</h3>
+      <div class="space-y-3 font-futura text-[18px] text-white">
+        <a href="#o-nas" class="block hover:text-magenta transition font-futura">O nás</a>
+        <a href="#sluzby" class="block hover:text-magenta transition font-futura">Služby</a>
+        <a href="#cenik" class="block hover:text-magenta transition font-futura">Ceník</a>
+        <a href="#portfolio" class="block hover:text-magenta transition font-futura">Portfolio</a>
+      </div>
+    </div>
+
   </div>
 
+  <!-- Spodní část -->
+  <div class="max-w-7xl mx-auto mt-12 pt-8  text-center text-[18px] text-neutral-500 font-futura">
+    <p>© 2025 Wash & Wrap. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
 
 
-  <!-- HEADER -->
-  <header class="header">
-    <nav class="navbar">
-      <!-- Logo -->
-      <div class="logo">
-        <a href="#">
-          <img src="img/Logo.png" alt="Logo" class="w-32" />
-        </a>
-      </div>
+<script type="module" src="js/portfolio.js"></script>
+<script type="module" src="js/hamburger.js"></script>
+<script type="module" src="js/services.js"></script>
 
-      <!-- Searchbar -->
-      <div class="searchbar-container">
-        <form class="search-form" role="search">
-          <div class="search-wrapper">
-            <span class="search-icon">
-              <i class="fas fa-search translate-y-px"></i>
-            </span>
-            <input type="search" name="q" aria-label="Hledat" placeholder="Hledat" class="search-input" />
-          </div>
-        </form>
-      </div>
 
-      <!-- Hamburger (mobile) -->
-      <div class="hamburger">
-        <button id="navbar-toggle" class="hamburger-btn">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="mobile-menu">
-        <a href="#" class="mobile-link">Nabídka kurzů</a>
-        <a href="#" class="mobile-link">Lektoři</a>
-        <a href="#" class="mobile-link">Blog</a>
-        <a href="#" class="mobile-btn">Zaregistrovat se</a>
-      </div>
-
-      <!-- Desktop menu -->
-      <div id="navbar-menu" class="navbar-menu">
-        <ul class="nav-links">
-          <li class="nav-item group">
-            <a href="#" class="nav-link">
-              Nabídka kurzů
-              <i class="fas fa-chevron-down ml-1 text-xs transition-transform group-hover:rotate-180"></i>
-            </a>
-            <div class="dropdown">
-              <div class="py-2">
-                <a href="#" class="dropdown-link">Programování</a>
-                <a href="#" class="dropdown-link">Design</a>
-                <a href="#" class="dropdown-link">Marketing</a>
-                <a href="#" class="dropdown-link">Business</a>
-              </div>
-            </div>
-          </li>
-          <li><a href="#" class="hover:text-[#2563eb]">Lektoři</a></li>
-          <li><a href="#" class="hover:text-[#2563eb]">Blog</a></li>
-        </ul>
-
-        <!-- Tlačítka -->
-        <div class="flex items-center gap-3">
-          <a href="#" class="btn-outline">Přihlásit se</a>
-          <a href="#" class="btn-primary">Zaregistrovat se</a>
-        </div>
-
-        <!-- Ikony -->
-        <div class="flex items-center gap-3">
-          <a href="#" class="icon-btn">
-            <img src="img/Kosik.png" alt="Cart" class="w-6 h-6" />
-          </a>
-          <a href="#" class="icon-btn-alt">
-            <img src="img/network.png" alt="Globe" class="w-5 h-5" />
-          </a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-
-
-  <!-- HERO SECTION -->
-  <section class="hero-section">
-    <div class="hero-wrapper">
-      <!-- Gradient box -->
-      <div class="hero-gradient">
-
-        <!-- Obsah -->
-        <div class="hero-content">
-          <!-- Texty -->
-          <div class="hero-texts text-center lg:text-left">
-            <h1 class="hero-title">
-              Vzdělávání pro <span class="hero-highlight">každého</span>
-            </h1>
-            <p class="hero-paragraph">
-              Mentioo – místo, kde můžete růst svým tempem.<br />
-              Učte se tak, jak vám vyhovuje.
-            </p>
-            <div class="hero-buttons justify-center lg:justify-start">
-              <a href="#" class="hero-btn-primary">Najít kurz</a>
-              <a href="#" class="hero-btn-outline">Stát se lektorem</a>
-            </div>
-          </div>
-
-          <!-- Bubliny -->
-          <div class="bubble-field md:block hidden">
-            <div class="bubble" style="top:80%; left:85%; width:21px; height:21px;"></div>
-            <div class="bubble" style="top:20%; left:70%; width:11px; height:11px;"></div>
-            <div class="bubble" style="top:60%; left:55%; width:8px; height:8px;"></div>
-            <div class="bubble" style="top:65%; left:35%; width:14px; height:14px;"></div>
-            <div class="bubble" style="top:40%; left:1%; width:10px; height:10px;"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Statistika - skrýt na md a výše -->
-    <div class="hero-stats hidden ">
-      <div class="stat-box">
-        <span class="stat-number">+1000</span>
-        <p class="stat-label">Aktivních studentů</p>
-      </div>
-    </div>
-
-    <div class="hero-stats--secondary hidden ">
-      <div class="stat-box">
-        <span class="stat-number">+200</span>
-        <p class="stat-label">Online kurzů</p>
-      </div>
-    </div>
-
-    <!-- Hero image -->
-    <div class="hero-image hidden">
-      <img src="img/heroGirl.png" alt="Hero girl" />
-    </div>
-
-    <div class="hero-circle lg:block hidden"></div>
-    <div class="hero-circle hero-circle--small lg:block hidden"></div>
-
-  </section>
-
-
-
-
-  <!-- NEWS SECTION -->
-  <section class="news-section">
-    <div class="news-wrapper">
-      <!-- Nadpis -->
-      <div class="news-header">
-        <h2 class="news-title">
-          Horké novinky na <span class="text-[#28A6FF]">Mentioo</span>
-        </h2>
-        <p class="news-subtitle whitespace-nowrap">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-          odio mattis.
-        </p>
-      </div>
-
-      <!-- Swiper -->
-      <div class="swiper mySwiper overflow-hidden">
-        <div class="swiper-wrapper">
-
-          <!-- Karta 1 -->
-          <div class="swiper-slide">
-            <a href="detail-kurzu.html" class="news-card">
-              <img src="img/card1.png" alt="Data Science Fundamentals" class="news-img" />
-              <div class="news-card-body">
-                <h3 class="news-card-title">Data Science Fundamentals</h3>
-                <p class="news-card-text">Learn to build modern websites from scratch with Erika Simpson...</p>
-                <div class="news-card-rating">
-                  <span class="rating-value">4.8</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <span class="rating-count">(5)</span>
-                </div>
-                <div class="news-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-purple">Free trial</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Karta 2 -->
-          <div class="swiper-slide">
-            <a href="detail-kurzu.html" class="news-card">
-              <img src="img/card2.png" alt="UI/UX Design Masterclass" class="news-img" />
-              <div class="news-card-body">
-                <h3 class="news-card-title">UI/UX Design Masterclass</h3>
-                <p class="news-card-text">Master modern UI/UX principles with practical design exercises...</p>
-                <div class="news-card-rating">
-                  <span class="rating-value">4.6</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <span class="rating-count">(4)</span>
-                </div>
-                <div class="news-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-blue">Pro nováčky</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Karta 3 -->
-          <div class="swiper-slide">
-            <a href="detail-kurzu.html" class="news-card">
-              <img src="img/card3.png" alt="Modern Illustration Course" class="news-img" />
-              <div class="news-card-body">
-                <h3 class="news-card-title">Modern Illustration Course</h3>
-                <p class="news-card-text">Create vibrant digital illustrations and improve your creative workflow...</p>
-                <div class="news-card-rating">
-                  <span class="rating-value">4.9</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <span class="rating-count">(6)</span>
-                </div>
-                <div class="news-tags">
-                  <span class="tag tag-purple">Nejlepší hodnocení</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Karta 4 -->
-          <div class="swiper-slide">
-            <a href="detail-kurzu.html" class="news-card">
-              <img src="img/card4.png" alt="Photography for Beginners" class="news-img" />
-              <div class="news-card-body">
-                <h3 class="news-card-title">Photography for Beginners</h3>
-                <p class="news-card-text">Capture stunning photos and learn the basics of photography...</p>
-                <div class="news-card-rating">
-                  <span class="rating-value">4.7</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <span class="rating-count">(3)</span>
-                </div>
-                <div class="news-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-turquoise">Trending</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Karta 5 -->
-          <div class="swiper-slide">
-            <a href="detail-kurzu.html" class="news-card">
-              <img src="img/card1.png" alt="Data Science Fundamentals" class="news-img" />
-              <div class="news-card-body">
-                <h3 class="news-card-title">Data Science Fundamentals</h3>
-                <p class="news-card-text">Learn to build modern websites from scratch with Erika Simpson...</p>
-                <div class="news-card-rating">
-                  <span class="rating-value">4.8</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <span class="rating-count">(5)</span>
-                </div>
-                <div class="news-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-purple">Free trial</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Karta 6 -->
-          <div class="swiper-slide">
-            <a href="detail-kurzu.html" class="news-card">
-              <img src="img/card2.png" alt="UI/UX Design Masterclass" class="news-img" />
-              <div class="news-card-body">
-                <h3 class="news-card-title">UI/UX Design Masterclass</h3>
-                <p class="news-card-text">Master modern UI/UX principles with practical design exercises...</p>
-                <div class="news-card-rating">
-                  <span class="rating-value">4.6</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <span class="rating-count">(4)</span>
-                </div>
-                <div class="news-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-blue">Pro nováčky</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Karta 7 -->
-          <div class="swiper-slide">
-            <a href="detail-kurzu.html" class="news-card">
-              <img src="img/card3.png" alt="Modern Illustration Course" class="news-img" />
-              <div class="news-card-body">
-                <h3 class="news-card-title">Modern Illustration Course</h3>
-                <p class="news-card-text">Create vibrant digital illustrations and improve your creative workflow...</p>
-                <div class="news-card-rating">
-                  <span class="rating-value">4.9</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <span class="rating-count">(6)</span>
-                </div>
-                <div class="news-tags">
-                  <span class="tag tag-purple">Nejlepší hodnocení</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- Karta 8 -->
-          <div class="swiper-slide">
-            <a href="detail-kurzu.html" class="news-card">
-              <img src="img/card4.png" alt="Photography for Beginners" class="news-img" />
-              <div class="news-card-body">
-                <h3 class="news-card-title">Photography for Beginners</h3>
-                <p class="news-card-text">Capture stunning photos and learn the basics of photography...</p>
-                <div class="news-card-rating">
-                  <span class="rating-value">4.7</span>
-                  <div class="rating-stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <span class="rating-count">(3)</span>
-                </div>
-                <div class="news-tags">
-                  <span class="tag tag-green">Novinka</span>
-                  <span class="tag tag-turquoise">Trending</span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <!-- Custom Navigation Buttons -->
-      <div class="news-prev">
-        <i class="fas fa-chevron-left text-[#0069B2] text-xl"></i>
-      </div>
-      <div class="news-next">
-        <i class="fas fa-chevron-right text-[#0069B2] text-xl"></i>
-      </div>
-
-      <!-- Button for Additional News -->
-      <div class="news-button-wrapper">
-        <button class="hero-btn-outline">Další novinky</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="category-section">
-    <div class="category-wrapper">
-
-      <!-- NADPIS A PODNADPIS -->
-      <div class="category-header text-center">
-        <h2 class="category-title">Vyberte si kurz podle kategorie</h2>
-        <p class="category-subtitle whitespace-nowrap">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
-          odio mattis.
-        </p>
-      </div>
-
-      <!-- KATEGORIE TAGY NAD GRADIENTEM -->
-      <div class="category-tabs-wrapper text-center">
-        <div class="category-tabs inline-flex flex-wrap justify-center gap-3">
-          <button class="category-tab active" data-category="web">Web development</button>
-          <button class="category-tab" data-category="data">Data science</button>
-          <button class="category-tab" data-category="comm">Communication</button>
-          <button class="category-tab" data-category="lead">Leadership</button>
-          <button class="category-tab" data-category="graphic">Graphic design</button>
-          <button class="category-tab" data-category="business">Business analytics</button>
-          <button class="category-tab" data-category="marketing">Marketing</button>
-          <button class="category-tab" data-category="lifestyle">Lifestyle</button>
-          <button class="category-tab" data-category="music">Music</button>
-          <span class="slider-bar"></span>
-        </div>
-      </div>
-
-      <!-- ===== CATEGORY GRADIENT SECTION ===== -->
-      <div class="category-gradient relative">
-
-        <!-- Navigační šipky -->
-        <div class="category-prev">
-          <i class="fas fa-chevron-left text-[#0069B2] text-xl"></i>
-        </div>
-        <div class="category-next">
-          <i class="fas fa-chevron-right text-[#0069B2] text-xl"></i>
-        </div>
-
-        <!-- Obsah uvnitř gradientu -->
-        <div class="category-content">
-          <!-- SWIPER -->
-          <div class="swiper myCategorySwiper">
-            <div class="swiper-wrapper max-w-[1525px]">
-
-              <!-- Karta 1 -->
-              <a href="detail-kurzu.html" class="swiper-slide category-card">
-                <img src="img/card1.png" alt="Web Development Bootcamp" class="category-img" />
-                <div class="category-card-body">
-                  <h3 class="category-card-title">Web Development Bootcamp</h3>
-                  <p class="category-card-text">Learn to build modern websites from scratch with Erika Simpson...</p>
-                  <div class="category-card-rating">
-                    <span class="rating-value">4,8</span>
-                    <div class="rating-stars">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <span class="rating-count">(5)</span>
-                  </div>
-                  <div class="category-tags">
-                    <span class="tag tag-green">Novinka</span>
-                    <span class="tag tag-purple">Free trial</span>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Karta 2 -->
-              <a href="detail-kurzu.html" class="swiper-slide category-card">
-                <img src="img/card2.png" alt="UI/UX Design Masterclass" class="category-img" />
-                <div class="category-card-body">
-                  <h3 class="category-card-title">UI/UX Design Masterclass</h3>
-                  <p class="category-card-text">Master modern UI/UX principles with practical design exercises...</p>
-                  <div class="category-card-rating">
-                    <span class="rating-value">4,6</span>
-                    <div class="rating-stars">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                    </div>
-                    <span class="rating-count">(4)</span>
-                  </div>
-                  <div class="category-tags">
-                    <span class="tag tag-green">Novinka</span>
-                    <span class="tag tag-blue">Pro nováčky</span>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Karta 3 -->
-              <a href="detail-kurzu.html" class="swiper-slide category-card">
-                <img src="img/card3.png" alt="Modern Illustration Course" class="category-img" />
-                <div class="category-card-body">
-                  <h3 class="category-card-title">Modern Illustration Course</h3>
-                  <p class="category-card-text">Create vibrant digital illustrations and improve your creative
-                    workflow...</p>
-                  <div class="category-card-rating">
-                    <span class="rating-value">4,8</span>
-                    <div class="rating-stars">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <span class="rating-count">(5)</span>
-                  </div>
-                  <div class="category-tags">
-                    <span class="tag tag-turquoise">Nejlepší hodnocení</span>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Karta 4 -->
-              <a href="detail-kurzu.html" class="swiper-slide category-card">
-                <img src="img/card4.png" alt="Data Science Fundamentals" class="category-img" />
-                <div class="category-card-body">
-                  <h3 class="category-card-title">Data Science Fundamentals</h3>
-                  <p class="category-card-text">Explore the world of data analytics and Python-based insights...</p>
-                  <div class="category-card-rating">
-                    <span class="rating-value">4,8</span>
-                    <div class="rating-stars">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <span class="rating-count">(4)</span>
-                  </div>
-                  <div class="category-tags">
-                    <span class="tag tag-green">Novinka</span>
-                    <span class="tag tag-purple">Free trial</span>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Karta 5 -->
-              <a href="detail-kurzu.html" class="swiper-slide category-card">
-                <img src="img/card1.png" alt="Digital Marketing 101" class="category-img" />
-                <div class="category-card-body">
-                  <h3 class="category-card-title">Digital Marketing 101</h3>
-                  <p class="category-card-text">Learn to master SEO, PPC, and social media marketing strategies...</p>
-                  <div class="category-card-rating">
-                    <span class="rating-value">4,7</span>
-                    <div class="rating-stars">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                    </div>
-                    <span class="rating-count">(6)</span>
-                  </div>
-                  <div class="category-tags">
-                    <span class="tag tag-blue">Trending</span>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Karta 6 -->
-              <a href="detail-kurzu.html" class="swiper-slide category-card">
-                <img src="img/card2.png" alt="Leadership Mastery" class="category-img" />
-                <div class="category-card-body">
-                  <h3 class="category-card-title">Leadership Mastery</h3>
-                  <p class="category-card-text">Enhance your leadership skills with practical techniques and tools...
-                  </p>
-                  <div class="category-card-rating">
-                    <span class="rating-value">4,9</span>
-                    <div class="rating-stars">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <span class="rating-count">(8)</span>
-                  </div>
-                  <div class="category-tags">
-                    <span class="tag tag-turquoise">Top kurz</span>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Karta 7 -->
-              <a href="detail-kurzu.html" class="swiper-slide category-card">
-                <img src="img/card3.png" alt="Photography for Beginners" class="category-img" />
-                <div class="category-card-body">
-                  <h3 class="category-card-title">Photography for Beginners</h3>
-                  <p class="category-card-text">Capture the perfect shot using simple techniques and camera control...
-                  </p>
-                  <div class="category-card-rating">
-                    <span class="rating-value">4,5</span>
-                    <div class="rating-stars">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-                      <i class="fa-regular fa-star"></i>
-                    </div>
-                    <span class="rating-count">(3)</span>
-                  </div>
-                  <div class="category-tags">
-                    <span class="tag tag-green">Novinka</span>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Karta 8 -->
-              <a href="detail-kurzu.html" class="swiper-slide category-card">
-                <img src="img/card4.png" alt="Music Production Basics" class="category-img" />
-                <div class="category-card-body">
-                  <h3 class="category-card-title">Music Production Basics</h3>
-                  <p class="category-card-text">Start producing your own music with professional tools and workflows...
-                  </p>
-                  <div class="category-card-rating">
-                    <span class="rating-value">4,8</span>
-                    <div class="rating-stars">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                    </div>
-                    <span class="rating-count">(4)</span>
-                  </div>
-                  <div class="category-tags">
-                    <span class="tag tag-purple">Free trial</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bubliny -->
-      <div class="bubble-field md:block hidden">
-        <div class="bubble" style="top:18%; left:85%; width:13px; height:13px;"></div>
-        <div class="bubble" style="top:92%; left:3%; width:14px; height:14px;"></div>
-        <div class="bubble" style="top:95%; left:10%; width:9px; height:9px;"></div>
-      </div>
-
-      <!-- Tlačítko -->
-      <div class="category-button-wrapper">
-        <button class="category-btn-outline">Další kurzy</button>
-      </div>
-    </div>
-    </div>
-
-    </div>
-
-  </section>
-
-
-
-  <section class="reviews-section py-16">
-    <div class="container mx-auto px-4 relative">
-      <h2 class="reviews-title">Hodnocení kurzů</h2>
-      <p class="reviews-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-        velit interdum.</p>
-
-      <div class="review-prev">
-        <i class="fas fa-chevron-left"></i>
-      </div>
-      <div class="review-next">
-        <i class="fas fa-chevron-right"></i>
-      </div>
-      <!-- Swiper Container -->
-      <div class="swiper myReviewsSwiper">
-
-        <div class="swiper-wrapper">
-
-
-          <!-- Review Card 1 -->
-          <div class="swiper-slide">
-            <div class="review-card">
-              <img src="img/quotes.png" alt="quotes" class="absolute top-8 right-8 w-[40px] h-[33px]">
-              <div class="review-header flex items-start mb-4">
-                <img src="img/reviewer3.png" alt="John Smith" class="rounded-full mr-4 w-[56px] h-[56px]">
-                <div>
-                  <h3 class="text-[16px] font-semibold">John Smith</h3>
-                  <div class="review-rating flex mb-2">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <p class="reviews-time">před 1 týdnem</p>
-                  </div>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="course-header mb-5">
-                <h3 class="text-[16px] font-semibold text-gray-900">Název kurzu XY</h3>
-                <a href="#" class="text-[#0069B2] text-[14px]">
-                  Jméno a příjmení lektora
-                </a>
-              </div>
-              <p class="text-gray-600 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
-            </div>
-          </div>
-
-          <!-- Review Card 2 -->
-          <div class="swiper-slide">
-            <div class="review-card">
-              <img src="img/quotes.png" alt="quotes" class="absolute top-8 right-8 w-[40px] h-[33px]">
-              <div class="review-header flex items-start mb-4">
-                <img src="img/reviever2.png" alt="Jane Doe" class="rounded-full mr-4 w-[56px] h-[56px]">
-                <div>
-                  <h3 class="text-[16px] font-semibold">Jane Doe</h3>
-                  <div class="review-rating flex mb-2">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <p class="reviews-time">před 2 týdny</p>
-                  </div>
-
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="course-header mb-5">
-                <h3 class="text-[16px] font-semibold text-gray-900">Název kurzu XY</h3>
-                <a href="#" class="text-[#0069B2] text-[14px]">
-                  Jméno a příjmení lektora
-                </a>
-              </div>
-              <p class="text-gray-600 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-                libero et velit interdum, ac aliquet odio mattis.</p>
-            </div>
-          </div>
-
-          <!-- Review Card 3 -->
-          <div class="swiper-slide">
-            <div class="review-card">
-              <img src="img/quotes.png" alt="quotes" class="absolute top-8 right-8 w-[40px] h-[33px]">
-              <div class="review-header flex items-start mb-4">
-                <img src="img/reviewer.png" alt="John Smith" class="rounded-full mr-4 w-[56px] h-[56px]">
-                <div>
-                  <h3 class="text-[16px] font-semibold">John Smith</h3>
-                  <div class="review-rating flex mb-2">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <p class="reviews-time">před 3 týdny</p>
-                  </div>
-                </div>
-              </div>
-              <div class="divider"></div>
-              <div class="course-header mb-5">
-                <h3 class="text-[16px] font-semibold text-gray-900">Název kurzu XY</h3>
-                <a href="#" class="text-[#0069B2] text-[14px]">
-                  Jméno a příjmení lektora
-                </a>
-              </div>
-              <p class="text-gray-600 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-                libero et velit interdum, ac aliquet odio mattis.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- Tři tečky pod recenzemi -->
-      <div class="dots-container flex justify-center -translate-y-36">
-        <div class="dot active bg-[#28A6FF] w-[10px] h-[10px] rounded-full mr-2"></div>
-        <div class="dot bg-[#D1D5DB] w-[10px] h-[10px] rounded-full mr-2"></div>
-        <div class="dot bg-[#D1D5DB] w-[10px] h-[10px] rounded-full"></div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="pricing-section py-16 px-4 relative">
-    <div class="container mx-auto text-start px-4 ">
-      <h2 class="text-[40px] font-semibold mb-4">Odemkněte svůj potenciál s předplatným</h2>
-      <p class="text-[16px] text-gray-600 mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-        libero et velit interdum, ac aliquet odio mattis.</p>
-
-      <div class="plan-tabs-wrapper mb-26">
-        <div class="plan-tabs" data-right-offset="24" data-left-offset="24">
-          <button class="plan-tab active" data-tab="annual" data-extend="left"><span>Roční platba</span></button>
-          <button class="plan-tab" data-tab="monthly" data-extend="right"><span>Měsíční platba</span></button>
-        </div>
-      </div>
-
-
-
-
-      <!-- Pricing Cards -->
-      <div class="container mx-auto text-center">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-24 relative z-10">
-          <!-- Základní Plan -->
-          <div class="pricing-card">
-            <h3 class="text-[20px]  font-semibold">Základní</h3>
-            <p class="text-[36px] font-semibold">
-              <span class="price-number">199</span> <span class="price-unit text-[20px] text-base text-[#717171]">|
-                měsíc</span>
-            </p>
-            <ul class="text-left mb-6">
-              <div class="divider"></div>
-              <div class="text-[16px]">
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet
-                </li>
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet <br>
-                  consectetur
-                  adipisicing elit.
-                </li>
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet
-                </li>
-              </div>
-            </ul>
-            <a href="#" class="cta-btn">Vyzkoušet zdarma</a>
-          </div>
-
-          <!-- Standard Plan -->
-          <div class="pricing-card">
-            <h3 class="text-[20px] font-semibold">Standard</h3>
-            <p class="text-[36px] font-semibold">
-              <span class="price-number">299</span> <span class="price-unit text-[20px] text-base text-[#717171]">|
-                měsíc</span>
-            </p>
-            <ul class="text-left mb-6">
-              <div class="divider"></div>
-              <div class="text-[16px]">
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet
-                </li>
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet <br>
-                  consectetur
-                  adipisicing elit.
-                </li>
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet
-                </li>
-              </div>
-            </ul>
-            <a href="#" class="cta-btn">Vyzkoušet zdarma</a>
-          </div>
-
-          <!-- Premium lan -->
-          <div class="pricing-card">
-            <h3 class="text-[20px] font-semibold">Premium</h3>
-            <p class="text-[36px] font-semibold">
-              <span class="price-number">599</span> <span class="price-unit text-[20px] text-base text-[#717171]">|
-                měsíc</span>
-            </p>
-            <ul class="text-left mb-6">
-              <div class="divider"></div>
-              <div class="text-[16px]">
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet
-                </li>
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet <br>
-                  consectetur
-                  adipisicing elit.
-                </li>
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet
-                </li>
-              </div>
-            </ul>
-            <a href="#" class="cta-btn">Vyzkoušet zdarma</a>
-          </div>
-
-          <!-- Individual Plan -->
-          <div class="pricing-card">
-            <h3 class="text-xl font-semibold">Teams/Buisness</h3>
-            <p class="text-[36px] font-semibold">Individualní</p>
-            <ul class="text-left mb-6">
-              <div class="divider"></div>
-              <div class="text-[16px]">
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet
-                </li>
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet <br>
-                  consectetur
-                  adipisicing elit.
-                </li>
-                <li class="flex items-center mb-2">
-                  <img src="img/check_circle.png" alt="check" class="mr-2" /> Lorem ipsum dolor sit amet
-                </li>
-              </div>
-            </ul>
-            <a href="#" class="cta-btn">Vyzkoušet zdarma</a>
-          </div>
-        </div>
-
-        <!-- Gradient Background -->
-        <div class="gradient-background lg:block hidden"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY STUDY SECTION -->
-  <section class="why-section py-20 px-4">
-    <div class="container mx-auto text-start px-4">
-
-      <!-- Nadpis -->
-      <h2 class="text-[40px] font-semibold mb-4">
-        Proč studovat s <span class="text-[#28A6FF]">Mentioo</span>
-      </h2>
-      <p class="text-[16px] text-gray-600 mb-12 max-w-[720px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
-        ac aliquet odio mattis.
-      </p>
-
-      <!-- KARTY -->
-      <div class="why-cards flex flex-col md:flex-row justify-center gap-8 lg:flex-nowrap">
-
-        <!-- Karta 1 -->
-        <div
-          class="why-card w-full sm:w-[320px] md:w-[45%] lg:w-[490px] flex flex-col items-start gap-4 p-8 bg-white rounded-[16px] shadow-md hover:shadow-lg transition-all duration-300 ease-out">
-          <div class="why-icon bg-[#EFE6FF] flex items-center justify-center w-[56px] h-[56px] rounded-[16px]">
-            <img src="img/book_ribbon.png" alt="Ikona studium" class="w-[28px] h-[28px]" />
-          </div>
-          <h3 class="text-[18px] font-semibold">Učte se tak, jak vám to sedí</h3>
-          <p class="text-[16px] text-gray-600">
-            Mentioo respektuje vaše tempo. Krátké lekce, opakování i motivace v tom, co vás baví.
-          </p>
-        </div>
-
-        <!-- Karta 2 -->
-        <div
-          class="why-card w-full sm:w-[320px] md:w-[45%] lg:w-[490px] flex flex-col items-start gap-4 p-8 bg-white rounded-[16px] shadow-md hover:shadow-lg transition-all duration-300 ease-out">
-          <div class="why-icon bg-[#CCFFE7] flex items-center justify-center w-[56px] h-[56px] rounded-[16px]">
-            <img src="img/person.png" alt="Ikona lektor" class="w-[28px] h-[28px]" />
-          </div>
-          <h3 class="text-[18px] font-semibold">Lektoři, kteří opravdu naučí</h3>
-          <p class="text-[16px] text-gray-600">
-            Kurzy vedou odborníci z praxe, kteří vědí, jak předat znalosti jednoduše a srozumitelně.
-          </p>
-        </div>
-
-        <!-- Karta 3 -->
-        <div
-          class="why-card w-full sm:w-[320px] md:w-[45%] lg:w-[490px] flex flex-col items-start gap-4 p-8 bg-white rounded-[16px] shadow-md hover:shadow-lg transition-all duration-300 ease-out">
-          <div class="why-icon bg-[#CCFAFA] flex items-center justify-center w-[56px] h-[56px] rounded-[16px]">
-            <img src="img/language.png" alt="Ikona laptop" class="w-[28px] h-[28px]" />
-          </div>
-          <h3 class="text-[18px] font-semibold">Učte se odkudkoliv, kdykoliv</h3>
-          <p class="text-[16px] text-gray-600">
-            Studujte doma, na cestách i večer po práci. Vše, co potřebujete, máte online.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <!-- BECOME LECTOR SECTION -->
-  <section class="lector-section py-24 px-4 relative overflow-hidden">
-    <div class="container mx-auto max-w-[1565px] flex flex-col lg:flex-row items-center justify-between gap-">
-
-      <!-- Textový obsah -->
-      <div class="lector-content text-start max-w-[520px] mb-24">
-        <h2 class="text-[40px] font-semibold mb-8">Staňte se lektorem</h2>
-
-        <ul class="space-y-4 mb-8">
-          <li class="flex items-start gap-3">
-            <img src="img/check_circle_blue.png" alt="check" class="w-[22px] h-[22px] mt-1" />
-            <p class="text-[16px] text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.
-            </p>
-          </li>
-          <li class="flex items-start gap-3">
-            <img src="img/check_circle_blue.png" alt="check" class="w-[22px] h-[22px] mt-1" />
-            <p class="text-[16px] text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </li>
-          <li class="flex items-start gap-3">
-            <img src="img/check_circle_blue.png" alt="check" class="w-[22px] h-[22px] mt-1" />
-            <p class="text-[16px] text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.
-            </p>
-          </li>
-          <li class="flex items-start gap-3">
-            <img src="img/check_circle_blue.png" alt="check" class="w-[22px] h-[22px] mt-1" />
-            <p class="text-[16px] text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </li>
-        </ul>
-
-        <button class="lector-btn">
-          Více informací
-        </button>
-      </div>
-
-
-      <!-- Obrázek -->
-      <div class="lector-image flex justify-center">
-        <img src="img/lektorka.jpg" alt="Lektor" class="w-[771px] h-[514px] object-cover rounded-[40px] shadow-md" />
-      </div>
-
-    </div>
-
-    <!-- Bubliny -->
-    <div class="bubble-field md:block hidden">
-      <div class="bubble" style="top:5%; right:5%; width:10px; height:10px;"></div>
-      <div class="bubble" style="top:20%; right:6%; width:15px; height:15px;"></div>
-      <div class="bubble" style="bottom:10%; left:50%; width:18px; height:18px;"></div>
-      <div class="bubble" style="bottom:82%; left:87%; width:36px; height:36px;"></div>
-    </div>
-  </section>
-
-
-   <footer class="footer bg-[#F5F9FF]">
-        <div class="footer-container">
-            <!-- Logo  -->
-            <div class="footer-logo">
-                <img src="img/FooterLogo.png" alt="Mentio_logo" class="footer-logo-img">
-            </div>
-
-            <!-- Obsah -->
-            <div class="footer-content">
-                <div class="footer-grid">
-                    <!-- INFO -->
-                    <div class="footer-info">
-                        <div class="footer-info-text">
-                            <p class="font-semibold text-lg">Mentio s.r.o</p>
-                            <p class="mt-2">U Lipek 1234/56, 101 00 Praha 10</p>
-                            <p class="mt-1"><span class="font-bold">IČO:</span> 12345678</p>
-                            <p class="mt-2 leading-relaxed ">Spisová značka C 987654 vedená u Městského soudu v Praze
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- 4X4 KATEGORIE-->
-                    <div class="footer-categories">
-                        <div>
-                            <h4 class="footer-heading">Kategorie kurzů</h4>
-                            <ul class="footer-links">
-                                <li><a class="footer-link" href="#">Kategorie 1</a></li>
-                                <li><a class="footer-link" href="#">Kategorie 2</a></li>
-                                <li><a class="footer-link" href="#">Kategorie 3</a></li>
-                                <li><a class="footer-link" href="#">Kategorie 4</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 class="footer-heading">Typy kurzů</h4>
-                            <ul class="footer-links">
-                                <li><a class="footer-link" href="#">Typ kurzů 1</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 2</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 3</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 4</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 class="footer-heading">Typy kurzů</h4>
-                            <ul class="footer-links">
-                                <li><a class="footer-link" href="#">Typ kurzů 1</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 2</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 3</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 4</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 class="footer-heading">Typy kurzů</h4>
-                            <ul class="footer-links">
-                                <li><a class="footer-link" href="#">Typ kurzů 1</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 2</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 3</a></li>
-                                <li><a class="footer-link" href="#">Typ kurzů 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- O nás -->
-                    <div class="footer-about">
-                        <h4 class="footer-heading">O nás</h4>
-                        <ul class="footer-links">
-                            <li><a class="footer-link" href="#">Lektoři</a></li>
-                            <li><a class="footer-link" href="#">Kariéra</a></li>
-                            <li><a class="footer-link" href="#">Blog</a></li>
-                            <li><a class="footer-link" href="#">Kontakt</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- divider -->
-            <div class="footer-divider"></div>
-
-            <!-- COPYRIGHT + IKONY -->
-            <div class="footer-bottom">
-                <div class="footer-copyright">© 2025 Lorem ipsum</div>
-                <div class="footer-social">
-                    <a href="#" class="social-link" aria-label="Instagram">
-                        <img src="img/instagram.svg" alt="Instagram" class="social-icon h-[24px] w-[24px]">
-                    </a>
-
-                    <a href="#" class="social-link" aria-label="Facebook">
-                        <img src="img/facebook.svg" alt="Facebook" class="social-icon h-[24px] w-[24px]">
-                    </a>
-
-                    <a href="#" class="social-link" aria-label="LinkedIn">
-                        <img src="img/linkedin.svg" alt="LinkedIn" class="social-icon h-[24px] w-[24px]">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-  <!-- Načtení Swiper knihovny před vlastními skripty -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script type="module" src="js/hamburger.js"></script>
-  <script type="module" src="js/bubbles.js"></script>
-  <script type="module" src="js/categorySwiper.js"></script>
-  <script type="module" src="js/reviews.js"></script>
-  <script type="module" src="js/pricingTabs.js"></script>
-  <script type="module" src="js/newsSwiper.js"></script>
 </body>
-
 </html>

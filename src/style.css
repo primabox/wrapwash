@@ -1,1495 +1,886 @@
-    @import "tailwindcss";
+@import "tailwindcss";
 
-    /* ===== HEADER ===== */
-    .header {
-      @apply bg-white shadow fixed top-0 left-0 right-0 z-[9999];
-    }
-
-    .navbar {
-      @apply flex items-center justify-between py-4 px-10 lg:px-20;
-    }
-
-    .logo {
-      @apply flex-shrink-0;
-    }
-
-    /* ===== SEARCHBAR ===== */
-    .searchbar-container {
-      @apply hidden md:flex flex-1 justify-center mx-6 max-w-[600px];
-    }
-
-    .search-form {
-      @apply w-full;
-    }
-
-    .search-wrapper {
-      @apply relative;
-    }
-
-    .search-icon {
-      @apply pointer-events-none absolute left-6 top-1/2 -translate-y-1/2 text-[#64748b];
-    }
-
-    .search-input {
-      @apply w-full h-14 pl-12 pr-5 rounded-full border border-gray-200 placeholder-gray-500 text-slate-700 focus:border-[#2563eb] focus:ring-4 focus:ring-[#e0f2fe] outline-none transition;
-    }
-
-    /* ===== MOBILE MENU ===== */
-    .hamburger {
-      @apply xl:hidden flex items-center relative;
-    }
-
-    .hamburger-btn {
-      @apply text-2xl text-gray-700 hover:text-[#2563eb] transition;
-    }
-
-    .mobile-menu {
-      @apply flex flex-col items-center bg-white shadow-md py-5 space-y-4 xl:hidden fixed top-[72px] left-0 w-full max-w-[100vw] overflow-x-hidden z-[9998];
-      max-height: 0;
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .mobile-menu.active {
-      max-height: 300px;
-      opacity: 1;
-    }
-
-    .mobile-link {
-      @apply text-gray-700 font-medium hover:text-[#2563eb];
-    }
-
-    .mobile-btn {
-      @apply px-5 py-2.5 rounded-full bg-[#0069B2] text-white hover:bg-[#1d4ed8] transition;
-    }
-
-    /* ===== DESKTOP MENU ===== */
-    .navbar-menu {
-      @apply hidden xl:flex items-center gap-8;
-    }
-
-    .nav-links {
-      @apply flex items-center gap-6 text-base font-medium text-gray-900;
-    }
-
-    .nav-item {
-      @apply relative;
-    }
-
-    .nav-link {
-      @apply flex items-center hover:text-[#2563eb];
-    }
-
-    .dropdown {
-      @apply absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50;
-    }
-
-    .dropdown-link {
-      @apply block px-4 py-2 text-sm text-gray-700 hover:bg-[#e0f2fe] hover:text-[#2563eb];
-    }
-
-    /* ===== BUTTONS ===== */
-    .btn-outline {
-      @apply px-5 py-2.5 rounded-full bg-[#D4EDFF] text-[#2563eb] hover:bg-[#bfdbfe] transition;
-    }
-
-    .btn-primary {
-      @apply px-5 py-2.5 rounded-full bg-[#0069B2] text-white hover:bg-[#1d4ed8] transition;
-    }
-
-    .icon-btn {
-      @apply w-11 h-11 flex items-center justify-center rounded-full hover:bg-gray-100 transition;
-    }
-
-    .icon-btn-alt {
-      @apply w-11 h-11 flex items-center justify-center rounded-full bg-[#dbeafe] hover:bg-[#bfdbfe] transition;
-    }
-
-    /* ===== HERO SECTION ===== */
-    .hero-section {
-      @apply relative flex justify-center pt-36 pb-24 px-4 sm:px-6 md:px-10 lg:px-20 overflow-x-hidden overflow-y-visible;
-    }
-
-    .hero-wrapper {
-      @apply relative flex items-center justify-center w-full max-w-[1750px] z-1;
-    }
-
-    .hero-gradient {
-      @apply relative w-full h-[608px] rounded-[64px] bg-[#E5F8FF] overflow-hidden;
-    }
-
-    .bubble-field {
-      @apply absolute inset-0 pointer-events-none z-10;
-    }
-
-    .bubble {
-      @apply absolute rounded-full bg-[#00E8E8];
-    }
-
-    .hero-content {
-      @apply absolute inset-0 flex flex-col xl:flex-row items-stretch justify-between gap-10 sm:gap-12 p-6 sm:p-8 xl:p-32 z-10;
-    }
-
-    .hero-texts {
-      @apply flex flex-col justify-center text-center lg:text-left w-full xl:w-1/2 gap-y-6 items-center lg:items-start;
-    }
-
-    .hero-title {
-      @apply text-5xl md:text-[56px] font-semibold leading-tight tracking-wide mb-4;
-    }
-
-    .hero-highlight {
-      @apply bg-gradient-to-r from-[#00E8E8] to-[#28A6FF] bg-clip-text text-transparent;
-    }
-
-    .hero-paragraph {
-      @apply text-[#141414] max-w-xl mx-auto xl:mx-0 mb-7 text-xl leading-relaxed;
-    }
-
-    .hero-buttons {
-      @apply flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4;
-    }
-
-    @media (max-width: 1599px) {
-      .hero-content {
-        @apply flex flex-col items-center justify-center text-center;
-      }
-
-      .hero-texts {
-        @apply items-center text-center w-full xl:w-auto;
-      }
-
-      .hero-title {
-        @apply text-center;
-      }
-
-      .hero-paragraph {
-        @apply text-center mx-auto;
-      }
-
-      .hero-buttons {
-        @apply justify-center;
-      }
-    }
-
-
-    .hero-btn-primary {
-      @apply bg-[#D4EDFF] text-[#0069B2] px-6 py-3 rounded-full font-semibold hover:bg-[#0068b23a] transition;
-    }
-
-    .hero-btn-outline {
-      @apply border border-blue-600 text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition cursor-pointer;
-    }
-
-/* Center specific section headings and subtitles on small screens (phone) */
-@media (max-width: 480px) {
-  .pricing-section h2,
-  .why-section h2 {
-    @apply text-center;
-  }
-
-  .pricing-section p,
-  .why-section p {
-    @apply text-center;
-  }
+/* ============================================
+   FONTS IMPORT
+   ============================================ */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/fonnts.com-Futura_PT_Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-    .hero-image {
-      @apply absolute top-[101px] left-[962px] w-[697px] h-[697px] z-20 pointer-events-none;
-      display: none;
-    }
+@font-face {
+    font-family: 'Magistral';
+    src: url('../fonts/fonnts.com-Magistral_Extra_Bold_Italic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
 
-    .hero-stats {
-      @apply absolute top-[280px] right-[182px] z-40;
-      display: none;
-    }
+/* ============================================
+   BASE STYLES
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
 
-    .hero-stats--secondary {
-      @apply absolute top-[538px] left-[895px] z-40 w-[158px] h-[127px];
-      display: none;
-    }
+/* ============================================
+   BASE TYPOGRAPHY
+   ============================================ */
+body {
+    font-family: 'Futura PT', sans-serif;
+}
 
-    @media (min-width: 1600px) {
-      .hero-stats {
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Magistral', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+p, span, a, li, input, textarea, select, button {
+    font-family: 'Futura PT', sans-serif;
+}
+
+/* ============================================
+   FONT UTILITY CLASSES
+   ============================================ */
+.font-futura {
+    font-family: 'Futura PT', sans-serif !important;
+}
+
+.font-magistral {
+    font-family: 'Magistral', sans-serif !important;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   CUSTOM COLOR UTILITIES
+   ============================================ */
+.bg-magenta {
+    background-color: #C31681;
+}
+
+.text-magenta {
+    color: #C31681;
+}
+
+.border-magenta {
+    border-color: #C31681;
+}
+
+.hover\:bg-magenta:hover {
+    background-color: #C31681;
+}
+
+.hover\:border-magenta:hover {
+    border-color: #C31681;
+}
+
+.hover\:text-magenta:hover {
+    color: #C31681;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+nav {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Nav linky - 17px */
+nav a {
+    font-size: 17px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    transition: right 0.3s ease;
+    z-index: 100;
+    padding: 5rem 2rem;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #262626;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 1024px) {
+    .hamburger {
         display: flex;
-      }
-
-      .hero-stats--secondary {
-        display: flex;
-      }
-
-      .hero-image {
+    }
+    
+    .mobile-menu {
         display: block;
-      }
     }
-
-    .stat-box {
-      @apply bg-white rounded-2xl shadow-lg w-[215px] h-[127px] flex flex-col items-start justify-center px-6 py-6 gap-1;
-    }
-
-    .stat-number {
-      @apply text-[32px] font-semibold text-[#003F91];
-    }
-
-    .stat-label {
-      @apply text-lg text-gray-600 mt-1;
-    }
-
-
-    .hero-circle {
-      @apply absolute rounded-full bg-gradient-to-r from-[#00E8E8] to-[#28A6FF] opacity-5;
-      width: 591px;
-      height: 591px;
-      top: 191px;
-      left: 1014.5px;
-      z-index: 5;
-      display: none;
-    }
-
-    .hero-circle--small {
-      @apply absolute rounded-full bg-gradient-to-r from-[#00E8E8] to-[#28A6FF] opacity-10;
-      width: 486px;
-      height: 486px;
-      top: 295px;
-      left: 1065px;
-      z-index: 5;
-      display: none;
-    }
-
-    @media (min-width: 1600px) {
-      .hero-circle {
-        display: block;
-      }
-
-      .hero-circle--small {
-        display: block;
-      }
-    }
-
-    /* ===== NEWS SECTION ===== */
-    .news-section {
-      @apply relative w-full flex justify-center lg:px-12 overflow-hidden pb-12;
-    }
-
-    .news-wrapper {
-      @apply w-full max-w-[1525px] flex flex-col items-center overflow-hidden pb-8;
-    }
-
-    .news-header {
-      @apply text-left mb-8 w-full max-w-[1525px] px-4 lg:px-0;
-    }
-
-    .news-title {
-      @apply text-[28px] sm:text-4xl md:text-[40px] font-semibold leading-tight text-center lg:text-left;
-    }
-
-    .news-subtitle {
-      @apply text-[#4D4D4D] mt-3 max-w-[600px] text-base leading-relaxed whitespace-normal text-center lg:text-left lg:whitespace-nowrap mx-auto lg:mx-0;
-    }
-
-    /* ===== CARDS (SHARED) ===== */
-    .news-card,
-    .category-card {
-      @apply bg-white rounded-2xl shadow-md overflow-hidden flex flex-col w-[361px] h-[456px] cursor-pointer;
-      transition: all 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .news-card:hover,
-    .category-card:hover {
-      @apply shadow-xl;
-      transform: translateY(-12px);
-      text-decoration: none;
-    }
-
-    .news-img,
-    .category-img {
-      @apply w-full h-[230px] object-cover rounded-t-2xl;
-    }
-
-    .news-card-body,
-    .category-card-body {
-      @apply flex flex-col p-6 flex-grow;
-    }
-
-    .news-card-title,
-    .category-card-title {
-      @apply font-semibold text-lg mb-1 text-gray-900;
-    }
-
-    .news-card-text,
-    .category-card-text {
-      @apply text-gray-600 text-sm mb-3;
-    }
-
-    .news-card-rating,
-    .category-card-rating {
-      @apply flex items-center text-sm mb-4;
-    }
-
-    .rating-value {
-      @apply font-semibold mr-1;
-    }
-
-    .rating-stars {
-      @apply flex text-yellow-400 mr-1;
-    }
-
-    .rating-count {
-      @apply text-gray-500;
-    }
-
-    .news-tags,
-    .category-tags {
-      @apply flex items-center gap-2 mt-auto;
-    }
-
-    .tag {
-      @apply text-[13px] px-2.5 py-1 rounded font-medium;
-    }
-
-    .tag-green {
-      @apply bg-[#E6FFFC] text-[#005D5D];
-    }
-
-    .tag-blue {
-      @apply bg-[#E9F6FF] text-[#0069B2];
-    }
-
-    .tag-purple {
-      @apply bg-[#F1E9FF] text-[#7045C2];
-    }
-
-    .tag-turquoise {
-      @apply bg-[#E6FFFC] text-[#005D5D];
-    }
-
-    .news-button-wrapper {
-      @apply flex justify-center md:justify-end w-full max-w-[1525px] mt-12 mb-6 mr-5;
-    }
-
-    /* ===== SWIPER NAVIGATION (VLASTNÍ ŠIPKY) ===== */
-    .swiper-button-prev,
-    .swiper-button-next,
-    .review-prev,
-    .review-next,
-    .news-prev,
-    .news-next,
-    .category-prev,
-    .category-next {
-      @apply absolute top-1/2 -translate-y-1/2 rounded-full bg-white border border-[#E5F8FF] flex items-center justify-center shadow-sm hover:bg-[#f8fcff] hover:shadow-md hover:scale-105 transition-all duration-300 cursor-pointer;
-      width: 48px !important;
-      height: 48px !important;
-      z-index: 100 !important;
-
-    }
-
-    /* Pozicování pro tlačítko "Předchozí" */
-    .review-prev {
-      left: -65px;
-      /* 20px od levého okraje */
-    }
-
-    /* Pozicování pro tlačítko "Další" */
-    .review-next {
-      right: -65px;
-      /* 20px od pravého okraje */
-    }
-
-    .swiper-button-prev {
-      left: 125px !important;
-    }
-
-    .swiper-button-next {
-      right: 125px !important;
-    }
-
-    /* Samostatné pozice pro news šipky */
-    .news-prev {
-      left: 125px !important;
-      top: 360px !important;
-    }
-
-    .news-next {
-      right: 125px !important;
-      top: 360px !important;
-    }
-
-    /* Samostatné pozice pro category šipky */
-    .category-prev {
-      left: 125px !important;
-      top: 320px !important;
-    }
-
-    .category-next {
-      right: 125px !important;
-      top: 320px !important;
-    }
-
-    .category-prev::after,
-    .category-next::after {
-      display: none !important;
-    }
-
-    .news-prev::after,
-    .news-next::after {
-      display: none !important;
-    }
-
-    .review-prev::after,
-    .review-next::after {
-      display: none !important;
-    }
-
-    /* ===== SWIPER SLIDES ===== */
-    .swiper-slide {
-      @apply flex-shrink-0;
-      width: 361px !important;
-      height: auto !important;
-      position: relative;
-      transition-property: transform, opacity;
-    }
-
-    /* Swiper kontejner pro news sekci */
-    .mySwiper {
-      @apply mx-auto;
-      width: 1518px !important;
-      max-width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      overflow: hidden !important;
-    }
-
-    .mySwiper .swiper-wrapper {
-      @apply items-stretch;
-      gap: 24px !important;
-    }
-
-    .mySwiper .swiper-slide {
-      width: 361px !important;
-      height: auto !important;
-      margin-right: 0 !important;
-    }
-
-    /* Swiper kontejner pro category sekci */
-    .myCategorySwiper {
-      @apply relative mx-auto mb-20;
-      width: 1518px !important;
-      max-width: 100%;
-      height: auto !important;
-      padding-top: 20px;
-      padding-bottom: 40px;
-      overflow: hidden !important;
-    }
-
-    .myCategorySwiper .swiper-wrapper {
-      gap: 24px !important;
-    }
-
-    .myCategorySwiper .swiper-slide {
-      width: 361px !important;
-      height: auto !important;
-      margin-right: 0 !important;
-    }
-
-    /* Skryj defaultní Swiper šipky */
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-      display: none !important;
-      content: '' !important;
-    }
-
-
-
-    @media (max-width: 767px) {
-
-      .swiper-button-prev,
-      .swiper-button-next,
-      .news-prev,
-      .news-next,
-      .category-prev,
-      .category-next {
-        display: none !important;
-      }
-
-      /* Mobilní swipery */
-      .mySwiper,
-      .myCategorySwiper,
-      .myReviewsSwiper {
-        width: 100% !important;
-        padding-left: calc((100vw - 361px) / 2) !important;
-        padding-right: calc((100vw - 361px) / 2) !important;
-        overflow: visible !important;
-      }
-
-      .mySwiper .swiper-wrapper,
-      .myCategorySwiper .swiper-wrapper,
-      .myReviewsSwiper .swiper-wrapper {
-        gap: 16px !important;
-      }
-
-      .mySwiper .swiper-slide,
-      .myCategorySwiper .swiper-slide {
-        width: 361px !important;
-        flex-shrink: 0 !important;
-      }
-
-      .myReviewsSwiper .swiper-slide {
-        width: 490px !important;
-        flex-shrink: 0 !important;
-      }
-
-      /* Review swiper centrování */
-      .myReviewsSwiper {
-        padding-left: calc((100vw - 490px) / 2) !important;
-        padding-right: calc((100vw - 490px) / 2) !important;
-      }
-
-      /* Category gradient má vlastní padding, musíme ho vynulovat */
-      .category-gradient {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-
-      /* Pro malé obrazovky kde se 361px nevejde */
-      @media (max-width: 400px) {
-
-        .mySwiper,
-        .myCategorySwiper {
-          padding-left: 16px !important;
-          padding-right: 16px !important;
-        }
-
-        .mySwiper .swiper-slide,
-        .myCategorySwiper .swiper-slide {
-          width: calc(100vw - 32px) !important;
-        }
-
-        .myReviewsSwiper {
-          padding-left: 16px !important;
-          padding-right: 16px !important;
-        }
-
-        .myReviewsSwiper .swiper-slide {
-          width: calc(100vw - 32px) !important;
-        }
-      }
-    }
-
-
-
-
-    /* ===== CATEGORY SECTION ===== */
-    .category-section {
-      @apply relative flex justify-center pt-16 pb-1 overflow-hidden;
-    }
-
-    .category-wrapper {
-      @apply relative w-full max-w-[2000px] z-10 flex flex-col items-center;
-    }
-
-    .category-header {
-      @apply mb-8 w-full max-w-[1520px] px-4 lg:px-0;
-    }
-
-    .category-title {
-      @apply text-[28px] sm:text-4xl md:text-[40px] font-semibold leading-tight text-center lg:text-left;
-    }
-
-    .category-subtitle {
-      @apply text-[#4D4D4D] mt-3 max-w-[600px] text-base leading-relaxed whitespace-normal lg:whitespace-nowrap text-center lg:text-left mx-auto lg:mx-0 mb-36;
-    }
-
-    /* ===== CATEGORY TABS ===== */
-    .category-tabs-wrapper {
-      @apply w-full flex justify-start max-w-[1520px] mx-auto relative z-30 overflow-hidden;
-      margin-top: -30px;
-      padding-left: 0;
-    }
-
-    .category-tabs {
-      display: inline-flex;
-      gap: 1.5rem;
-      position: relative;
-      padding-bottom: 0.625rem;
-      width: fit-content;
-
-    }
-
-    .category-tabs::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 98%;
-      height: 2px;
-      background-color: #e5e7eb;
-      z-index: 1;
-      display: none;
-
-    }
-
-    .category-tabs::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      height: 2px;
-      background-color: #0069b2;
-      left: var(--bar-left, 0);
-      width: var(--bar-width, 0);
-      transition: all 0.3s ease-in-out;
-      z-index: 2;
-      display: none;
-    }
-
-    @media (min-width: 1171px) {
-
-      .category-tabs::after,
-      .category-tabs::before {
-        display: block;
-      }
-    }
-
-
-
-
-    .category-tab {
-      @apply text-[#4D4D4D] text-base font-medium whitespace-nowrap cursor-pointer transition-all;
-    }
-
-    .category-tab.active {
-      @apply text-[#0069B2] font-semibold;
-    }
-
-    .category-tabs::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* ===== CATEGORY GRADIENT ===== */
-    .category-gradient {
-      @apply relative w-full bg-[#F5F9FF] overflow-hidden p-8 sm:p-12 lg:p-20 pb-32;
-      min-height: 680px;
-    }
-
-    .category-content {
-      @apply relative z-20 flex flex-col items-center;
-    }
-
-    .category-button-wrapper {
-      @apply flex justify-center md:justify-end w-full max-w-[1520px] absolute bottom-8 left-1/2 -translate-x-1/2 px-8 md:px-2;
-    }
-
-    .category-btn-outline {
-      @apply border border-[#0069B2] text-[#0069B2] px-6 py-3 rounded-full font-medium hover:bg-[#0069B2] hover:text-white transition cursor-pointer;
-    }
-
-    /* ===== REVIEWS SECTION ===== */
-    .reviews-section {
-      @apply py-16 px-4 sm:px-6 lg:px-12;
-    }
-
-    .reviews-header {
-      @apply text-left mb-10;
-    }
-
-    .reviews-title {
-      @apply text-[40px] font-bold text-gray-900;
-    }
-
-    .reviews-subtitle {
-      @apply mt-3 mb-16 text-[#4D4D4D] text-[16px] font-[400];
-    }
-
-    /* Review Swiper */
-    .myReviewsSwiper {
-      width: 1518px !important;
-      max-width: 100%;
-      height: auto !important;
-      margin: 0 auto;
-      overflow: hidden !important;
-    }
-
-    .myReviewsSwiper .swiper-wrapper {
-      gap: 24px !important;
-    }
-
-    .myReviewsSwiper .swiper-slide {
-      @apply flex justify-center;
-      width: 490px !important;
-      height: 305px !important;
-      margin-right: 0 !important;
-    }
-
-    /* Review Card Styling */
-    .review-card {
-      @apply bg-white shadow-lg flex flex-col relative;
-      width: 490px !important;
-      height: 305px !important;
-      padding: 32px !important;
-      border-radius: 16px !important;
-      gap: 0 !important;
-    }
-
-    .review-header {
-      @apply flex items-start mb-3;
-    }
-
-    .review-avatar {
-      @apply w-12 h-12 rounded-full object-cover;
-    }
-
-    .review-name {
-      @apply font-semibold text-lg text-gray-900;
-    }
-
-    .review-date {
-      @apply text-gray-500 text-sm;
-    }
-
-    .review-body {
-      @apply mt-0;
-    }
-
-    .reviews-time {
-      @apply text-[12px] text-[#717171] font-[400]
-    }
-
-    /* Review Rating (Stars) */
-    .review-rating {
-      @apply flex mb-2 mt-1 gap-1 text-[12px];
-    }
-
-    .review-rating i {
-      @apply text-[#28A6FF];
-    }
-
-    .review-rating i:last-child {
-      @apply text-gray-300;
-    }
-
-    /* SHADOW DIVIDER */
-    .divider {
-      @apply w-full h-[1px] bg-gray-100 my-3;
-    }
-
-    /* SWIPER BUTTONS */
-    .swiper-button-next,
-    .swiper-button-prev {
-      @apply absolute top-1/2 transform -translate-y-1/2 z-10;
-      background-color: rgba(0, 0, 0, 0.3);
-      color: white;
-      padding: 10px;
-      border-radius: 50%;
-    }
-
-    .swiper-button-next {
-      @apply right-4;
-    }
-
-    .swiper-button-prev {
-      @apply left-4;
-    }
-
-    /* Responsive styling for 3 cards per row */
-    @media (max-width: 768px) {
-      .swiper-slide {
-        @apply w-1/3;
-        /* 3 cards per row */
-      }
-
-      .navbar {
-        @apply px-5;
-      }
-
-      .footer-categories {
-        @apply !grid-cols-2;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .navbar {
-        @apply px-5;
-      }
-
-      .footer-categories {
-        @apply !grid-cols-2;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .swiper-slide {
-        @apply w-1/4;
-        /* 4 cards per row */
-      }
-    }
-
-
-    /* Navigation Arrows */
-    .navigation-arrows {
-      @apply flex justify-between mt-6;
-    }
-
-    .nav-button {
-      @apply text-gray-600 hover:text-gray-900;
-    }
-
-    /* Swiper Navigation Arrows Custom */
-    .swiper-button-prev,
-    .swiper-button-next {
-      @apply absolute top-1/2 -translate-y-1/2 rounded-full bg-white border border-[#E5F8FF] flex items-center justify-center shadow-sm hover:bg-[#f8fcff] hover:shadow-md hover:scale-105 transition-all duration-300 cursor-pointer;
-      width: 48px !important;
-      height: 48px !important;
-      z-index: 100 !important;
-    }
-
-    /* ===== FOOTER (moved from profil-lektora.css) ===== */
-    .footer {
-      padding: 50px 200px;
-    }
-
-    @media (max-width: 1400px) {
-      .footer {
-        padding: 50px 100px;
-      }
-    }
-
-    @media (max-width: 1200px) {
-      .footer {
-        padding: 50px 60px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .navbar {
-        @apply px-5;
-      }
-
-      .footer {
-        padding: 40px 40px;
-      }
-
-      .footer-categories {
-        @apply grid-cols-2;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .navbar {
-        @apply px-5;
-      }
-
-      .footer {
-        padding: 32px 24px;
-      }
-
-      .footer-categories {
-        @apply grid-cols-2;
-      }
-    }
-
-    .footer-container {
-      @apply container mx-auto;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .footer-logo {
-      @apply pb-6;
-    }
-
-    .footer-logo-img {
-      width: 146px;
-      height: 60px;
-    }
-
-    @media (max-width: 768px) {
-      .footer-logo-img {
-        width: 130px;
-        height: 54px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .footer-logo-img {
-        width: 120px;
-        height: 50px;
-      }
-    }
-
-    .footer-content {
-      @apply pb-6;
-    }
-
-    .footer-grid {
-      @apply flex flex-col md:flex-row md:items-start gap-8;
-    }
-
-    @media (max-width: 768px) {
-      .footer-grid {
-        @apply flex-col gap-6;
-      }
-    }
-
-    .footer-info {
-      @apply sm:w-1/4 min-w-0;
-    }
-
-    @media (max-width: 768px) {
-      .footer-info {
-        @apply w-full;
-      }
-    }
-
-    .footer-info-text {
-      @apply text-base font-light text-[#1C1C1C] max-w-xs;
-    }
-
-    @media (max-width: 768px) {
-      .footer-info-text {
-        @apply text-sm;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .footer-info-text {
-        @apply text-[14px];
-      }
-    }
-
-    .footer-categories {
-      @apply flex-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8;
-    }
-
-    @media (max-width: 768px) {
-      .footer-categories {
-        @apply grid-cols-2 gap-6;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .footer-categories {
-        @apply grid-cols-1 gap-5;
-      }
-    }
-
-    .footer-heading {
-      @apply text-gray-900 font-medium mb-3 text-lg;
-    }
-
-    @media (max-width: 768px) {
-      .footer-heading {
-        @apply text-base mb-2;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .footer-heading {
-        @apply text-[15px] mb-2;
-      }
-    }
-
-    .footer-links {
-      @apply space-y-2 text-sm text-[#4D4D4D] font-[500];
-    }
-
-    @media (max-width: 768px) {
-      .footer-links {
-        @apply text-sm;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .footer-links {
-        @apply text-[13px];
-      }
-    }
-
-    .footer-link {
-      @apply hover:underline hover:text-blue-600 transition-colors;
-    }
-
-    .footer-about {
-      @apply md:w-48;
-    }
-
-    @media (max-width: 768px) {
-      .footer-about {
-        @apply w-full;
-      }
-    }
-
-    .footer-divider {
-      @apply border-t border-gray-200 mt-4;
-    }
-
-    .footer-bottom {
-      @apply py-4 flex flex-col md:flex-row items-center justify-between gap-4;
-    }
-
-    @media (max-width: 768px) {
-      .footer-bottom {
-        @apply flex-col gap-3 py-3;
-      }
-    }
-
-    .footer-copyright {
-      @apply text-sm text-gray-600;
-    }
-
-    @media (max-width: 768px) {
-      .footer-copyright {
-        @apply text-sm text-center;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .footer-copyright {
-        @apply text-[12px] text-center;
-      }
-    }
-
-    .footer-social {
-      @apply flex items-center gap-4;
-    }
-
-    @media (max-width: 768px) {
-      .footer-social {
-        @apply gap-3;
-      }
-    }
-
-    .social-link {
-      @apply rounded-full border border-transparent hover:scale-110 transition-all;
-    }
-
-    /* ===== COURSE DETAIL ===== */
-    .course-detail {
-      @apply py-8;
-    }
-
-    .lesson-card {
-      @apply bg-white rounded-xl p-4 border border-gray-100 hover:border-blue-100 transition-colors duration-200;
-    }
-
-    .lesson-card.completed {
-      @apply bg-green-50/30 border-green-100;
-    }
-
-    .lesson-card.current {
-      @apply bg-blue-50/30 border-blue-100;
-    }
-
-    .lesson-number {
-      @apply w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-sm font-medium text-gray-600;
-    }
-
-    .lesson-number.completed {
-      @apply bg-green-100 text-green-600;
-    }
-
-    .lesson-number.current {
-      @apply bg-blue-100 text-blue-600;
-    }
-
-    .progress-bar {
-      @apply w-full bg-gray-100 rounded-full overflow-hidden;
-    }
-
-    .progress-bar-fill {
-      @apply bg-blue-600 h-full rounded-full transition-all duration-300;
-    }
-
-    /* ===== RESPONSIVE: MOBILE ===== */
-    @media (max-width: 767px) {
-
-
-
-
-      /* Hero */
-      .hero-title {
-        @apply text-5xl;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-gradient {
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.hero-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 2rem;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.hero-subtitle::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #C31681;
+}
+
+.hero-subtitle::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    bottom: 0;
+    width: 3px;
+    height: 18px;
+    background-color: #C31681;
+}
+
+.hero-title {
+    font-family: 'Magistral', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 0.95;
+    font-style: italic;
+}
+
+/* ============================================
+   PAGINATION DOTS
+   ============================================ */
+.pagination-dot {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #525252;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #fff;
+}
+
+.pagination-dot.active {
+    border-color: #C31681;
+    color: #C31681;
+}
+
+.pagination-dot:hover {
+    border-color: #C31681;
+    color: #C31681;
+}
+
+/* ============================================
+   SECTION LABELS & TITLES
+   ============================================ */
+.section-label {
+    position: relative;
+    margin-bottom: 2rem;
+    margin-left: 25px;
+}
+
+.section-label span {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.section-label span::after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #C31681;
+}
+
+.section-label span::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    width: 3px;
+    height: 18px;
+    background-color: #C31681;
+}
+
+
+
+.section-underline {
+    display: none;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+/* ============================================
+   ABOUT SECTION - ZAROVNÁNÍ
+   ============================================ */
+.about-image {
+    width: 320px;
+    height: 401px;
+    object-fit: cover;
+}
+
+.about-image:last-child {
+    margin-top: 3rem;
+}
+
+/* Zarovnání O nás sekce */
+#o-nas > div {
+    align-items: center;
+}
+
+/* ============================================
+   FEATURE ITEMS
+   ============================================ */
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* ============================================
+   SERVICE CARDS
+   ============================================ */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #171717;
+}
+
+.service-card-inner {
+    position: relative;
+    overflow: hidden;
+    height: 20rem;
+}
+
+.service-card-special {
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.service-number {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: 'Magistral', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    font-style: italic;
+    opacity: 1;
+    line-height: 1;
+    z-index: 10;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image { 
+    transform: scale(1.1);
+}
+
+.service-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+}
+
+.service-content {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+}
+
+.service-title {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.service-card:hover .service-number {
+    color: #C31681;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .service-title {
+    color: #C31681;
+    transition: color 0.3s ease;
+}
+
+/* ============================================
+   TIMELINE SECTION - NOVÝ DESIGN
+   ============================================ */
+.timeline-section {
+    background-color: #1b1b1b; /* Existing background color */
+    /* Use padding + optional min-height instead of fixed height to allow variable content */
+    padding: 3rem 1rem;
+    min-height: 180px;
+}
+
+.timeline-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    position: relative;
+    align-items: start; /* ensure items align to top of the grid cell */
+}
+
+
+
+
+
+.timeline-item {
+    /* On desktop we want the year on top and the supporting text below, centered
+       so that multiple items look consistent. We use flex column and align-items:center. */
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+
+.timeline-year {
+    font-family: 'Magistral', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+}
+
+/* Růžové podtržení roku */
+.timeline-year::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    bottom: 0px;
+    width: 100%;
+    height: 6px;
+    background-color: #C31681;
+}
+
+.timeline-text {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 18px;
+    color: #999;
+    line-height: 1.6;
+    margin-top: 0.5rem; /* keep the text close under the year */
+}
+
+@media (max-width: 1024px) {
+    .timeline-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .timeline-container::before {
+        display: none;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+    
+    .timeline-section {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .timeline-year {
+        font-size: 2.5rem;
+    }
+    
+    .timeline-section {
+        padding: 4rem 1.5rem;
+    }
+    
+    .timeline-container::before {
+        display: none;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+    /* center timeline items on small screens */
+    .timeline-item {
         text-align: center;
-        margin-top: 20px;
-      }
+        align-items: center;
+    }
+}
 
-      .why-card p {
-        white-space: normal;
-      }
+@media (max-width: 480px) {
+    .timeline-container {
+        grid-template-columns: 1fr;
+    }
+}
 
-      .hero-paragraph {
-        @apply text-center text-xl;
-      }
+/* For desktop (default) timeline items are left-aligned via the base rule above.
+   Small screens center items (handled in the max-width:768px block). */
 
-      .hero-buttons {
-        @apply flex-col items-center pl-4 gap-3;
-      }
+/* ============================================
+   CTA BUTTON
+   ============================================ */
+.cta-button {
+    @apply text-[25px];
+    display: inline-block;
+    background-color: #C31681;
+    padding: 0.75rem 2rem;
+    width: 300px;
+    height: 63px;
+    transition: opacity 0.3s ease;
+}
 
+.cta-button:hover {
+    opacity: 0.9;
+}
 
+/* ============================================
+   PORTFOLIO SECTION
+   ============================================ */
+.portfolio-slider {
+    position: relative;
+    overflow: hidden;
+}
 
-      .hero-gradient {
-        @apply h-[550px] rounded-[32px];
-      }
+.portfolio-track {
+    display: flex;
+    gap: 0;
+}
 
-      .stat-box {
-        @apply mx-auto w-[200px] h-[100px] text-center items-center;
-      }
+.portfolio-item {
+    flex: 0 0 401px;
+    height: 401px;
+    position: relative;
+    cursor: pointer;
+}
 
-      .stat-number {
-        @apply text-[22px];
-      }
+.portfolio-image {
+    width: 401px;
+    height: 401px;
+    object-fit: cover;
+}
 
-      .stat-label {
-        @apply text-[11px];
-      }
+.portfolio-image-dark {
+    width: 401px;
+    height: 401px;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
 
+.portfolio-item:hover .portfolio-image {
+    filter: brightness(0.5);
+    transition: filter 0.3s ease;
+}
 
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+   
+    transition: background-color 0.5s ease;
+}
 
-      .gradient-background {
-        @apply absolute bottom-0 left-0 w-full h-[577px] bg-[#F5F9FF];
-      }
+.portfolio-item:hover .portfolio-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 
-      /* Category */
-      .category-prev,
-      .category-next {
+.portfolio-item-featured .portfolio-overlay {
+    display: none;
+}
+
+.portfolio-featured-content {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.portfolio-featured-title {
+    font-family: 'Magistral', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.portfolio-featured-text {
+    font-size: 0.875rem;
+    color: #d4d4d4;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.portfolio-zoom-btn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid #C31681;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #C31681;
+    transition: all 0.3s ease;
+}
+
+.portfolio-zoom-btn:hover {
+    background-color: #C31681;
+    color: white;
+}
+
+/* ============================================
+   PORTFOLIO - TOUCH / ACTIVE STATES
+   These rules ensure the hover content can be toggled on touch devices
+   and provide a consistent active state styling.
+   ============================================ */
+.portfolio-hover-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    pointer-events: none; /* prevent intercepting clicks by default */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(6px);
+    z-index: 10; /* Ensure hover content appears above overlay */
+}
+
+.portfolio-item:hover .portfolio-hover-content,
+.portfolio-item.is-active .portfolio-hover-content {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.portfolio-item.is-active .portfolio-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-item .portfolio-hover-content img {
+    transition: transform 0.25s ease;
+}
+
+.portfolio-item.is-active .portfolio-hover-content img,
+.portfolio-item:hover .portfolio-hover-content img {
+    transform: scale(1.05);
+}
+
+/* Zoom icon inside hover content */
+.portfolio-hover-content .zoom-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 35px;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* ============================================
+   SERVICES - HOVER EFFECTS
+   ============================================ */
+.service-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-card:hover .service-image {
+    filter: brightness(0.5);
+    transition: filter 0.3s ease;
+}
+
+.service-hover-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(6px);
+    z-index: 10;
+    text-align: center;
+}
+
+.service-card:hover .service-hover-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover .service-content {
+    opacity: 0;
+}
+
+.services-hover-icon {
+    width: 143px;
+    height: 71px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+.contact-form {
+    background-color: #171717;
+    padding: 2rem;
+}
+
+.form-input {
+    background-color: #000;
+    border: 1px solid #404040;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #C31681;
+    outline: none;
+}
+
+.form-submit {
+    width: 100%;
+    background-color: #C31681;
+    padding: 0.75rem;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.form-submit:hover {
+    opacity: 0.9;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+@media (max-width: 1024px) {
+    .portfolio-item {
+        flex-basis: 320px;
+        height: 320px;
+    }
+    .portfolio-image {
+        width: 320px;
+        height: 320px;
+    }
+    .portfolio-hover-content h3 {
+        font-size: 24px;
+    }
+    .portfolio-hover-content p {
+        font-size: 16px;
+    }
+    nav .hidden.lg\:flex {
         display: none !important;
-      }
-
-      .category-gradient {
-        @apply p-4 sm:p-6;
-        min-height: 600px;
-      }
-
-      .category-header {
-        @apply text-center px-4;
-      }
-
-      .category-subtitle {
-        margin-bottom: 1.5rem !important;
-        white-space: normal !important;
-      }
-
-      .news-subtitle {
-        margin-bottom: 1.5rem !important;
-        white-space: normal !important;
-      }
-
-      .category-tabs-wrapper {
-        @apply w-full flex justify-center mt-4 mb-6;
-      }
-
-      .category-tabs {
-        @apply grid grid-cols-2 gap-x-8 gap-y-4 w-full max-w-[380px] justify-items-center;
-      }
-
-      .category-tab {
-        @apply relative text-[17px] font-semibold text-[#2b2b2b] text-center pb-2;
-      }
-
-      .category-tab::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%) scaleX(0);
-        transform-origin: center;
-        width: 60%;
-        height: 2px;
-        background-color: #e5e7eb;
-        border-radius: 2px;
-        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-      }
-
-      .category-tab.active::after {
-        background-color: #0069b2;
-        transform: translateX(-50%) scaleX(1);
-      }
-
-      .category-tabs::before,
-      .category-tabs::after {
-        display: none !important;
-      }
-
-      .myCategorySwiper {
-        @apply w-full px-4;
-        touch-action: pan-x !important;
-        padding-bottom: 40px;
-      }
-
-
-      .category-card {
-        width: 361px !important;
-        height: 456px !important;
-        margin: 0 auto;
-      }
-
-      .category-button-wrapper {
-        @apply justify-center mt-8 mb-6;
-      }
-
-
-
-      /* Cards */
-      .category-card-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-
-      .tag {
-        @apply text-xs px-2 py-1;
-      }
-
-      /* Course detail */
-      .course-detail {
-        @apply py-4;
-      }
-
-      .lesson-card {
-        @apply p-3;
-      }
-
-      .lesson-number {
-        @apply w-7 h-7 text-xs;
-      }
     }
-
-    .dot {
-      @apply w-[10px] h-[10px] rounded-full mr-2;
-      transition: all 0.3s ease-in-out;
-      /* Přechod pro změnu velikosti a barvy */
-    }
-
-    /* Aktivní tečka */
-    .dot.active {
-      @apply bg-[#28A6FF];
-      /* Modrá pro aktivní tečku */
-      transform: scale(1.2);
-      /* Zvýšíme velikost aktivní tečky */
-    }
-
-    /* Neaktivní tečky */
-    .dot:not(.active) {
-      @apply bg-[#D1D5DB];
-      /* Šedá pro neaktivní tečky */
-      transform: scale(1);
-      /* Základní velikost pro neaktivní tečky */
-    }
-
-    /* ===== Pricing Section ===== */
-    .pricing-section {
-      @apply py-16 px-4;
-    }
-
     .section-title {
-      @apply text-2xl font-bold text-gray-900 mb-4;
+        font-size: 3rem;
     }
-
-    .section-subtitle {
-      @apply text-gray-600 mb-10;
+    .hero-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
     }
+}
 
-    /* ===== Pricing Cards Container ===== */
-    .pricing-cards {
-      @apply flex justify-between gap-4 relative z-10;
-
-
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
     }
-
-    /* ===== Pricing Card ===== */
-    .pricing-card {
-      @apply flex flex-col items-start p-6 bg-white rounded-[16px] w-[362px] h-[409px] text-left relative z-10 shadow-lg;
-      transform: translateY(-50px);
-      /* žádný počáteční posun */
-      transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
-      border: 2px solid transparent;
-      /* neviditelný border pro konzistenci */
-
+    
+    .service-card-inner {
+        height: 16rem;
     }
-
-    /* ===== Hover efekt – jemný modrý outline ===== */
-    .pricing-card:hover {
-      border-color: #28A6FF;
-      box-shadow: 0 8px 24px rgba(40, 166, 255, 0.2);
-      /* jemný modrý stín */
-      transform: translateY(-60px);
-      /* decentní pohyb nahoru */
-      transition: all 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    
+    .portfolio-slider {
+        overflow-x: visible;
     }
-
-
-    .pricing-card h3 {
-      @apply text-lg font-semibold text-[#0069B2];
+    .portfolio-track {
+        flex-wrap: wrap;
     }
-
-    .pricing-card .price {
-      @apply text-xl font-bold text-[#28A6FF];
+    .portfolio-item {
+        flex-basis: auto;
+        width: 80%;
+        height: 200px;
+        margin: 0 auto 1rem auto;
     }
-
-    .pricing-card ul {
-      @apply list-none space-y-2 my-4 text-sm text-gray-600;
+    .portfolio-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-
-
-
-    /* Specific Pricing Plan Styles */
-    .basic-plan {
-      @apply border;
+    .portfolio-hover-content h3 {
+        font-size: 20px;
     }
-
-    .standard-plan {
-      @apply border;
+    .portfolio-hover-content p {
+        font-size: 14px;
     }
-
-    .premium-plan {
-      @apply border-2 border-[#28A6FF] bg-[#E5F8FF];
+    .service-hover-content h3 {
+        font-size: 24px;
     }
-
-    .business-plan {
-      @apply border;
+    .service-hover-content p {
+        font-size: 16px;
     }
-
-    /* ===== Gradient Background Below Pricing Cards ===== */
-    .gradient-background {
-      @apply absolute bottom-0 left-0 w-full h-[577px] bg-[#F5F9FF];
+    .services-hover-icon {
+        width: 100px;
+        height: 50px;
     }
-
-    /* ===== Plan Tabs Wrapper ===== */
-    /* ===== Wrapper ===== */
-    .plan-tabs-wrapper {
-      @apply w-full flex justify-center relative z-30 overflow-hidden;
+    
+    .timeline-section {
+        height: auto;
+        padding: 2rem 1rem;
     }
-
-    .plan-tabs {
-      @apply lg:hidden;
-      display: inline-flex;
-      gap: 1.5rem;
-      position: relative;
-      padding-bottom: 0.625rem;
-      width: fit-content;
-      margin-bottom: 20px;
+    .timeline-year {
+        font-size: 2rem;
     }
-
-    /* Šedá čára pod taby – přesahuje do stran */
-    .plan-tabs::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      /* zarovná na střed */
-      transform: translateX(-50%);
-      /* posune zpět o polovinu šířky */
-      width: calc(100% + 32px);
-      /* přesah 16px vlevo i vpravo */
-      height: 2px;
-      background-color: #E8E8E8;
-      z-index: 1;
+    .timeline-text {
+        font-size: 16px;
     }
-
-    .plan-tabs::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      height: 2px;
-      background-color: #0069B2;
-      left: var(--bar-left, 0);
-      width: var(--bar-width, 0);
-      transition: all 0.3s ease-in-out;
-      z-index: 2;
+    
+    .about-image {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+    
+    #uvod {
+        height: 80vh;
+    }
+    
+    nav {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    .hero-subtitle {
+        font-size: 0.6rem;
+    }
+    .section-label span {
+        font-size: 0.6rem;
+    }
+    .pagination-dot {
+        width: 2rem;
+        height: 2rem;
+        margin-top: -16rem;
 
     }
+}
 
-    .plan-tab {
-      @apply text-[#4D4D4D] text-base font-medium whitespace-nowrap cursor-pointer transition-all;
-      margin-bottom: 5px;
+/* ============================================
+   RESPONSIVE - DESKTOP
+   ============================================ */
+@media (min-width: 1024px) {
+    .section-title {
+        font-size: 46px;
     }
-
-    .plan-tab.active {
-      @apply text-[#0069B2] font-semibold;
-    }
-
-    /* ===== CTA tlačítko ===== */
-    .cta-btn {
-      @apply text-[#28A6FF] border border-[#D4EDFF] bg-[#D4EDFF] font-medium rounded-full px-6 py-3 text-sm transition-all duration-500 ease-out self-center mt-auto;
-    }
-
-    .cta-btn:hover {
-      background-color: transparent;
-      /* žádný fill */
-      color: #0069B2;
-      /* změna barvy textu */
-      outline: 1.5px solid #0069B2;
-      /* outline efekt */
-
-      transform: translateY(-2px);
-    }
-
-    .price-number,
-    .price-unit {
-      transition: opacity 0.3s ease;
-    }
-
-    .fade-out {
-      opacity: 0;
-    }
-
-    .fade-in {
-      opacity: 1;
-    }
-
-
-
-
-
-    /* ===== Pricing Section END ===== */
-
-    .why-cards {
-      @apply flex flex-col md:flex-row justify-center gap-8 lg:flex-nowrap;
-    }
-
-    .why-card {
-      @apply flex flex-col items-start gap-4 p-8 min-h-[215px] bg-white rounded-[16px] shadow-md hover:shadow-lg transition-all duration-300 ease-out text-left;
-      @apply w-full sm:w-[320px] md:w-[45%] lg:w-[490px];
-    }
-
-    .why-card:hover {
-      @apply translate-y-[-6px];
-    }
-
-    .why-icon {
-      @apply flex items-center justify-center w-[56px] h-[56px] p-2 gap-[10px] rounded-[16px];
-    }
-
-    .why-icon img {
-      @apply w-[28px] h-[28px] object-contain;
-    }
-
-
-
-    .lector-section {
-      @apply relative bg-white;
-    }
-
-    .lector-btn {
-      @apply text-[#28A6FF] border border-[#D4EDFF] bg-[#D4EDFF] font-medium rounded-full px-6 py-3 text-sm transition-all duration-500 ease-out self-center mt-auto cursor-pointer;
-    }
-
-    /* Hover efekt */
-    .lector-btn:hover {
-      @apply bg-[#28A6FF] text-white;
-    }
-
-    .lector-image img {
-      @apply rounded-[24px] shadow-lg;
-    }
-
-    html,
-    body {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-
-    }
+}
