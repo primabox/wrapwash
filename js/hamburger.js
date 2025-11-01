@@ -2,6 +2,7 @@
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        const nav = document.querySelector('nav');
         
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
