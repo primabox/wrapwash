@@ -6,13 +6,8 @@ export default defineConfig({
   plugins: [tailwindcss()],
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-        detailKurzu: resolve(__dirname, "detail-kurzu.html"),
-        detailKurzuPrihlaseny: resolve(__dirname, "detail-kurzu-prihlaseny.html"),
-        detailKurzuPrihlasenyHotovo: resolve(__dirname, "detail-kurzu-prihlaseny-hotovo.html"),
-        detailLekce: resolve(__dirname, "detail-lekce.html"),
-      },
+      // Single entry: only build the main index.html
+      input: resolve(__dirname, "index.html"),
     },
   },
 });
