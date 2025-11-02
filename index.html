@@ -6,14 +6,13 @@
     <title>Wash & Wrap</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body class="bg-[#121212] text-white z-2">
     
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50">
-        <div class="max-w-[1250px] mx-auto pt-8 flex items-center justify-between ">
+        <div class="max-w-7xl mx-auto pt-8 px-8 flex items-center justify-between">
             <div class="flex items-center">
                 <img src="img/logo.png" alt="Wash_Wrap" class="w-[120px] h-auto object-contain mr-10">
             </div>
@@ -65,26 +64,44 @@
         <div class="absolute inset-0 overflow-hidden">
             <img src="img/wrap-bg.jpg" 
                  alt="Red Lexus" 
-                 class="w-full h-full object-cover">
+                 class="hero-background-image fade-in w-full h-full object-cover"
+                 data-slide="0">
+            <img src="img/foto2.png" 
+                 alt="Car Wrapping" 
+                 class="hero-background-image absolute inset-0 w-full h-full object-cover opacity-0"
+                 data-slide="1">
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
         
-        <div class="relative z-1 max-w-7xl mx-auto px-8 w-full">
-            <div class="max-w-2xl">
-                <div class="section-label">
-                    <span class="font-futura" style="font-size: 17px;">WASH&WRAP</span>
-                    <div class="section-underline"></div>
+        <div class="relative z-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-slides-wrapper relative">
+                <div class="max-w-2xl hero-slide-content fade-in" data-slide="0">
+                    <div class="section-label">
+                        <span class="font-futura" style="font-size: 17px;">WASH&WRAP</span>
+                        <div class="section-underline"></div>
+                    </div>
+                    <h1 class="font-magistral text-4xl sm:text-5xl lg:text-[65px] leading-none mb-[100px]">
+                        RUČNÍ MYTÍ<br>
+                        <span class="text-magenta font-magistral">OCHRANA</span> LAKU<br>
+                        POLEPY AUT
+                    </h1>
                 </div>
-                <h1 class="font-magistral text-5xl lg:text-[65px] leading-none mb-[100px]">
-                    RUČNÍ MYTÍ<br>
-                    <span class="text-magenta font-magistral">OCHRANA</span> LAKU<br>
-                    POLEPY AUT
-                </h1>
+                <div class="max-w-2xl hero-slide-content absolute top-0 left-0 opacity-0 pointer-events-none" data-slide="1">
+                    <div class="section-label">
+                        <span class="font-futura" style="font-size: 17px;">WASH&WRAP</span>
+                        <div class="section-underline"></div>
+                    </div>
+                    <h1 class="font-magistral text-4xl sm:text-5xl lg:text-[65px] leading-none mb-[100px]">
+                        PROFESIONÁLNÍ<br>
+                        <span class="text-magenta font-magistral">POLEPY</span> A<br>
+                        DETAILING AUT
+                    </h1>
+                </div>
             </div>
             
-            <div class="absolute bottom-0 right-8 flex gap-3">
-                <button class="pagination-dot active">1</button>
-                <button class="pagination-dot">2</button>
+            <div class="absolute bottom-0 right-4 sm:right-6 lg:right-8 flex gap-3">
+                <button class="pagination-dot active" data-slide="0">1</button>
+                <button class="pagination-dot" data-slide="1">2</button>
             </div>
         </div>
     </section>
@@ -118,15 +135,15 @@
                     
                     <div class="space-y-1 mt-10 pt-6">
                         <div class="feature-item gap-6">
-                            <img src="img/arrows.png" alt="Arrow" class="w-4 h-4 mt-[6px]">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[6px]">
                             <p class="flex-1">Přistavení a vyzvednutí auta <span class="font-bold text-white">7 dní v týdnu, 24/7</span></p>
                         </div>
                         <div class="feature-item gap-6">
-                            <img src="img/arrows.png" alt="Arrow" class="w-4 h-4 mt-[6px]">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[6px]">
                             <p class="flex-1">Služby na počkání a posezením v lounge u dobré kávy</p>
                         </div>
                         <div class="feature-item gap-6">
-                            <img src="img/arrows.png" alt="Arrow" class="w-4 h-4 mt-[6px]">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[6px]">
                             <p class="flex-1">Moderní centrum a špičkové zázemí na ploše <span class="font-bold text-white">přes 200 m²</span></p>
                         </div>
                     </div>
@@ -138,27 +155,27 @@
     <!-- Timeline Section -->
     <section class="timeline-section">
         <div class="timeline-container">
-            <div class="timeline-item "  data-aos-delay="1000" data-aos="fade-in">
+            <div class="timeline-item">
                 <div class="timeline-year">2015</div>
                 <span></span>
                 <p class="timeline-text">Certifikace naší společnosti nonotechnologia Ceramic <br> Pro.</p>
             </div>
-            <div class="timeline-item"  data-aos-delay="2000" data-aos="fade-in">
+            <div class="timeline-item">
                 <div class="timeline-year">2017</div>
                 <span></span>
                 <p class="timeline-text">Certifikace renovace laku  <br>systémem Rupes v Itáli</p>
             </div>
-            <div class="timeline-item"  data-aos-delay="3000" data-aos="fade-in">
+            <div class="timeline-item">
                 <div class="timeline-year">2021</div>
                 <span></span>
                 <p class="timeline-text">Zavedení ochranných fólií<br> PPF KAVACA do sortimen- <br>tu.</p>
             </div>
-            <div class="timeline-item" data-aos-delay="4000" data-aos="fade-down">
+            <div class="timeline-item">
                 <div class="timeline-year">2025</div>
                 <span ></span>
                 <p class="timeline-text">Proškolení nového sys- <br>tému Ceramic Pro ION u <br>polského partnera.</p>
             </div>
-            <div class="timeline-item" data-aos-delay="5000" data-aos="fade-down">
+            <div class="timeline-item">
                 <div class="timeline-year">2025</div>
                 <div class="spanLong"></div>
                 <p class="timeline-text">Nová pobočka Wash&Wrap. Oficiální partnerem značky <br>Ceramic Pro na Geddes slicu.</p>
@@ -305,7 +322,7 @@
     </section>
 
     <!-- Portfolio -->
-    <section id="portfolio" class="py-20 px-0 bg-[#121212] mb-20"> <!-- Removed padding to make cards go to edges -->
+    <section id="portfolio" class="py-20 px-0 bg-[#121212]"> <!-- Removed padding to make cards go to edges -->
         <div class="max-w-full mx-auto"> <!-- Adjusted max-width to full -->
             <div class="text-center mb-16">
                 <div class="section-label inline-block">
@@ -389,23 +406,23 @@
     <div class="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-16">
 
       <!-- 1. Sloupec - Logo a features -->
-      <div class="w-full md:w-auto flex-1" style="max-width: 320px;">
+      <div class="w-full md:w-auto flex-1" style="max-width: 320px;" id="kontakt">
         <img src="img/footerLogo.png" alt="Wash_Wrap" class="h-[50px] w-auto mb-8">
         <div class="space-y-3.5 font-futura">
           <div class="flex items-start gap-2">
-            <img src="img/arrows.png" alt="Arrow" class="w-4 h-4 mt-[3px] flex-shrink-0">
+            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
             <p class="text-[18px] leading-snug text-white"><strong>Kompletní péče</strong> o vůz na jednom místě</p>
           </div>
           <div class="flex items-start gap-2">
-            <img src="img/arrows.png" alt="Arrow" class="w-4 h-4 mt-[3px] flex-shrink-0">
+            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
             <p class="text-[18px] leading-snug text-white">Poradenství a prodej autokosmetiky</p>
           </div>
           <div class="flex items-start gap-2">
-            <img src="img/arrows.png" alt="Arrow" class="w-4 h-4 mt-[3px] flex-shrink-0">
+            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
             <p class="text-[18px] leading-snug text-white">Oficiální zastoupení <strong>Ceramic Pro v ČR</strong></p>
           </div>
           <div class="flex items-start gap-2">
-            <img src="img/arrows.png" alt="Arrow" class="w-4 h-4 mt-[3px] flex-shrink-0">
+            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
             <p class="text-[18px] leading-snug text-white">Odborný tým s více než <strong>10 lety praxe</strong></p>
           </div>
         </div>
@@ -469,24 +486,16 @@
 
 <!-- Lightbox -->
 <div id="lightbox" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); cursor:pointer;">
-  <span style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; cursor:pointer;">&times;</span>
+  <span id="lightbox-close" style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; cursor:pointer; z-index:10000;">&times;</span>
   <img id="lightbox-img" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:95%; max-height:95%;">
 </div>
 
+<script type="module" src="js/hero-slider.js"></script>
 <script type="module" src="js/portfolio.js"></script>
 <script type="module" src="js/hamburger.js"></script>
 <script type="module" src="js/services.js"></script>
 <script type="module" src="js/lightbox.js"></script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-  });
-</script>
-<script type="module" src="js/aosTiming.js"></script>
+<script type="module" src="js/timeline.js"></script>
 
 </body>
 </html>
