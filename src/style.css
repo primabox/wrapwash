@@ -924,6 +924,7 @@ nav a {
     /* Přidání paddingu pro hero sekci aby nenávazovala na nav */
     #uvod {
         padding-top: 100px;
+        margin-bottom: 0 !important;
     }
     
     .section-title {
