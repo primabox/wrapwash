@@ -633,21 +633,22 @@ nav a {
 .portfolio-track {
     display: flex;
     gap: 0;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .portfolio-item {
-    flex: 0 0 381px;
-    width: 381px;
-    height: 381px;
+    flex: 1 1 0;
+    width: 0;
+    aspect-ratio: 1 / 1;
     position: relative;
     cursor: pointer;
 }
 
 .portfolio-image {
-    width: 381px;
-    height: 381px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -886,21 +887,9 @@ nav a {
 }
 
 /* ============================================
-   RESPONSIVE - TABLET
+   RESPONSIVE - TABLET & DESKTOP
    ============================================ */
-@media (max-width: 1024px) {
-    .portfolio-track {
-        flex-wrap: wrap;
-    }
-    .portfolio-item {
-        flex: 0 0 320px;
-        width: 320px;
-        height: 320px;
-    }
-    .portfolio-image {
-        width: 320px;
-        height: 320px;
-    }
+@media (max-width: 1024px) and (min-width: 769px) {
     .portfolio-hover-content h3 {
         font-size: 24px;
     }
