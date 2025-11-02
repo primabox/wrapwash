@@ -947,20 +947,27 @@ nav a {
     
     .portfolio-slider {
         overflow-x: visible;
+        padding: 0 2rem;
     }
     .portfolio-track {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
         justify-content: center;
     }
     .portfolio-item {
-        flex: 0 0 280px;
-        width: 280px;
-        height: 280px;
-        margin: 0 auto 1rem auto;
+        flex-basis: auto;
+        width: 800px;
+        height: 200px;
+        max-width: 100%;
+        margin: 0 auto 1.5rem auto;
+    }
+    .portfolio-item:last-child {
+        margin-bottom: 0;
     }
     .portfolio-image {
-        width: 280px;
-        height: 280px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
     .portfolio-hover-content h3 {
