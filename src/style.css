@@ -627,29 +627,33 @@ nav a {
 .portfolio-slider {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .portfolio-track {
     display: flex;
     gap: 0;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .portfolio-item {
     flex: 0 0 381px;
+    width: 381px;
     height: 381px;
     position: relative;
     cursor: pointer;
 }
 
 .portfolio-image {
-    width: 401px;
-    height: 401px;
+    width: 381px;
+    height: 381px;
     object-fit: cover;
 }
 
 .portfolio-image-dark {
-    width: 401px;
-    height: 401px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     filter: brightness(0.5);
 }
@@ -885,8 +889,12 @@ nav a {
    RESPONSIVE - TABLET
    ============================================ */
 @media (max-width: 1024px) {
+    .portfolio-track {
+        flex-wrap: wrap;
+    }
     .portfolio-item {
-        flex-basis: 320px;
+        flex: 0 0 320px;
+        width: 320px;
         height: 320px;
     }
     .portfolio-image {
@@ -942,16 +950,17 @@ nav a {
     }
     .portfolio-track {
         flex-wrap: wrap;
+        justify-content: center;
     }
     .portfolio-item {
-        flex-basis: auto;
-        width: 80%;
-        height: 200px;
+        flex: 0 0 280px;
+        width: 280px;
+        height: 280px;
         margin: 0 auto 1rem auto;
     }
     .portfolio-image {
-        width: 100%;
-        height: 100%;
+        width: 280px;
+        height: 280px;
         object-fit: cover;
     }
     .portfolio-hover-content h3 {
