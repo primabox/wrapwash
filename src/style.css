@@ -635,8 +635,8 @@ nav a {
 }
 
 .portfolio-item {
-    flex: 0 0 401px;
-    height: 401px;
+    flex: 0 0 381px;
+    height: 381px;
     position: relative;
     cursor: pointer;
 }
