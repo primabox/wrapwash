@@ -386,7 +386,7 @@ nav a {
 .service-card-inner {
     position: relative;
     overflow: hidden;
-    height: 20rem;
+    height: 22rem;
 }
 
 .service-card-special {
@@ -838,12 +838,19 @@ nav a {
 }
 
 .services-hover-icon {
-    width: 200px;
-    height: 100px;
+    width: 220px;
+    height: 110px;
     object-fit: contain;
     opacity: 0;
     transform: scale(0.8);
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Větší ikony pro PPF a Barevné fólie */
+.services-hover-icon[src="img/4.svg"],
+.services-hover-icon[src="img/5.svg"] {
+    width: 280px;
+    height: 140px;
 }
 
 .service-card:hover .services-hover-icon {
@@ -931,7 +938,7 @@ nav a {
     }
     
     .service-card-inner {
-        height: 16rem;
+        height: 18rem;
     }
     
     .portfolio-slider {
@@ -972,8 +979,15 @@ nav a {
         font-size: 16px;
     }
     .services-hover-icon {
-        width: 140px;
-        height: 70px;
+        width: 155px;
+        height: 78px;
+    }
+    
+    /* Větší ikony pro PPF a Barevné fólie na mobilu */
+    .services-hover-icon[src="img/4.svg"],
+    .services-hover-icon[src="img/5.svg"] {
+        width: 200px;
+        height: 100px;
     }
     
     .timeline-section {
