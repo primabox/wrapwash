@@ -564,8 +564,23 @@ nav a {
 
 @media (max-width: 768px) {
     .timeline-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        position: relative;
+        max-width: 400px;
+        padding-left: 3rem;
+    }
+    
+    /* Vertikální linka vlevo */
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        background-color: rgba(136, 136, 136, 0.3);
+        display: block;
     }
     
     .timeline-year {
@@ -576,22 +591,34 @@ nav a {
         padding: 4rem 1.5rem;
     }
     
-    .timeline-container::before {
-        display: none;
+    /* Horizontální čárka z vertikální linky k roku */
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        top: 2.5rem;
+        left: -3rem;
+        width: 3rem;
+        height: 2px;
+        background-color: rgba(136, 136, 136, 0.3);
+        display: block;
     }
     
-    .timeline-item::before {
-        display: none;
-    }
     /* center timeline items on small screens */
     .timeline-item {
-        text-align: center;
-        align-items: center;
+        text-align: left;
+        align-items: flex-start;
+        position: relative;
     }
     
     .timeline-text {
-        text-align: center;
+        text-align: left;
         padding-left: 0;
+    }
+    
+    /* Skrýt desktop linky */
+    .timeline-item > span,
+    .spanLong {
+        display: none;
     }
 }
 
