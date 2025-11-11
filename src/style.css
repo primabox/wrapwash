@@ -36,14 +36,26 @@ body {
     font-family: 'Futura PT', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Magistral', sans-serif;
     font-weight: 800;
     font-style: italic;
     letter-spacing: 0.02em;
 }
 
-p, span, a, li, input, textarea, select, button {
+p,
+span,
+a,
+li,
+input,
+textarea,
+select,
+button {
     font-family: 'Futura PT', sans-serif;
 }
 
@@ -69,6 +81,7 @@ p, span, a, li, input, textarea, select, button {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -188,7 +201,7 @@ nav a {
     .hamburger {
         display: flex;
     }
-    
+
     .mobile-menu {
         display: block;
     }
@@ -360,7 +373,7 @@ nav a {
 }
 
 /* Zarovnání O nás sekce */
-#o-nas > div {
+#o-nas>div {
     align-items: center;
 }
 
@@ -453,7 +466,8 @@ nav a {
    TIMELINE SECTION - NOVÝ DESIGN
    ============================================ */
 .timeline-section {
-    background-color: #1b1b1b; /* Existing background color */
+    background-color: #1b1b1b;
+    /* Existing background color */
     /* Use padding + optional min-height instead of fixed height to allow variable content */
     padding: 3rem 1rem;
     min-height: 180px;
@@ -467,7 +481,8 @@ nav a {
     grid-template-columns: repeat(5, 1fr);
     gap: 0;
     position: relative;
-    align-items: start; /* ensure items align to top of the grid cell */
+    align-items: start;
+    /* ensure items align to top of the grid cell */
 }
 
 
@@ -522,7 +537,7 @@ nav a {
 }
 
 /* Spodní čára v timeline items */
-.timeline-item > span {
+.timeline-item>span {
     display: block;
     width: 60%;
     border-bottom: 1px solid rgba(136, 136, 136, 0.3);
@@ -539,24 +554,26 @@ nav a {
 }
 
 @media (max-width: 1024px) {
-    .timeline-item > span {
+    .timeline-item>span {
         display: none;
     }
+
     .spanLong {
         display: none;
     }
+
     .timeline-container {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .timeline-container::before {
         display: none;
     }
-    
+
     .timeline-item::before {
         display: none;
     }
-    
+
     .timeline-section {
         height: auto;
     }
@@ -570,7 +587,7 @@ nav a {
         max-width: 400px;
         padding-left: 3rem;
     }
-    
+
     /* Vertikální linka vlevo */
     .timeline-container::before {
         content: '';
@@ -582,15 +599,15 @@ nav a {
         background-color: rgba(136, 136, 136, 0.3);
         display: block;
     }
-    
+
     .timeline-year {
         font-size: 2.5rem;
     }
-    
+
     .timeline-section {
         padding: 4rem 1.5rem;
     }
-    
+
     /* Horizontální čárka z vertikální linky k roku */
     .timeline-item::after {
         content: '';
@@ -602,21 +619,21 @@ nav a {
         background-color: rgba(136, 136, 136, 0.3);
         display: block;
     }
-    
+
     /* center timeline items on small screens */
     .timeline-item {
         text-align: left;
         align-items: flex-start;
         position: relative;
     }
-    
+
     .timeline-text {
         text-align: left;
         padding-left: 0;
     }
-    
+
     /* Skrýt desktop linky */
-    .timeline-item > span,
+    .timeline-item>span,
     .spanLong {
         display: none;
     }
@@ -694,7 +711,7 @@ nav a {
 .portfolio-overlay {
     position: absolute;
     inset: 0;
-   
+
     transition: background-color 0.5s ease;
 }
 
@@ -765,11 +782,13 @@ nav a {
     justify-content: flex-end;
     padding-bottom: 80px;
     text-align: center;
-    pointer-events: none; /* prevent intercepting clicks by default */
+    pointer-events: none;
+    /* prevent intercepting clicks by default */
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(6px);
-    z-index: 10; /* Ensure hover content appears above overlay */
+    z-index: 10;
+    /* Ensure hover content appears above overlay */
 }
 
 .portfolio-item:hover .portfolio-hover-content,
@@ -801,6 +820,17 @@ nav a {
     height: 30px;
     object-fit: contain;
 }
+
+/* ============================================
+   LIGHTBOX - vertical inset and sizing
+   Ensures the lightbox image has ~15px spacing top/bottom and is slightly smaller overall.
+   ============================================ */
+#lightbox {
+    /* keep existing fixed positioning, just add vertical padding */
+    box-sizing: border-box;
+    padding: 15px 0;
+}
+
 
 .portfolio-hover-content h3 {
     padding: 0 2rem;
@@ -937,15 +967,19 @@ nav a {
     .portfolio-hover-content h3 {
         font-size: 24px;
     }
+
     .portfolio-hover-content p {
         font-size: 16px;
     }
+
     nav .hidden.lg\:flex {
         display: none !important;
     }
+
     .section-title {
         font-size: 3rem;
     }
+
     .hero-title {
         font-size: clamp(2.5rem, 5vw, 4rem);
     }
@@ -955,40 +989,43 @@ nav a {
    RESPONSIVE - MOBILE
    ============================================ */
 @media (max-width: 768px) {
+
     /* Menší logo na mobilu */
     nav img[alt="Wash_Wrap"] {
         width: 80px !important;
     }
-    
+
     /* Menší padding top navigace na mobilu */
     nav .max-w-\[1250px\] {
         padding-top: 1rem !important;
     }
-    
+
     /* Přidání paddingu pro hero sekci aby nenávazovala na nav */
     #uvod {
         padding-top: 100px;
         margin-bottom: 0 !important;
     }
-    
+
     .section-title {
         font-size: 2.5rem;
     }
-    
+
     .service-card-inner {
         height: 18rem;
     }
-    
+
     .portfolio-slider {
         overflow-x: visible;
         padding: 0 2rem;
     }
+
     .portfolio-track {
         flex-direction: column;
         align-items: center;
         gap: 0;
         justify-content: center;
     }
+
     .portfolio-item {
         flex-basis: auto;
         width: 800px;
@@ -996,78 +1033,91 @@ nav a {
         max-width: 100%;
         margin: 0 auto 1.5rem auto;
     }
+
     .portfolio-item:last-child {
         margin-bottom: 0;
     }
+
     .portfolio-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
     .portfolio-hover-content h3 {
         font-size: 20px;
     }
+
     .portfolio-hover-content p {
         font-size: 14px;
     }
+
     .service-hover-content h3 {
         font-size: 24px;
     }
+
     .service-hover-content p {
         font-size: 16px;
     }
+
     .services-hover-icon {
         width: 155px;
         height: 78px;
     }
-    
+
     /* Větší ikony pro PPF a Barevné fólie na mobilu */
     .services-hover-icon[src="img/4.svg"],
     .services-hover-icon[src="img/5.svg"] {
         width: 200px;
         height: 100px;
     }
-    
+
     .timeline-section {
         height: auto;
         padding: 2rem 1rem;
     }
+
     .timeline-year {
         font-size: 2rem;
     }
+
     .timeline-text {
         font-size: 16px;
     }
-    
+
     .about-image {
         width: 100%;
         height: auto;
         min-height: 300px;
     }
-    
+
     #uvod {
         height: 80vh;
     }
-    
+
     nav {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
     nav a {
         font-size: 14px;
     }
+
     .hero-subtitle {
         font-size: 0.6rem;
     }
+
     .section-label span {
         font-size: 0.6rem;
     }
+
     .pagination-dot {
         width: 2rem;
         height: 2rem;
         margin-top: -16rem;
     }
-    
+
     /* Lightbox responsive na mobilu */
     #lightbox-img {
         max-width: 90% !important;
@@ -1075,13 +1125,13 @@ nav a {
         width: auto !important;
         height: auto !important;
     }
-    
+
     #lightbox-close {
         top: 10px !important;
         right: 15px !important;
         font-size: 30px !important;
     }
-    
+
     /* Telefon v patičce menší na mobilu */
     footer a[href^="tel:"] {
         font-size: 24px !important;
@@ -1093,13 +1143,15 @@ nav a {
    LIGHTBOX
    ============================================ */
 #lightbox {
-    padding: 20px;
+    /* vertical inset for lightbox content */
     box-sizing: border-box;
+    padding: 15px 0;
 }
 
 #lightbox-img {
-    max-width: 95%;
-    max-height: 95%;
+    max-width: 80% !important;
+    max-height: calc(100% - 100px) !important;
+    /* 20px top + 20px bottom */
     object-fit: contain;
 }
 

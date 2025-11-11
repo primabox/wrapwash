@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="src/style.css">
 </head>
+
 <body class="bg-[#121212] text-white z-2">
-    
+
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50">
         <div class="max-w-7xl mx-auto pt-8 px-8 flex items-center justify-between">
             <div class="flex items-center">
                 <img src="img/logo.png" alt="Wash_Wrap" class="w-[120px] h-auto object-contain mr-10">
             </div>
-            
+
             <div class="hidden lg:flex items-center gap-8 text-[14px] tracking-wider font-futura ml-20 mb-[72px]">
                 <a href="#uvod" class="hover:text-magenta transition uppercase">Úvod</a>
                 <a href="#o-nas" class="hover:text-magenta transition uppercase">O nás</a>
@@ -25,26 +27,29 @@
                 <a href="#portfolio" class="hover:text-magenta transition uppercase">Portfolio</a>
                 <a href="#kontakt" class="hover:text-magenta transition uppercase">Kontakt</a>
             </div>
-            
+
             <div class="hidden lg:flex items-center gap-4 mb-[72px] mr-16">
-                <a href="tel:+420603298838" class="bg-magenta px-6 py-2.5 hover:opacity-90 transition font-magistral text-base mr-[10px]">
+                <a href="tel:+420603298838"
+                    class="bg-magenta px-6 py-2.5 hover:opacity-90 transition font-magistral text-base mr-[10px]">
                     +420 603 298 838
                 </a>
-                <a href="#" class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                <a href="#"
+                    class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
                     <i class="fab fa-facebook-f text-sm"></i>
                 </a>
-                <a href="#" class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                <a href="#"
+                    class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
                     <i class="fab fa-instagram text-sm"></i>
                 </a>
             </div>
-            
+
             <div class="hamburger lg:hidden">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div class="mobile-menu">
             <a href="#uvod" class="hover:text-magenta transition uppercase">Úvod</a>
@@ -62,17 +67,13 @@
     <!-- Hero Section -->
     <section id="uvod" class="relative h-screen flex items-end mb-20">
         <div class="absolute inset-0 overflow-hidden">
-            <img src="img/wrap-bg.jpg" 
-                 alt="Red Lexus" 
-                 class="hero-background-image fade-in w-full h-full object-cover"
-                 data-slide="0">
-            <img src="img/foto2.png" 
-                 alt="Car Wrapping" 
-                 class="hero-background-image absolute inset-0 w-full h-full object-cover opacity-0"
-                 data-slide="1">
+            <img src="img/wrap-bg.jpg" alt="Red Lexus" class="hero-background-image fade-in w-full h-full object-cover"
+                data-slide="0">
+            <img src="img/foto2.png" alt="Car Wrapping"
+                class="hero-background-image absolute inset-0 w-full h-full object-cover opacity-0" data-slide="1">
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
-        
+
         <div class="relative z-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="hero-slides-wrapper relative">
                 <div class="max-w-2xl hero-slide-content fade-in" data-slide="0">
@@ -86,7 +87,8 @@
                         POLEPY AUT
                     </h1>
                 </div>
-                <div class="max-w-2xl hero-slide-content absolute top-0 left-0 opacity-0 pointer-events-none" data-slide="1">
+                <div class="max-w-2xl hero-slide-content absolute top-0 left-0 opacity-0 pointer-events-none"
+                    data-slide="1">
                     <div class="section-label">
                         <span class="font-futura" style="font-size: 17px;">WASH&WRAP</span>
                         <div class="section-underline"></div>
@@ -98,7 +100,7 @@
                     </h1>
                 </div>
             </div>
-            
+
             <div class="absolute bottom-0 right-4 sm:right-6 lg:right-8 flex gap-3">
                 <button class="pagination-dot active" data-slide="0">1</button>
                 <!-- <button class="pagination-dot" data-slide="1">2</button> -->
@@ -111,32 +113,34 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <!-- Images -->
             <div class="grid grid-cols-2 gap-4 justify-items-center">
-                <img src="img/whyUS.png" 
-                     alt="Car detail" 
-                     class="about-image">
-                <img src="img/whyUS2.png" 
-                     alt="Wheel wash" 
-                     class="about-image">
+                <img src="img/whyUS.png" alt="Car detail" class="about-image">
+                <img src="img/whyUS2.png" alt="Wheel wash" class="about-image">
             </div>
-            
+
             <!-- Content -->
             <div>
                 <div class="section-label">
                     <span class="font-futura">INFO O NÁS</span>
                     <div class="section-underline"></div>
                 </div>
-                
+
                 <h2 class="section-title italic font-magistral">
                     PROČ MY?
                 </h2>
-                
+
                 <div class="space-y-6 text-[20px] text-neutral-300 leading-relaxed font-futura">
-                    <p>Jsme tu pro vás již od roku 2015. Za <span class="font-bold text-white">více než 10 let</span> jsme vyčistili a ošetřili tisíce vozů, aplikovali stovky keramických ochran a zrealizovali řadu sofistikovaných projektů. Naše <span class="font-bold text-white">moderní mycí centrum v Brně</span> vzniklo na základě <span class="font-bold text-white">znalostí</span> dlouhodobých požadavků klientů a spojuje zkušenosti, špičkovou technologii a vášeň pro detail.</p>
-                    
+                    <p>Jsme tu pro vás již od roku 2015. Za <span class="font-bold text-white">více než 10 let</span>
+                        jsme vyčistili a ošetřili tisíce vozů, aplikovali stovky keramických ochran a zrealizovali řadu
+                        sofistikovaných projektů. Naše <span class="font-bold text-white">moderní mycí centrum v
+                            Brně</span> vzniklo na základě <span class="font-bold text-white">znalostí</span>
+                        dlouhodobých požadavků klientů a spojuje zkušenosti, špičkovou technologii a vášeň pro detail.
+                    </p>
+
                     <div class="space-y-1 mt-10 pt-6">
                         <div class="feature-item gap-6 items-start">
                             <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
-                            <p class="flex-1">Přistavení a vyzvednutí auta <span class="font-bold text-white">7 dní v týdnu, 24/7</span></p>
+                            <p class="flex-1">Přistavení a vyzvednutí auta <span class="font-bold text-white">7 dní v
+                                    týdnu, 24/7</span></p>
                         </div>
                         <div class="feature-item gap-6 items-start">
                             <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
@@ -144,7 +148,8 @@
                         </div>
                         <div class="feature-item gap-6 items-start">
                             <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
-                            <p class="flex-1">Moderní centrum a špičkové zázemí na ploše <span class="font-bold text-white">přes 200 m²</span></p>
+                            <p class="flex-1">Moderní centrum a špičkové zázemí na ploše <span
+                                    class="font-bold text-white">přes 200 m²</span></p>
                         </div>
                     </div>
                 </div>
@@ -172,13 +177,14 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-year">2025</div>
-                <span ></span>
+                <span></span>
                 <p class="timeline-text">Proškolení nového systému Ceramic Pro ION u&nbsp;polského partnera.</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-year">2025</div>
                 <div class="spanLong"></div>
-                <p class="timeline-text">Nová pobočka Wash&Wrap. Oficiální partnerem značky Ceramic&nbsp;Pro na&nbsp;Geddes&nbsp;slicu (na českém trhu). </p>
+                <p class="timeline-text">Nová pobočka Wash&Wrap. Oficiální partner značky Ceramic Pro na Českém trhu.
+                </p>
             </div>
         </div>
     </section>
@@ -195,14 +201,12 @@
                     NAŠE SLUŽBY
                 </h2>
             </div>
-            
+
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-number font-magistral text-[36px] text-white">01</div>
-                        <img src="img/detailni-myti.png" 
-                             alt="Detailní ruční mytí" 
-                             class="service-image">
+                        <img src="img/detailni-myti.png" alt="Detailní ruční mytí" class="service-image">
                         <div class="service-gradient"></div>
                         <div class="service-content">
                             <h3 class="service-title font-magistral">Detailní ruční mytí</h3>
@@ -211,18 +215,17 @@
                         <div class="service-hover-content">
                             <img src="img/1.svg" alt="Services Hover" class="services-hover-icon">
                             <h3 class="font-magistral text-[30px] text-white">Detailní ruční mytí</h3>
-                            <p class="font-futura text-[20px] px-4 text-neutral-300">Precizní ruční mytí s maximální šetrností a důrazem na detail.</p>
+                            <p class="font-futura text-[20px] px-4 text-neutral-300">Precizní ruční mytí s maximální
+                                šetrností a důrazem na detail.</p>
                             <p class="service-price font-magistral text-magenta text-[24px] mt-3">od 980,-</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-number font-magistral text-[36px] text-white">02</div>
-                        <img src="img/renovace-laku.png" 
-                             alt="Renovace laku" 
-                             class="service-image">
+                        <img src="img/renovace-laku.png" alt="Renovace laku" class="service-image">
                         <div class="service-gradient"></div>
                         <div class="service-content">
                             <h3 class="service-title font-magistral">Renovace laku</h3>
@@ -231,18 +234,18 @@
                         <div class="service-hover-content">
                             <img src="img/2.svg" alt="Services Hover" class="services-hover-icon">
                             <h3 class="font-magistral text-[30px] text-white">Renovace laku</h3>
-                            <p class="font-futura text-[20px] px-4 text-neutral-300">Strojní leštění certifikovaným systémem RUPES, které obnoví lesk laku a odstraní škrábance. Postupy, které jsme osobně zdokonalili v jejich italské továrně.</p>
+                            <p class="font-futura text-[20px] px-4 text-neutral-300">Strojní leštění certifikovaným
+                                systémem RUPES, které obnoví lesk laku a odstraní škrábance. Postupy, které jsme osobně
+                                zdokonalili v jejich italské továrně.</p>
                             <p class="service-price font-magistral text-magenta text-[24px] mt-3">od 10 200,-</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-number font-magistral text-[36px] text-white">03</div>
-                        <img src="img/keramika.png" 
-                             alt="Keramická ochrana" 
-                             class="service-image">
+                        <img src="img/keramika.png" alt="Keramická ochrana" class="service-image">
                         <div class="service-gradient"></div>
                         <div class="service-content">
                             <h3 class="service-title font-magistral">Keramická ochrana</h3>
@@ -251,18 +254,18 @@
                         <div class="service-hover-content">
                             <img src="img/3.svg" alt="Services Hover" class="services-hover-icon">
                             <h3 class="font-magistral text-[30px] text-white">Keramická ochrana</h3>
-                            <p class="font-futura text-[20px] px-4 text-neutral-300">Aplikace Ceramic Pro ION – nejmodernější ochrana laku na bázi iontové výměny a nanotechnologie s mimořádnou tvrdostí a dlouhou výdrží.</p>
+                            <p class="font-futura text-[18px] px-4 text-neutral-300">Aplikace Ceramic Pro ION –
+                                nejmodernější ochrana laku na bázi iontové výměny a nanotechnologie s mimořádnou
+                                tvrdostí a dlouhou výdrží.</p>
                             <p class="service-price font-magistral text-magenta text-[24px] mt-3">od 35 000,-</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-number font-magistral text-[36px] text-white">04</div>
-                        <img src="img/PPF-folie.png" 
-                             alt="PPF fólie" 
-                             class="service-image">
+                        <img src="img/PPF-folie.png" alt="PPF fólie" class="service-image">
                         <div class="service-gradient"></div>
                         <div class="service-content">
                             <h3 class="service-title font-magistral">PPF fólie</h3>
@@ -271,18 +274,18 @@
                         <div class="service-hover-content">
                             <img src="img/4.svg" alt="Services Hover" class="services-hover-icon">
                             <h3 class="font-magistral text-[30px] text-white">PPF fólie</h3>
-                            <p class="font-futura text-[20px] px-4 text-neutral-300">Prémiové fólie KAVACA s keramickou vrstvou a přesně plotrem vyřezanými díly, které dokonale padnou na karoserii i interiér vozu. Ochrana proti kamínkům i škrábancům.</p>
+                            <p class="font-futura text-[18px] px-4 text-neutral-300">Prémiové fólie KAVACA s keramickou
+                                vrstvou a přesně plotrem vyřezanými díly, které dokonale padnou na karoserii i interiér
+                                vozu. Ochrana proti kamínkům i škrábancům.</p>
                             <p class="service-price font-magistral text-magenta text-[24px] mt-1">od 15 000,-</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-card-inner">
                         <div class="service-number font-magistral text-[36px] text-white">05</div>
-                        <img src="img/barevna-folie.png" 
-                             alt="Barevné fólie" 
-                             class="service-image">
+                        <img src="img/barevna-folie.png" alt="Barevné fólie" class="service-image">
                         <div class="service-gradient"></div>
                         <div class="service-content">
                             <h3 class="service-title font-magistral">Barevné fólie (wrap)</h3>
@@ -291,18 +294,17 @@
                         <div class="service-hover-content">
                             <img src="img/5.svg" alt="Services Hover" class="services-hover-icon">
                             <h3 class="font-magistral text-[30px] text-white">Barevné fólie (wrap)</h3>
-                            <p class="font-futura text-[20px] px-4 text-neutral-300">Změna barvy i designu vozu pomocí kvalitních fólií. Precizní instalace a individuální styl.</p>
-                            <p class="service-price font-magistral text-magenta text-[24px] mt-3">od 50 000,-</p>
+                            <p class="font-futura text-[20px] px-4 text-neutral-300">Změna barvy i designu vozu pomocí
+                                kvalitních fólií. Precizní instalace a individuální styl.</p>
+                            <p class="service-price font-magistral text-magenta text-[24px] mt-3">od 5 000,-</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-card" id="cenik">
                     <div class="service-card-inner">
                         <div class="service-number font-magistral text-[36px] text-white">06</div>
-                        <img src="img/renovace-kuze.png" 
-                             alt="Renovace kůže" 
-                             class="service-image">
+                        <img src="img/renovace-kuze.png" alt="Renovace kůže" class="service-image">
                         <div class="service-gradient"></div>
                         <div class="service-content">
                             <h3 class="service-title font-magistral">Renovace kůže</h3>
@@ -311,15 +313,18 @@
                         <div class="service-hover-content">
                             <img src="img/6.svg" alt="Services Hover" class="services-hover-icon">
                             <h3 class="font-magistral text-[30px] text-white">Renovace kůže</h3>
-                            <p class="font-futura text-[20px] px-4 text-neutral-300">Opravy, renovace a barvení kožených interiérů systémem Colourlock – postupy, které vracejí materiálům původní vzhled, strukturu i komfort.</p>
+                            <p class="font-futura text-[20px] px-4 text-neutral-300">Opravy, renovace a barvení kožených
+                                interiérů systémem Colourlock – postupy, které vracejí materiálům původní vzhled,
+                                strukturu i komfort.</p>
                             <p class="service-price font-magistral text-magenta text-[24px] mt-3">od 1 500,-</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <p class="text-[22px] text-neutral-400 mb-6 font-futura">Podívejte se na naše kompletní služby a stáhněte si ceník.</p>
+                <p class="text-[22px] text-neutral-400 mb-6 font-futura">Podívejte se na naše kompletní služby a
+                    stáhněte si ceník.</p>
                 <a href="Cenik.pdf" download="Ceník.pdf" class="cta-button font-futura text-[25px]">
                     CENÍK SLUŽEB
                 </a>
@@ -339,65 +344,60 @@
                     PORTFOLIO
                 </h2>
             </div>
-            
+
             <div class="portfolio-slider">
                 <div class="portfolio-track flex gap-0"> <!-- Removed gap to make cards touch edges -->
-                    <div class="portfolio-item">
-                        <img src="img/porsche_1.png" 
-                             alt="Porsche" 
-                             class="portfolio-image">
+                    <div class="portfolio-item" data-full="img/PorscheFull.jpg">
+                        <img src="img/porsche_1.png" alt="Porsche" class="portfolio-image">
                         <div class="portfolio-overlay"></div>
                         <div class="portfolio-hover-content">
                             <h3 class="font-magistral text-[30px] text-white">Porsche 928</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Ruční mytí, renovace laku a čištění interiéru veterána.</p>
+                            <p class="font-futura text-[20px] text-neutral-300">Ruční mytí, renovace laku a čištění
+                                interiéru veterána.</p>
                             <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
                         </div>
                     </div>
-                    
-                    <div class="portfolio-item">
-                        <img src="img/helicopter-2.png" 
-                             alt="Helicopter" 
-                             class="portfolio-image">
+
+                    <div class="portfolio-item" data-full="img/GazzeleFull.jpg">
+                        <img src="img/helicopter-2.png" alt="Helicopter" class="portfolio-image">
                         <div class="portfolio-overlay"></div>
-                            <div class="portfolio-hover-content">
-                                <h3 class="font-magistral text-[30px] text-white">Gazelle</h3>
-                                <p class="font-futura text-[20px] text-neutral-300">Renovace a keramická ochrana laku, čištění interiéru vrtulníku externě u zákazníka.</p>
-                                <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
-                            </div>
+                        <div class="portfolio-hover-content">
+                            <h3 class="font-magistral text-[30px] text-white">Gazelle SA 341</h3>
+                            <p class="font-futura text-[20px] text-neutral-300">Renovace a keramická ochrana laku,
+                                čištění interiéru vrtulníku externě u zákazníka.</p>
+                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                        </div>
                     </div>
-                    
-                    <div class="portfolio-item">
-                        <img src="img/bmw-3.png" 
-                             alt="BMW" 
-                             class="portfolio-image">
+
+                    <div class="portfolio-item" data-full="img/bmw2full.jpg">
+                        <img src="img/bmw-3.png" alt="BMW" class="portfolio-image">
                         <div class="portfolio-overlay"></div>
                         <div class="portfolio-hover-content">
                             <h3 class="font-magistral text-[30px] text-white">BMW 6</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Ruční mytí, individuální polep auta včetně tonování skel a ochranné PPF fólie.</p>
+                            <p class="font-futura text-[20px] text-neutral-300">Ruční mytí, individuální polep auta
+                                včetně tonování skel a ochranné PPF fólie.</p>
                             <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
                         </div>
                     </div>
-                    
-                    <div class="portfolio-item">
-                        <img src="img/porsche_4.png" 
-                             alt="Ferrari" 
-                             class="portfolio-image">
+
+                    <div class="portfolio-item" data-full="img/ferrariFull.JPG">
+                        <img src="img/porsche_4.png" alt="Ferrari" class="portfolio-image">
                         <div class="portfolio-overlay"></div>
                         <div class="portfolio-hover-content">
                             <h3 class="font-magistral text-[30px] text-white">Ferrari 400i</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Renovace kůže, leštění a keramická ochrana laku na veteránský vůz.</p>
+                            <p class="font-futura text-[20px] text-neutral-300">Renovace kůže, leštění a keramická
+                                ochrana laku na veteránský vůz.</p>
                             <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
                         </div>
                     </div>
-                    
-                    <div class="portfolio-item">
-                        <img src="img/motor-5.png" 
-                             alt="Motorcycle" 
-                             class="portfolio-image">
+
+                    <div class="portfolio-item" data-full="img/MotorCycle.jpg">
+                        <img src="img/motor-5.png" alt="Motorcycle" class="portfolio-image">
                         <div class="portfolio-overlay"></div>
                         <div class="portfolio-hover-content">
                             <h3 class="font-magistral text-[30px] text-white">Husqvarna 1935</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Renovace, leštění laku a keramická ochrana aplikována na veteránskou motorku.</p>
+                            <p class="font-futura text-[20px] text-neutral-300">Renovace, leštění laku a keramická
+                                ochrana aplikována na veteránskou motorku.</p>
                             <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
                         </div>
                     </div>
@@ -407,107 +407,124 @@
     </section>
 
     <!-- Footer -->
-<footer class="py-20 px-8 bg-neutral-950">
-  <div class="max-w-[1200px] mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-16">
+    <footer class="py-20 px-8 bg-neutral-950">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-16">
 
-      <!-- 1. Sloupec - Logo a features -->
-      <div class="w-full md:w-auto flex-1" style="max-width: 320px;" id="kontakt">
-        <img src="img/FooterLogo.png" alt="Wash_Wrap" class="h-[50px] w-auto mb-8">
-        <div class="space-y-3.5 font-futura">
-          <div class="flex items-start gap-2">
-            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
-            <p class="text-[18px] leading-snug text-white"><strong>Kompletní péče</strong> o vůz na jednom místě</p>
-          </div>
-          <div class="flex items-start gap-2">
-            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
-            <p class="text-[18px] leading-snug text-white">Poradenství a prodej autokosmetiky</p>
-          </div>
-          <div class="flex items-start gap-2">
-            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
-            <p class="text-[18px] leading-snug text-white">Oficiální zastoupení <strong>Ceramic Pro v ČR</strong></p>
-          </div>
-          <div class="flex items-start gap-2">
-            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
-            <p class="text-[18px] leading-snug text-white">Odborný tým s více než <strong>10 lety praxe</strong></p>
-          </div>
-        </div>
-      </div>
+                <!-- 1. Sloupec - Logo a features -->
+                <div class="w-full md:w-auto flex-1" style="max-width: 320px;" id="kontakt">
+                    <img src="img/FooterLogo.png" alt="Wash_Wrap" class="h-[50px] w-auto mb-8">
+                    <div class="space-y-3.5 font-futura">
+                        <div class="flex items-start gap-2">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
+                            <p class="text-[18px] leading-snug text-white"><strong>Kompletní péče</strong> o vůz na
+                                jednom místě</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
+                            <p class="text-[18px] leading-snug text-white">Poradenství a prodej autokosmetiky</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
+                            <p class="text-[18px] leading-snug text-white">Oficiální zastoupení <strong>Ceramic Pro v
+                                    ČR</strong></p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
+                            <p class="text-[18px] leading-snug text-white">Odborný tým s více než <strong>10 lety
+                                    praxe</strong></p>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- 2. Sloupec - Kontakt a otevírací doba -->
-      <div class="w-full md:w-auto flex-1 mt-[60px]" style="max-width: 350px;">
-        <p class="font-futura text-[18px] uppercase text-white mb-3 tracking-wider">Zavolejte a objednejte se 24/7</p>
-        <a href="tel:+420603298838" class="text-[34px] font-magistral text-white mb-8 leading-none tracking-wide block hover:text-magenta transition">+420 603 298 838</a>
-        <div class="space-y-1">
-          <p class="text-[18px] font-futura text-white leading-relaxed"><strong>Otevírací doba:</strong> Po–Pá 8:00–17:00</p>
-          <p class="text-[18px] font-futura text-white leading-relaxed">Garáže M-Palác, Heršpická 814/5a Brno</p>
-        </div>
-      </div>
+                <!-- 2. Sloupec - Kontakt a otevírací doba -->
+                <div class="w-full md:w-auto flex-1 mt-[60px]" style="max-width: 350px;">
+                    <p class="font-futura text-[18px] uppercase text-white mb-3 tracking-wider">Zavolejte a objednejte
+                        se 24/7</p>
+                    <a href="tel:+420603298838"
+                        class="text-[34px] font-magistral text-white mb-8 leading-none tracking-wide block hover:text-magenta transition">+420
+                        603 298 838</a>
+                    <div class="space-y-1">
+                        <p class="text-[18px] font-futura text-white leading-relaxed"><strong>Otevírací doba:</strong>
+                            Po–Pá 8:00–17:00</p>
+                        <p class="text-[18px] font-futura text-white leading-relaxed">Garáže M-Palác, Heršpická 814/5a
+                            Brno</p>
+                    </div>
+                </div>
 
-      <!-- 3. Sloupec - Kontakty -->
-      <div class="w-full md:w-auto flex-shrink-0 mt-[40px]" style="max-width: 200px;">
-        <h3 class="font-magistral text-[20px] mb-4 uppercase text-white">Kontakty</h3>
-        <div class="space-y-2 font-futura text-[18px] text-white">
-          <p>NanoHome s.r.o</p>
-          <a href="mailto:info@washwrap.cz" class="text-magenta hover:text-white transition block">info@washwrap.cz</a>
-          <a href="https://www.washwrap.cz" target="_blank" class="text-magenta hover:text-white transition block">www.washwrap.cz</a>
-          <p>IČO: 17833261</p>
-        </div>
-      </div>
+                <!-- 3. Sloupec - Kontakty -->
+                <div class="w-full md:w-auto flex-shrink-0 mt-[40px]" style="max-width: 200px;">
+                    <h3 class="font-magistral text-[20px] mb-4 uppercase text-white">Kontakty</h3>
+                    <div class="space-y-2 font-futura text-[18px] text-white">
+                        <p>NanoHome s.r.o</p>
+                        <a href="mailto:info@washwrap.cz"
+                            class="text-magenta hover:text-white transition block">info@washwrap.cz</a>
+                        <a href="https://www.washwrap.cz" target="_blank"
+                            class="text-magenta hover:text-white transition block">www.washwrap.cz</a>
+                        <p>IČO: 17833261</p>
+                    </div>
+                </div>
 
-      <!-- 4. Sloupec - Odkazy a Sociální sítě -->
-      <div class="w-full md:w-auto flex gap-12">
-        <!-- Odkazy -->
-        <div class="flex-shrink-0 mt-[40px]">
-          <h3 class="font-magistral text-[20px] mb-4 uppercase text-white">Odkazy</h3>
-          <div class="space-y-2 font-futura text-[18px] text-white">
-            <a href="#o-nas" class="block hover:text-magenta transition">O nás</a>
-            <a href="#sluzby" class="block hover:text-magenta transition">Služby</a>
-            <a href="#cenik" class="block hover:text-magenta transition">Ceník</a>
-            <a href="#portfolio" class="block hover:text-magenta transition">Portfolio</a>
-          </div>
-        </div>
-        
-        <!-- Sociální sítě -->
-        <div class="flex-shrink-0 flex items-end">
-          <div class="flex flex-col gap-3">
-            <a href="#" class="w-10 h-10 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
-              <i class="fab fa-facebook-f text-sm"></i>
-            </a>
-            <a href="#" class="w-10 h-10 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
-              <i class="fab fa-instagram text-sm"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+                <!-- 4. Sloupec - Odkazy a Sociální sítě -->
+                <div class="w-full md:w-auto flex gap-12">
+                    <!-- Odkazy -->
+                    <div class="flex-shrink-0 mt-[40px]">
+                        <h3 class="font-magistral text-[20px] mb-4 uppercase text-white">Odkazy</h3>
+                        <div class="space-y-2 font-futura text-[18px] text-white">
+                            <a href="#o-nas" class="block hover:text-magenta transition">O nás</a>
+                            <a href="#sluzby" class="block hover:text-magenta transition">Služby</a>
+                            <a href="#cenik" class="block hover:text-magenta transition">Ceník</a>
+                            <a href="#portfolio" class="block hover:text-magenta transition">Portfolio</a>
+                        </div>
+                    </div>
 
+                    <!-- Sociální sítě -->
+                    <div class="flex-shrink-0 flex items-end">
+                        <div class="flex flex-col gap-3">
+                            <a href="#"
+                                class="w-10 h-10 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                                <i class="fab fa-facebook-f text-sm"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                                <i class="fab fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Spodní část -->
+            <div class="max-w-7xl mx-auto mt-12 pt-8 text-center text-[18px] text-neutral-500 font-futura">
+                <div class="flex items-center justify-center gap-8 flex-wrap">
+                    <p>© 2025 Wash & Wrap. Všechna práva vyhrazena.</p>
+                    <div class="flex items-center gap-2">
+                        <span>Designed by</span>
+                        <a href="https://matez.cz/"><img src="img/matez-logo-magenta.png" alt="Matez Design"
+                                class="h-6"></a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox"
+        style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); cursor:pointer;">
+        <span id="lightbox-close"
+            style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; cursor:pointer; z-index:10000;">&times;</span>
+        <img id="lightbox-img"
+            style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:80%; max-height:calc(100% - 40px);">
     </div>
 
-  <!-- Spodní část -->
-  <div class="max-w-7xl mx-auto mt-12 pt-8 text-center text-[18px] text-neutral-500 font-futura">
-    <div class="flex items-center justify-center gap-8 flex-wrap">
-      <p>© 2025 Wash & Wrap. Všechna práva vyhrazena.</p>
-      <div class="flex items-center gap-2">
-        <span>Designed by</span>
-       <a href="https://matez.cz/"><img src="img/matez-logo-magenta.png" alt="Matez Design" class="h-6"></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-<!-- Lightbox -->
-<div id="lightbox" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); cursor:pointer;">
-  <span id="lightbox-close" style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; cursor:pointer; z-index:10000;">&times;</span>
-  <img id="lightbox-img" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:95%; max-height:95%;">
-</div>
-
-<script type="module" src="js/hero-slider.js"></script>
-<script type="module" src="js/portfolio.js"></script>
-<script type="module" src="js/hamburger.js"></script>
-<script type="module" src="js/services.js"></script>
-<script type="module" src="js/lightbox.js"></script>
-<script type="module" src="js/timeline.js"></script>
+    <script type="module" src="js/hero-slider.js"></script>
+    <script type="module" src="js/portfolio.js"></script>
+    <script type="module" src="js/hamburger.js"></script>
+    <script type="module" src="js/services.js"></script>
+    <script type="module" src="js/lightbox.js"></script>
+    <script type="module" src="js/timeline.js"></script>
 
 </body>
+
 </html>
