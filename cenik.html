@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceník | Wash & Wrap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css">
+    <style>
+        /* ============================================
+           CENÍK PAGE STYLES
+           ============================================ */
+        .cenik-wrapper {
+            padding: 160px 24px 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cenik-hero {
+            position: relative;
+            max-width: 1000px;
+            width: 100%;
+            background: url('img/cenik_bg.jpg') center center / cover no-repeat;
+            border-radius: 0;
+        }
+
+        
+
+        .cenik-content {
+            position: relative;
+            z-index: 1;
+            padding: 60px 60px 60px;
+        }
+
+        .cenik-category-title {
+            font-family: 'Magistral', sans-serif;
+            font-weight: 800;
+            font-style: italic;
+            font-size: 42px;
+            color: #fff;
+            margin-bottom: 24px;
+            margin-top: 50px;
+        }
+
+        .cenik-category-title:first-child {
+            margin-top: 0;
+        }
+
+        .cenik-subtitle {
+            font-family: 'Futura PT', sans-serif;
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .cenik-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 10px 0;
+            gap: 20px;
+        }
+
+        .cenik-item-left {
+            flex: 1;
+        }
+
+        .cenik-item-name {
+            font-family: 'Futura PT', sans-serif;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .cenik-item-desc {
+            font-family: 'Futura PT', sans-serif;
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .cenik-item-price {
+            font-family: 'Futura PT', sans-serif;
+            font-size: 18px;
+            color: #C31681;
+            white-space: nowrap;
+            text-align: right;
+            min-width: 120px;
+        }
+
+        .cenik-separator {
+            display: none;
+        }
+
+        .cenik-addon-title {
+            font-family: 'Futura PT', sans-serif;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        .cenik-addon-line {
+            font-family: 'Futura PT', sans-serif;
+            font-size: 17px;
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        .cenik-addon-line .text-magenta {
+            color: #C31681;
+        }
+
+        .cenik-note {
+            font-family: 'Futura PT', sans-serif;
+            font-size: 17px;
+            color: #ffffff;
+            font-style: italic;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cenik-wrapper {
+                padding: 100px 16px 40px;
+            }
+
+            .cenik-content {
+                padding: 30px 20px 40px;
+            }
+
+            .cenik-category-title {
+                font-size: 30px;
+                margin-top: 40px;
+            }
+
+            .cenik-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .cenik-item-price {
+                text-align: left;
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#121212] text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto pt-8 px-8 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Wash_Wrap" class="w-[120px] h-auto object-contain mr-10">
+                </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-[14px] tracking-wider font-futura ml-20 mb-[72px]">
+                <a href="index.html#uvod" class="hover:text-magenta transition uppercase">Úvod</a>
+                <a href="index.html#o-nas" class="hover:text-magenta transition uppercase">O nás</a>
+                <a href="index.html#sluzby" class="hover:text-magenta transition uppercase">Služby</a>
+                <a href="cenik.html" class="hover:text-magenta transition uppercase text-magenta">Ceník</a>
+                <a href="index.html#portfolio" class="hover:text-magenta transition uppercase">Portfolio</a>
+                <a href="index.html#kontakt" class="hover:text-magenta transition uppercase">Kontakt</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4 mb-[72px] mr-16">
+                <a href="tel:+420603298838"
+                    class="bg-magenta px-6 py-2.5 hover:opacity-90 transition font-magistral text-base mr-[10px]">
+                    +420 603 298 838
+                </a>
+                <a href="https://www.facebook.com/"
+                    class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                    <i class="fab fa-facebook-f text-sm"></i>
+                </a>
+                <a href="https://www.instagram.com/"
+                    class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                    <i class="fab fa-instagram text-sm"></i>
+                </a>
+            </div>
+
+            <div class="hamburger lg:hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="index.html#uvod" class="hover:text-magenta transition uppercase">Úvod</a>
+            <a href="index.html#o-nas" class="hover:text-magenta transition uppercase">O nás</a>
+            <a href="index.html#sluzby" class="hover:text-magenta transition uppercase">Služby</a>
+            <a href="cenik.html" class="hover:text-magenta transition uppercase text-magenta">Ceník</a>
+            <a href="index.html#portfolio" class="hover:text-magenta transition uppercase">Portfolio</a>
+            <a href="index.html#kontakt" class="hover:text-magenta transition uppercase">Kontakt</a>
+            <a href="tel:+420603298838" class="bg-magenta px-6 py-3 mt-4 text-center block">
+                +420 603 298 838
+            </a>
+        </div>
+    </nav>
+
+    <!-- Ceník Section -->
+    <div class="cenik-wrapper">
+        <div class="cenik-hero">
+            <div class="cenik-content">
+
+            <!-- WASH -->
+            <h2 class="cenik-category-title">Wash</h2>
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Wash</span>
+                    <span class="cenik-item-desc"> – Ruční mytí, čištění disků, sušení, impregnace pneu. Cca 45min.</span>
+                </div>
+                <span class="cenik-item-price">od 980 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Clean & Go</span>
+                    <span class="cenik-item-desc"> – Kompletní ruční mytí, vysávání interiéru, čištění plastů, leštění oken. Cca 1h 45min.</span>
+                </div>
+                <span class="cenik-item-price">od 2 200 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Textile Full</span>
+                    <span class="cenik-item-desc"> – Ruční mytí, vysávání interiéru, tepování, čištění plastů, leštění oken. Cca 3h.</span>
+                </div>
+                <span class="cenik-item-price">od 3 200 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Leather Full</span>
+                    <span class="cenik-item-desc"> – Kompletní ruční mytí, vysávání interiéru, čištění a impregnace kůže, čištění plastů, leštění oken. Cca 3h.</span>
+                </div>
+                <span class="cenik-item-price">od 3 600 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Doplňkové služby k čištění</span>
+                    <span class="cenik-item-desc"> – Mytí a impregnace motoru, renovace světlometů, opravy kůže.</span>
+                </div>
+                <span class="cenik-item-price">od 590 Kč</span>
+            </div>
+
+            <!-- POLISH -->
+            <h2 class="cenik-category-title">Polish</h2>
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Wax</span>
+                    <span class="cenik-item-desc"> – Ruční mytí, dekontaminace, vosk, impregnace pneu, leštění oken. Cca 3hod.</span>
+                </div>
+                <span class="cenik-item-price">od 3 500 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Shine & Wax</span>
+                    <span class="cenik-item-desc"> – Kompletní ruční mytí exteriéru, dekontaminace laku, 1-krokové leštění, aplikace vosku, impregnace pneu, leštění oken. 1-2 dny.</span>
+                </div>
+                <span class="cenik-item-price">od 10 200 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Deep Polish & Wax</span>
+                    <span class="cenik-item-desc"> – Kompletní ruční mytí exteriéru, dekontaminace laku, 2-krokové leštění laku, aplikace vosku, impregnace pneu, leštění oken. Cca 2 dny.</span>
+                </div>
+                <span class="cenik-item-price">od 14 500 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Doplňkové služby k leštění</span>
+                    <span class="cenik-item-desc"> – Leštění a lokální opravy, retuše laku. 1h.</span>
+                </div>
+                <span class="cenik-item-price">od 1 000 Kč</span>
+            </div>
+
+            <!-- KERAMICKÁ OCHRANA -->
+            <h2 class="cenik-category-title">Keramická ochrana</h2>
+
+            <p class="cenik-subtitle">Aplikace: 3-5 dní.</p>
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Ceramic Pro 9H</span><span class="cenik-item-desc"> &#8211; Ruční mytí, dekontaminace laku, 3-krok. leštění laku, aplikace: 1× Ceramic Pro 9H, 1× Ceramic Pro Light, impregnace pneu, leštění oken. Výdrž : 5 let.</span>
+                </div>
+                <span class="cenik-item-price">od 35 000 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Ceramic Pro ION</span><span class="cenik-item-desc"> &#8211; Ruční mytí, dekontaminace laku, 3-krok. leštění laku, aplikace: 1× ION Base, 1x ION TOP, impregnace pneu, leštění oken. Výdrž : 7 let</span>
+                </div>
+                <span class="cenik-item-price">od 42 000 Kč</span>
+            </div>
+
+            <div class="cenik-addon-title">Doplňkové keramické služby</div>
+            <p class="cenik-addon-line">
+                Ceramic Pro Rain na okna <span class="text-magenta">od 2 000 Kč</span> / Wheel <span class="text-magenta">od 5 000 Kč</span> /
+            </p>
+            <p class="cenik-addon-line">
+                Ochrana interiéru Ceramic Pro LUX <span class="text-magenta">od 10 000 Kč</span>.
+            </p>
+
+            <!-- PPF & WRAP - KAVACA -->
+            <h2 class="cenik-category-title">PPF & Wrap – Kavaca</h2>
+
+            <p class="cenik-subtitle">Prémiová polyuretanová ochranná fólie s keramickou vrstvou. 100% ochrana laku proti oděrkám.<br>Instalace: 2–7 dní.</p>
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Front</span><span class="cenik-item-desc"> (nárazník + světla)</span>
+                </div>
+                <span class="cenik-item-price">od 15 000 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Full Front</span><span class="cenik-item-desc"> (nárazník, světla, kapota, blatníky)</span>
+                </div>
+                <span class="cenik-item-price">od 32 000 Kč</span>
+            </div>
+            <hr class="cenik-separator">
+
+            <div class="cenik-item">
+                <div class="cenik-item-left">
+                    <span class="cenik-item-name">Full Wrap</span><span class="cenik-item-desc"> (celopolep vozu)</span>
+                </div>
+                <span class="cenik-item-price">od 80 000 Kč</span>
+            </div>
+
+            <div class="cenik-addon-title">Doplňky k PPF & Wrap</div>
+            <p class="cenik-addon-line">
+                Polep světel PPF <span class="text-magenta">od 3 000 Kč</span> / Čelní sklo PPF <span class="text-magenta">od 8 000 Kč</span> / Ochrana interiéru PPF <span class="text-magenta">od 2 500 Kč</span> /
+            </p>
+            <p class="cenik-addon-line">
+                Tónování oken Kavaca IR <span class="text-magenta">od 2 500 Kč</span> / Wrap změna barvy – <span class="text-magenta">od 50 000 Kč</span>.
+            </p>
+
+            <!-- POZNÁMKA -->
+            <p class="cenik-note">
+                Ceny jsou uvedeny vč. DPH. Pro SUV, VAN, limuzíny a silné znečištění se účtuje příplatek 20–50 %.
+            </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-20 px-8 bg-neutral-950">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-16">
+
+                <!-- 1. Sloupec - Logo a features -->
+                <div class="w-full md:w-auto flex-1" style="max-width: 320px;">
+                    <img src="img/FooterLogo.png" alt="Wash_Wrap" class="h-[50px] w-auto mb-8">
+                    <div class="space-y-3.5 font-futura">
+                        <div class="flex items-start gap-2">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
+                            <p class="text-[18px] leading-snug text-white"><strong>Kompletní péče</strong> o vůz na
+                                jednom místě</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
+                            <p class="text-[18px] leading-snug text-white">Poradenství a prodej autokosmetiky</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
+                            <p class="text-[18px] leading-snug text-white">Oficiální zastoupení <strong>Ceramic Pro v
+                                    ČR</strong></p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[3px] flex-shrink-0">
+                            <p class="text-[18px] leading-snug text-white">Odborný tým s více než <strong>10 lety
+                                    praxe</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Sloupec - Kontakt a otevírací doba -->
+                <div class="w-full md:w-auto flex-1 mt-[60px]" style="max-width: 350px;">
+                    <p class="font-futura text-[18px] uppercase text-white mb-3 tracking-wider">Zavolejte a objednejte
+                        se 24/7</p>
+                    <a href="tel:+420603298838"
+                        class="text-[34px] font-magistral text-white mb-8 leading-none tracking-wide block hover:text-magenta transition">+420
+                        603 298 838</a>
+                    <div class="space-y-1">
+                        <p class="text-[18px] font-futura text-white leading-relaxed"><strong>Otevírací doba:</strong>
+                            Po–Pá 8:00–17:00</p>
+                        <p class="text-[18px] font-futura text-white leading-relaxed">Garáže M-Palác, Heršpická 814/5a
+                            Brno</p>
+                    </div>
+                </div>
+
+                <!-- 3. Sloupec - Kontakty -->
+                <div class="w-full md:w-auto flex-shrink-0 mt-[40px]" style="max-width: 200px;">
+                    <h3 class="font-magistral text-[20px] mb-4 uppercase text-white">Kontakty</h3>
+                    <div class="space-y-2 font-futura text-[18px] text-white">
+                        <p>NanoHome s.r.o</p>
+                        <a href="mailto:info@washwrap.cz"
+                            class="text-magenta hover:text-white transition block">info@washwrap.cz</a>
+                        <a href="https://www.washwrap.cz" target="_blank"
+                            class="text-magenta hover:text-white transition block">www.washwrap.cz</a>
+                        <p>IČO: 17833261</p>
+                    </div>
+                </div>
+
+                <!-- 4. Sloupec - Odkazy a Sociální sítě -->
+                <div class="w-full md:w-auto flex gap-12">
+                    <!-- Odkazy -->
+                    <div class="flex-shrink-0 mt-[40px]">
+                        <h3 class="font-magistral text-[20px] mb-4 uppercase text-white">Odkazy</h3>
+                        <div class="space-y-2 font-futura text-[18px] text-white">
+                            <a href="index.html#o-nas" class="block hover:text-magenta transition">O nás</a>
+                            <a href="index.html#sluzby" class="block hover:text-magenta transition">Služby</a>
+                            <a href="cenik.html" class="block hover:text-magenta transition">Ceník</a>
+                            <a href="index.html#portfolio" class="block hover:text-magenta transition">Portfolio</a>
+                        </div>
+                    </div>
+
+                    <!-- Sociální sítě -->
+                    <div class="flex-shrink-0 flex items-end">
+                        <div class="flex flex-col gap-3">
+                            <a href="#"
+                                class="w-10 h-10 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                                <i class="fab fa-facebook-f text-sm"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
+                                <i class="fab fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Spodní část -->
+            <div class="max-w-7xl mx-auto mt-12 pt-8 text-center text-[18px] text-neutral-500 font-futura">
+                <div class="flex items-center justify-center gap-8 flex-wrap">
+                    <p>&copy; 2025 Wash & Wrap. Všechna práva vyhrazena.</p>
+                    <div class="flex items-center gap-2">
+                        <span>Designed by</span>
+                        <a href="https://matez.cz/"><img src="img/matez-logo-magenta.png" alt="Matez Design"
+                                class="h-6"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/hamburger.js"></script>
+
+</body>
+
+</html>
