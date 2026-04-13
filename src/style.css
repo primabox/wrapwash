@@ -822,13 +822,17 @@ nav a {
 }
 
 .portfolio-hover-content h3 {
-    padding: 0 2rem;
-    margin-bottom: 1rem;
+    padding: 0 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    text-align: center;
 }
 
 .portfolio-hover-content p {
-    padding: 0 3rem;
+    padding: 0 1.5rem;
     line-height: 1.6;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    text-align: center;
 }
 
 /* ============================================
@@ -1171,39 +1175,12 @@ nav a {
 }
 
 /* ============================================
-   RECENZE / PORTFOLIO - MOBILE
+   REZERVACE - MOBILE
    ============================================ */
 @media (max-width: 768px) {
     .rezervace-vehicle-icon { width: 80px !important; height: 50px !important; }
     #rezervace { padding-left: 1rem !important; padding-right: 1rem !important; }
     #extra-pozadavky { margin-top: 1.5rem !important; }
-
-    /* Recenze – cards stacked, text always visible */
-    .portfolio-slider { overflow: visible !important; padding: 0 1rem !important; }
-    .portfolio-track { flex-direction: column !important; gap: 2.5rem !important; max-height: none !important; }
-    .portfolio-item {
-        width: 100% !important; flex: none !important; height: auto !important;
-        aspect-ratio: unset !important; margin-bottom: 0 !important;
-        display: flex !important; flex-direction: column !important;
-    }
-    .portfolio-item .portfolio-image {
-        width: 100% !important; height: 220px !important; object-fit: cover !important;
-        filter: none !important; transition: none !important;
-        display: block !important; flex-shrink: 0 !important;
-    }
-    .portfolio-item .portfolio-overlay { display: none !important; }
-    .portfolio-item .portfolio-hover-content {
-        position: static !important; opacity: 1 !important; pointer-events: auto !important;
-        transform: none !important; background-color: #1c1c1c !important;
-        padding: 1rem 1rem 1.25rem !important; display: flex !important;
-        flex-direction: column !important; align-items: flex-start !important;
-        justify-content: flex-start !important; text-align: left !important; inset: unset !important;
-    }
-    .portfolio-item .portfolio-hover-content > .absolute {
-        position: static !important; margin-bottom: 0.5rem; justify-content: flex-start !important;
-    }
-    .portfolio-item .portfolio-hover-content > .flex { margin-left: 0 !important; }
-    .portfolio-item .portfolio-hover-content p { font-size: 15px !important; }
 }
 
 /* ============================================

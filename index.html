@@ -470,99 +470,53 @@
         </div>
     </section>
 
-    <!-- Portfolio / Recenze -->
-    <section id="portfolio" class="pt-20 px-0 bg-[#121212]">
-        <div>
-            <div class="text-center mb-16">
-                <h2 class="section-title italic font-magistral relative font-black leading-tight mb-4" style="font-size: clamp(1.8rem, 4vw, 3rem);">RECENZE</h2>
-            </div>
-
-            <div class="portfolio-slider relative overflow-hidden w-full max-md:overflow-x-visible max-md:px-8">
-                <div class="portfolio-track flex flex-nowrap w-full gap-0">
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
-                        <img src="img/BMWM2.jpg" alt="BMW M2" class="portfolio-image w-full h-full object-cover">
-                        <div class="portfolio-overlay absolute inset-0"></div>
-                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
-                            <div class="absolute top-4 right-4 flex gap-1">
-                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
-                            </div>
-                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
-                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">S</div>
-                                <div class="flex flex-col items-start">
-                                    <h3 class="font-magistral text-white text-lg leading-tight">Stanislav Mihula</h3>
-                                    <span class="font-futura text-neutral-400 text-[13px]">před 8 hodinami</span>
-                                </div>
-                            </div>
-                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Na auto aplikovali PPF fólie čiré na předek vozu, barevný polep PPF fólie na střechu (černá) a na zbytek vozu prověřenou keramickou ochranu. Ochranná PPF fólie se chová perfektně.</p>
-                        </div>
+    <!-- Portfolio -->
+    <section id="portfolio" class="pt-0 px-0 bg-[#1b1b1b]">
+        <div class="portfolio-slider relative overflow-hidden w-full">
+            <div class="portfolio-track flex flex-nowrap w-full gap-0">
+                <div class="portfolio-item relative cursor-pointer" style="flex:1 1 0; width:0; aspect-ratio:1/1;" data-full="img/BMWM2.jpg">
+                    <img src="img/BMWM2.jpg" alt="BMW M2" class="portfolio-image w-full h-full object-cover">
+                    <div class="portfolio-overlay absolute inset-0"></div>
+                    <div class="portfolio-hover-content">
+                        <h3 class="font-magistral text-white">BMW M2</h3>
+                        <p class="font-futura text-neutral-300 text-[14px]">Instalace ochranné PPF folie, barevný wrap polep střechy a aplikace keramické ochrany.</p>
+                        <img src="img/lupa.png" alt="" class="zoom-icon">
                     </div>
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
-                        <img src="img/helicopter-2.png" alt="Helicopter" class="portfolio-image w-full h-full object-cover">
-                        <div class="portfolio-overlay absolute inset-0"></div>
-                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
-                            <div class="absolute top-4 right-4 flex gap-1">
-                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
-                            </div>
-                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
-                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">E</div>
-                                <div class="flex flex-col items-start">
-                                    <h3 class="font-magistral text-white text-lg leading-tight">Edman</h3>
-                                    <span class="font-futura text-neutral-400 text-[13px]">před 8 lety</span>
-                                </div>
-                            </div>
-                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Spokojenost. Dobře umyté, vyleštěné i vytepované. Dobrá služba za adekvátní cenu.</p>
-                        </div>
+                </div>
+                <div class="portfolio-item relative cursor-pointer" style="flex:1 1 0; width:0; aspect-ratio:1/1;" data-full="img/helicopter-2.png">
+                    <img src="img/helicopter-2.png" alt="Robinson R44" class="portfolio-image w-full h-full object-cover">
+                    <div class="portfolio-overlay absolute inset-0"></div>
+                    <div class="portfolio-hover-content">
+                        <h3 class="font-magistral text-white">Robinson R44</h3>
+                        <p class="font-futura text-neutral-300 text-[14px]">Celoplošný polep a ochranná PPF fólie nanášená na vrtulník.</p>
+                        <img src="img/lupa.png" alt="" class="zoom-icon">
                     </div>
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
-                        <img src="img/bmw-3.png" alt="BMW" class="portfolio-image w-full h-full object-cover">
-                        <div class="portfolio-overlay absolute inset-0"></div>
-                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
-                            <div class="absolute top-4 right-4 flex gap-1">
-                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
-                            </div>
-                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
-                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">M</div>
-                                <div class="flex flex-col items-start">
-                                    <h3 class="font-magistral text-white text-lg leading-tight">Martin Novák</h3>
-                                    <span class="font-futura text-neutral-400 text-[13px]">před 2 měsíci</span>
-                                </div>
-                            </div>
-                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Ruční mytí, individuální polep auta včetně tonování skel a ochranné PPF fólie. Naprostá spokojenost s výsledkem.</p>
-                        </div>
+                </div>
+                <div class="portfolio-item relative cursor-pointer" style="flex:1 1 0; width:0; aspect-ratio:1/1;" data-full="img/bmw-3.png">
+                    <img src="img/bmw-3.png" alt="BMW 6 Series" class="portfolio-image w-full h-full object-cover">
+                    <div class="portfolio-overlay absolute inset-0"></div>
+                    <div class="portfolio-hover-content">
+                        <h3 class="font-magistral text-white">BMW 630i</h3>
+                        <p class="font-futura text-neutral-300 text-[14px]">Leštění laku, keramická ochrana 9H a kompletní detailing vozu.</p>
+                        <img src="img/lupa.png" alt="" class="zoom-icon">
                     </div>
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
-                        <img src="img/lexus.jpg" alt="Lexus" class="portfolio-image w-full h-full object-cover">
-                        <div class="portfolio-overlay absolute inset-0"></div>
-                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
-                            <div class="absolute top-4 right-4 flex gap-1">
-                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
-                            </div>
-                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
-                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">J</div>
-                                <div class="flex flex-col items-start">
-                                    <h3 class="font-magistral text-white text-lg leading-tight">Jakub Zogata</h3>
-                                    <span class="font-futura text-neutral-400 text-[13px]">před 3 měsíci</span>
-                                </div>
-                            </div>
-                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Proběhlo kompletní mytí, voskování, důkladné vyčištění sedaček i celého interiéru. Auto teď vypadá jako nové – lak krásně lesklý.</p>
-                        </div>
+                </div>
+                <div class="portfolio-item relative cursor-pointer" style="flex:1 1 0; width:0; aspect-ratio:1/1;" data-full="img/lexus.jpg">
+                    <img src="img/lexus.jpg" alt="Lexus LC500" class="portfolio-image w-full h-full object-cover">
+                    <div class="portfolio-overlay absolute inset-0"></div>
+                    <div class="portfolio-hover-content">
+                        <h3 class="font-magistral text-white">Lexus LC500</h3>
+                        <p class="font-futura text-neutral-300 text-[14px]">Leštění a renovace laku, keramická ochrana 9H s čištěním interiéru a impregnací kůže.</p>
+                        <img src="img/lupa.png" alt="" class="zoom-icon">
                     </div>
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-0 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
-                        <img src="img/motor-5.png" alt="Motorcycle" class="portfolio-image w-full h-full object-cover">
-                        <div class="portfolio-overlay absolute inset-0"></div>
-                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
-                            <div class="absolute top-4 right-4 flex gap-1">
-                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
-                            </div>
-                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
-                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">P</div>
-                                <div class="flex flex-col items-start">
-                                    <h3 class="font-magistral text-white text-lg leading-tight">Petr Šimek</h3>
-                                    <span class="font-futura text-neutral-400 text-[13px]">před 1 rokem</span>
-                                </div>
-                            </div>
-                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Renovace, leštění laku a keramická ochrana aplikována na veteránskou motorku. Perfektní práce, doporučuji.</p>
-                        </div>
+                </div>
+                <div class="portfolio-item relative cursor-pointer" style="flex:1 1 0; width:0; aspect-ratio:1/1;" data-full="img/motor-5.png">
+                    <img src="img/motor-5.png" alt="Veterán" class="portfolio-image w-full h-full object-cover">
+                    <div class="portfolio-overlay absolute inset-0"></div>
+                    <div class="portfolio-hover-content">
+                        <h3 class="font-magistral text-white">Veterán</h3>
+                        <p class="font-futura text-neutral-300 text-[14px]">Renovace, leštění laku a keramická ochrana aplikovaná na veteránskou motorku.</p>
+                        <img src="img/lupa.png" alt="" class="zoom-icon">
                     </div>
                 </div>
             </div>
@@ -677,10 +631,20 @@
     </footer>
 
 
+    <!-- Lightbox -->
+    <div id="lightbox"
+        style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); cursor:pointer; box-sizing:border-box; padding:15px 0;">
+        <span id="lightbox-close"
+            style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; cursor:pointer; z-index:10000; user-select:none;">&times;</span>
+        <img id="lightbox-img"
+            style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:80%; max-height:calc(100% - 100px); object-fit:contain;">
+    </div>
+
     <script type="module" src="js/hero-slider.js"></script>
     <script type="module" src="js/portfolio.js"></script>
     <script type="module" src="js/hamburger.js"></script>
     <script type="module" src="js/services.js"></script>
+    <script type="module" src="js/lightbox.js"></script>
     <script type="module" src="js/timeline.js"></script>
     <script type="module" src="js/rezervace.js"></script>
 
