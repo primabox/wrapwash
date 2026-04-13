@@ -30,6 +30,18 @@ if (empty($name) || empty($phone) || empty($email)) {
     exit;
 }
 
+// Name: only letters (including diacritics), spaces, hyphens, dots, 2-100 chars
+if (!preg_match('/^[\p{L}][\p{L}\s\-\.]{1,99}$/u', $name)) {
+    echo json_encode(['success' => false, 'message' => 'Jméno smí obsahovat pouze písmena, mezery a pomlčky.']);
+    exit;
+}
+
+// Phone: +, digits, spaces, hyphens, parentheses; at least 9 digits
+if (!preg_match('/^\+?[\d\s\-\(\)]{9,20}$/', $phone) || strlen(preg_replace('/\D/', '', $phone)) < 9) {
+    echo json_encode(['success' => false, 'message' => 'Zadejte platné telefonní číslo (min. 9 číslic).']);
+    exit;
+}
+
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode(['success' => false, 'message' => 'Zadejte platnou e-mailovou adresu.']);
     exit;
