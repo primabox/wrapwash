@@ -15,12 +15,12 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50">
-        <div class="max-w-7xl mx-auto pt-8 px-8 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto pt-8  flex items-center justify-between">
             <div class="flex items-center">
                 <img src="img/logo.png" alt="Wash_Wrap" class="w-[120px] h-auto object-contain mr-10">
             </div>
 
-            <div class="hidden lg:flex items-center gap-8 text-[14px] tracking-wider font-futura ml-20 mb-[72px]">
+            <div class="hidden lg:flex items-center gap-8 text-[14px] tracking-wider font-futura  mb-[72px]">
                 <a href="#uvod" class="hover:text-magenta transition uppercase">Úvod</a>
                 <a href="#o-nas" class="hover:text-magenta transition uppercase">O nás</a>
                 <a href="#sluzby" class="hover:text-magenta transition uppercase">Služby</a>
@@ -29,16 +29,21 @@
                 <a href="#kontakt" class="hover:text-magenta transition uppercase">Kontakt</a>
             </div>
 
-            <div class="hidden lg:flex items-center gap-4 mb-[72px] mr-16">
+            <div class="hidden lg:flex items-center gap-2 mb-[72px] mr-8">
                 <a href="tel:+420603298838"
                     class="bg-magenta px-6 py-2.5 hover:opacity-90 transition font-magistral text-base mr-[10px]">
                     +420 603 298 838
                 </a>
-                <a href="#"
+                <a href="#rezervace"
+                    class="border border-white px-6 py-2.5 hover:opacity-90 transition font-magistral text-base mr-[10px]"
+                    style="background-color:#fff; color:#C31681;">
+                    OBJEDNAT SE
+                </a>
+                <a href="https://www.facebook.com/WashWrap" target="_blank" rel="noopener"
                     class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
                     <i class="fab fa-facebook-f text-sm"></i>
                 </a>
-                <a href="#"
+                <a href="https://www.instagram.com/washwrap/" target="_blank" rel="noopener"
                     class="w-9 h-9 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
                     <i class="fab fa-instagram text-sm"></i>
                 </a>
@@ -61,6 +66,9 @@
             <a href="#kontakt" class="hover:text-magenta transition uppercase">Kontakt</a>
             <a href="tel:+420603298838" class="bg-magenta px-6 py-3 mt-4 text-center block">
                 +420 603 298 838
+            </a>
+            <a href="#rezervace" class="px-6 py-3 mt-2 text-center block font-magistral" style="background-color:#fff; color:#C31681;">
+                OBJEDNAT SE
             </a>
         </div>
     </nav>
@@ -105,87 +113,6 @@
             <div class="absolute bottom-0 right-4 sm:right-6 lg:right-8 flex gap-3">
                 <button class="pagination-dot active" data-slide="0">1</button>
                 <!-- <button class="pagination-dot" data-slide="1">2</button> -->
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="o-nas" class="py-20 px-8">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <!-- Images -->
-            <div class="grid grid-cols-2 gap-4 justify-items-center">
-                <img src="img/whyUS.png" alt="Car detail" class="about-image">
-                <img src="img/whyUS2.png" alt="Wheel wash" class="about-image">
-            </div>
-
-            <!-- Content -->
-            <div>
-                <div class="section-label">
-                    <span class="font-futura">INFO O NÁS</span>
-                    <div class="section-underline"></div>
-                </div>
-
-                <h2 class="section-title italic font-magistral">
-                    PROČ MY?
-                </h2>
-
-                <div class="space-y-6 text-[20px] text-neutral-300 leading-relaxed font-futura">
-                    <p>Jsme tu pro vás již od roku 2015. Za <span class="font-bold text-white">více než 10 let</span>
-                        jsme vyčistili a ošetřili tisíce vozů, aplikovali stovky keramických ochran a zrealizovali řadu
-                        sofistikovaných projektů. Naše <span class="font-bold text-white">moderní mycí centrum v
-                            Brně</span> vzniklo na základě <span class="font-bold text-white">znalostí</span>
-                        dlouhodobých požadavků klientů a spojuje zkušenosti, špičkovou technologii a vášeň pro detail.
-                    </p>
-
-                    <div class="space-y-1 mt-10 pt-6">
-                        <div class="feature-item gap-6 items-start">
-                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
-                            <p class="flex-1">Přistavení a vyzvednutí auta <span class="font-bold text-white">7 dní v
-                                    týdnu, 24/7</span></p>
-                        </div>
-                        <div class="feature-item gap-6 items-start">
-                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
-                            <p class="flex-1">Služby na počkání a posezením v lounge u dobré kávy</p>
-                        </div>
-                        <div class="feature-item gap-6 items-start">
-                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
-                            <p class="flex-1">Moderní centrum a špičkové zázemí na ploše <span
-                                    class="font-bold text-white">přes 200 m²</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <div class="timeline-container">
-            <div class="timeline-item">
-                <div class="timeline-year">2015</div>
-                <span></span>
-                <p class="timeline-text">Certifikace naší společnosti nanotechnologie Ceramic&nbsp;Pro.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2017</div>
-                <span></span>
-                <p class="timeline-text">Certifikace renovace laku systémem Rupes v&nbsp;Itálii</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2021</div>
-                <span></span>
-                <p class="timeline-text">Zavedení ochranných fólií PPF KAVACA do&nbsp;sortimentu.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2025</div>
-                <span></span>
-                <p class="timeline-text">Proškolení nového systému Ceramic Pro ION u&nbsp;polského partnera.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2025</div>
-                <div class="spanLong"></div>
-                <p class="timeline-text">Nová pobočka Wash&Wrap. Oficiální partner značky Ceramic Pro na Českém trhu.
-                </p>
             </div>
         </div>
     </section>
@@ -333,73 +260,308 @@
         </div>
     </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="pt-20 px-0 bg-[#121212]"> <!-- Removed padding to make cards go to edges -->
-        <div class="max-w-full mx-auto"> <!-- Adjusted max-width to full -->
-            <div class="text-center mb-16">
-                <div class="section-label inline-block">
-                    <span class="font-futura text-[12px]">NAŠE PRÁCE</span>
-                    <div class="section-underline mx-auto"></div>
-                </div>
-                <h2 class="section-title italic font-magistral">
-                    PORTFOLIO
-                </h2>
+    <!-- Rezervace Section -->
+    <section id="rezervace" class="py-20 px-4 sm:px-16 bg-[#121212]">
+        <div class="max-w-[1500px] mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="section-title font-magistral relative font-black leading-tight mb-4" style="font-size: clamp(1.8rem, 3vw, 2.8rem);">REZERVACE</h2>
             </div>
 
-            <div class="portfolio-slider">
-                <div class="portfolio-track flex gap-0"> <!-- Removed gap to make cards touch edges -->
-                    <div class="portfolio-item" data-full="img/PorscheFull.jpg">
-                        <img src="img/porsche_1.png" alt="Porsche" class="portfolio-image">
-                        <div class="portfolio-overlay"></div>
-                        <div class="portfolio-hover-content">
-                            <h3 class="font-magistral text-[30px] text-white">Porsche 928</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Ruční mytí, renovace laku a čištění
-                                interiéru veterána.</p>
-                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+            <form id="rezervace-form" novalidate>
+            <div class="border border-neutral-800 bg-[#212121] p-5 md:p-9">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+                    <!-- 01 Typ vozu -->
+                    <div>
+                        <h3 class="text-white mb-2 font-magistral" style="font-size:18px;"><span class="text-magenta font-magistral" style="font-size:22px;">01</span> TYP VOZU</h3>
+                        <p class="font-futura mb-5 text-[18px] text-[#aaa] md:text-xl">Vyberte, prosím, kategorii vašeho auta:</p>
+                        <div class="grid grid-cols-3 gap-2">
+                            <label class="rezervace-vehicle flex flex-col items-center gap-1.5 cursor-pointer text-xs md:text-base text-[#ccc]">
+                                <img src="img/Hatchback.svg" alt="Hatchback" class="rezervace-vehicle-icon object-contain" style="width:120px;height:76px;">
+                                <span class="font-futura">Hatchback</span>
+                                <input type="radio" name="vehicle" value="hatchback">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                            <label class="rezervace-vehicle flex flex-col items-center gap-1.5 cursor-pointer text-xs md:text-base text-[#ccc]">
+                                <img src="img/Sedan.svg" alt="Sedan" class="rezervace-vehicle-icon object-contain" style="width:120px;height:76px;">
+                                <span class="font-futura">Sedan</span>
+                                <input type="radio" name="vehicle" value="sedan">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                            <label class="rezervace-vehicle flex flex-col items-center gap-1.5 cursor-pointer text-xs md:text-base text-[#ccc]">
+                                <img src="img/SUV.svg" alt="SUV" class="rezervace-vehicle-icon object-contain" style="width:120px;height:76px;">
+                                <span class="font-futura">SUV</span>
+                                <input type="radio" name="vehicle" value="suv">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                            <label class="rezervace-vehicle flex flex-col items-center gap-1.5 cursor-pointer text-xs md:text-base text-[#ccc]">
+                                <img src="img/Van.svg" alt="Van/MPV" class="rezervace-vehicle-icon object-contain" style="width:120px;height:76px;">
+                                <span class="font-futura">Van/ MPV</span>
+                                <input type="radio" name="vehicle" value="van">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                            <label class="rezervace-vehicle flex flex-col items-center gap-1.5 cursor-pointer text-xs md:text-base text-[#ccc]">
+                                <img src="img/Moto.svg" alt="Moto" class="rezervace-vehicle-icon object-contain" style="width:120px;height:76px;">
+                                <span class="font-futura">Moto</span>
+                                <input type="radio" name="vehicle" value="moto">
+                                <span class="rezervace-radio"></span>
+                            </label>
                         </div>
                     </div>
 
-                    <div class="portfolio-item" data-full="img/GazzeleFull.jpg">
-                        <img src="img/helicopter-2.png" alt="Helicopter" class="portfolio-image">
-                        <div class="portfolio-overlay"></div>
-                        <div class="portfolio-hover-content">
-                            <h3 class="font-magistral text-[30px] text-white">Gazelle SA 341</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Renovace a keramická ochrana laku,
-                                čištění interiéru vrtulníku externě u zákazníka.</p>
-                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                    <!-- 02 Rozsah služeb -->
+                    <div>
+                        <h3 class="text-white mb-2 font-magistral" style="font-size:18px;"><span class="text-magenta font-magistral" style="font-size:22px;">02</span> ROZSAH SLUŽEB</h3>
+                        <p class="font-futura mb-5 text-[18px] text-[#aaa] md:text-xl">Zvolte služby, o které máte zájem:</p>
+                        <div class="flex flex-col gap-3">
+                            <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
+                                <input type="checkbox" name="service" value="rucni-myti">
+                                <span class="rezervace-checkbox"></span>
+                                Ruční mytí vozu
+                            </label>
+                            <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
+                                <input type="checkbox" name="service" value="cisteni-interieru">
+                                <span class="rezervace-checkbox"></span>
+                                Čištění interiéru
+                            </label>
+                            <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
+                                <input type="checkbox" name="service" value="polepy">
+                                <span class="rezervace-checkbox"></span>
+                                Polepy aut
+                            </label>
+                            <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
+                                <input type="checkbox" name="service" value="ppf">
+                                <span class="rezervace-checkbox"></span>
+                                Ochranné fólie (PPF)
+                            </label>
+                            <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
+                                <input type="checkbox" name="service" value="renovace-laku">
+                                <span class="rezervace-checkbox"></span>
+                                Renovace laku
+                            </label>
+                            <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
+                                <input type="checkbox" name="service" value="keramika">
+                                <span class="rezervace-checkbox"></span>
+                                Keramická ochrana laku
+                            </label>
+                            <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
+                                <input type="checkbox" name="service" value="kuze">
+                                <span class="rezervace-checkbox"></span>
+                                Opravy kůže (sedačky, interiér)
+                            </label>
                         </div>
                     </div>
 
-                    <div class="portfolio-item" data-full="img/bmw2full.jpg">
-                        <img src="img/bmw-3.png" alt="BMW" class="portfolio-image">
-                        <div class="portfolio-overlay"></div>
-                        <div class="portfolio-hover-content">
-                            <h3 class="font-magistral text-[30px] text-white">BMW 6</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Ruční mytí, individuální polep auta
-                                včetně tonování skel a ochranné PPF fólie.</p>
-                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                    <!-- Extra požadavky -->
+                    <div id="extra-pozadavky" class="mt-10 md:mt-0">
+                        <p class="font-futura text-lg mb-4 text-[#ddd]" style="line-height:1.5;">Máte speciální požadavek nebo přání? Napište nám detaily – rádi vám připravíme <strong>individuální řešení.</strong></p>
+                        <textarea name="extra" class="rezervace-textarea w-full text-[17px] resize-none rounded p-3 px-4 bg-[#212121] text-[#ccc] font-futura" placeholder="Extra požadavky" rows="6" style="min-height:140px; border:2px solid #979797;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 Kontakt -->
+            <div class="mt-10 pt-8">
+                <h3 class="text-white mb-2 font-magistral" style="font-size:18px;"><span class="text-magenta font-magistral" style="font-size:22px;">03</span> KONTAKT</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5 mb-6">
+                    <input type="text" name="name" placeholder="Jméno" class="kontakt-input w-full text-[17px] bg-transparent text-[#ccc] font-futura" style="border:2px solid #555; padding:14px 18px; border-radius:0;">
+                    <input type="tel" name="phone" placeholder="Telefon" class="kontakt-input w-full text-[17px] bg-transparent text-[#ccc] font-futura" style="border:2px solid #555; padding:14px 18px; border-radius:0;">
+                    <input type="email" name="email" placeholder="E-mail" class="kontakt-input w-full text-[17px] bg-transparent text-[#ccc] font-futura" style="border:2px solid #555; padding:14px 18px; border-radius:0;">
+                </div>
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-[15px] text-[#bbb] font-futura" style="line-height:1.5;">
+                            <img src="img/arrow.svg" alt="" class="inline-block shrink-0 w-[22px] h-[18px] align-middle mb-0.5"> Po odeslání formuláře vás budeme co nejdříve kontaktovat s <strong class="text-white italic">cenovou nabídkou</strong> a návrhem realizace.
+                        </p>
+                        <label class="kontakt-consent flex items-center gap-3 cursor-pointer text-[16px] text-[#bbb] font-futura">
+                            <input type="checkbox" name="consent">
+                            <span class="rezervace-checkbox"></span>
+                            Souhlasím se <a href="gdpr.docx" download class="text-magenta underline">zpracováním osobních údajů.</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="kontakt-submit flex items-center justify-center gap-3 text-white uppercase tracking-wider cursor-pointer border-none bg-[#C31681] font-magistral" style="padding:16px 40px; font-size:18px;">
+                        <img src="img/send.svg" alt="Odeslat" class="kontakt-send-icon w-6 h-6 md:w-7 md:h-7">
+                        ODESLAT
+                    </button>
+                </div>
+                <div id="form-message" class="hidden mt-5 p-3 rounded font-futura text-sm text-center"></div>
+            </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="o-nas" class="py-20 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <!-- Images -->
+            <div class="grid grid-cols-2 gap-4 justify-items-center">
+                <img src="img/whyUS.png" alt="Car detail" class="about-image">
+                <img src="img/whyUS2.png" alt="Wheel wash" class="about-image">
+            </div>
+
+            <!-- Content -->
+            <div>
+                <div class="section-label">
+                    <span class="font-futura">INFO O NÁS</span>
+                    <div class="section-underline"></div>
+                </div>
+
+                <h2 class="section-title italic font-magistral">
+                    PROČ MY?
+                </h2>
+
+                <div class="space-y-6 text-[20px] text-neutral-300 leading-relaxed font-futura">
+                    <p>Jsme tu pro vás již od roku 2015. Za <span class="font-bold text-white">více než 10 let</span>
+                        jsme vyčistili a ošetřili tisíce vozů, aplikovali stovky keramických ochran a zrealizovali řadu
+                        sofistikovaných projektů. Naše <span class="font-bold text-white">moderní mycí centrum v
+                            Brně</span> vzniklo na základě <span class="font-bold text-white">znalostí</span>
+                        dlouhodobých požadavků klientů a spojuje zkušenosti, špičkovou technologii a vášeň pro detail.
+                    </p>
+
+                    <div class="space-y-1 mt-10 pt-6">
+                        <div class="feature-item gap-6 items-start">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
+                            <p class="flex-1">Přistavení a vyzvednutí auta <span class="font-bold text-white">7 dní v
+                                    týdnu, 24/7</span></p>
+                        </div>
+                        <div class="feature-item gap-6 items-start">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
+                            <p class="flex-1">Služby na počkání a posezením v lounge u dobré kávy</p>
+                        </div>
+                        <div class="feature-item gap-6 items-start">
+                            <img src="img/arrows.png" alt="Arrow" class="w-[19px] h-[16px] mt-[8px] flex-shrink-0">
+                            <p class="flex-1">Moderní centrum a špičkové zázemí na ploše <span
+                                    class="font-bold text-white">přes 200 m²</span></p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="portfolio-item" data-full="img/ferrariFull.JPG">
-                        <img src="img/porsche_4.png" alt="Ferrari" class="portfolio-image">
-                        <div class="portfolio-overlay"></div>
-                        <div class="portfolio-hover-content">
-                            <h3 class="font-magistral text-[30px] text-white">Ferrari 400i</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Renovace kůže, leštění a keramická
-                                ochrana laku na veteránský vůz.</p>
-                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-year">2015</div>
+                <span></span>
+                <p class="timeline-text">Certifikace naší společnosti nanotechnologie Ceramic&nbsp;Pro.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2017</div>
+                <span></span>
+                <p class="timeline-text">Certifikace renovace laku systémem Rupes v&nbsp;Itálii</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2021</div>
+                <span></span>
+                <p class="timeline-text">Zavedení ochranných fólií PPF KAVACA do&nbsp;sortimentu.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <span></span>
+                <p class="timeline-text">Proškolení nového systému Ceramic Pro ION u&nbsp;polského partnera.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <div class="spanLong"></div>
+                <p class="timeline-text">Nová pobočka Wash&Wrap. Oficiální partner značky Ceramic Pro na Českém trhu.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Recenze -->
+    <section id="portfolio" class="pt-20 px-0 bg-[#121212]">
+        <div>
+            <div class="text-center mb-16">
+                <h2 class="section-title italic font-magistral relative font-black leading-tight mb-4" style="font-size: clamp(1.8rem, 4vw, 3rem);">RECENZE</h2>
+            </div>
+
+            <div class="portfolio-slider relative overflow-hidden w-full max-md:overflow-x-visible max-md:px-8">
+                <div class="portfolio-track flex flex-nowrap w-full gap-0">
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                        <img src="img/BMWM2.jpg" alt="BMW M2" class="portfolio-image w-full h-full object-cover">
+                        <div class="portfolio-overlay absolute inset-0"></div>
+                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
+                            <div class="absolute top-4 right-4 flex gap-1">
+                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
+                            </div>
+                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
+                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">S</div>
+                                <div class="flex flex-col items-start">
+                                    <h3 class="font-magistral text-white text-lg leading-tight">Stanislav Mihula</h3>
+                                    <span class="font-futura text-neutral-400 text-[13px]">před 8 hodinami</span>
+                                </div>
+                            </div>
+                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Na auto aplikovali PPF fólie čiré na předek vozu, barevný polep PPF fólie na střechu (černá) a na zbytek vozu prověřenou keramickou ochranu. Ochranná PPF fólie se chová perfektně.</p>
                         </div>
                     </div>
-
-                    <div class="portfolio-item" data-full="img/MotorCycle.jpg">
-                        <img src="img/motor-5.png" alt="Motorcycle" class="portfolio-image">
-                        <div class="portfolio-overlay"></div>
-                        <div class="portfolio-hover-content">
-                            <h3 class="font-magistral text-[30px] text-white">Husqvarna 1935</h3>
-                            <p class="font-futura text-[20px] text-neutral-300">Renovace, leštění laku a keramická
-                                ochrana aplikována na veteránskou motorku.</p>
-                            <img src="img/lupa.png" alt="Zoom" class="zoom-icon">
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                        <img src="img/helicopter-2.png" alt="Helicopter" class="portfolio-image w-full h-full object-cover">
+                        <div class="portfolio-overlay absolute inset-0"></div>
+                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
+                            <div class="absolute top-4 right-4 flex gap-1">
+                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
+                            </div>
+                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
+                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">E</div>
+                                <div class="flex flex-col items-start">
+                                    <h3 class="font-magistral text-white text-lg leading-tight">Edman</h3>
+                                    <span class="font-futura text-neutral-400 text-[13px]">před 8 lety</span>
+                                </div>
+                            </div>
+                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Spokojenost. Dobře umyté, vyleštěné i vytepované. Dobrá služba za adekvátní cenu.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                        <img src="img/bmw-3.png" alt="BMW" class="portfolio-image w-full h-full object-cover">
+                        <div class="portfolio-overlay absolute inset-0"></div>
+                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
+                            <div class="absolute top-4 right-4 flex gap-1">
+                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
+                            </div>
+                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
+                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">M</div>
+                                <div class="flex flex-col items-start">
+                                    <h3 class="font-magistral text-white text-lg leading-tight">Martin Novák</h3>
+                                    <span class="font-futura text-neutral-400 text-[13px]">před 2 měsíci</span>
+                                </div>
+                            </div>
+                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Ruční mytí, individuální polep auta včetně tonování skel a ochranné PPF fólie. Naprostá spokojenost s výsledkem.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                        <img src="img/lexus.jpg" alt="Lexus" class="portfolio-image w-full h-full object-cover">
+                        <div class="portfolio-overlay absolute inset-0"></div>
+                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
+                            <div class="absolute top-4 right-4 flex gap-1">
+                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
+                            </div>
+                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
+                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">J</div>
+                                <div class="flex flex-col items-start">
+                                    <h3 class="font-magistral text-white text-lg leading-tight">Jakub Zogata</h3>
+                                    <span class="font-futura text-neutral-400 text-[13px]">před 3 měsíci</span>
+                                </div>
+                            </div>
+                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Proběhlo kompletní mytí, voskování, důkladné vyčištění sedaček i celého interiéru. Auto teď vypadá jako nové – lak krásně lesklý.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-0 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                        <img src="img/motor-5.png" alt="Motorcycle" class="portfolio-image w-full h-full object-cover">
+                        <div class="portfolio-overlay absolute inset-0"></div>
+                        <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
+                            <div class="absolute top-4 right-4 flex gap-1">
+                                <i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i><i class="fas fa-star text-[#C31681] text-[16px]"></i>
+                            </div>
+                            <div class="flex items-center gap-3 mb-3" style="margin-left:-56px;">
+                                <div class="flex items-center justify-center rounded-full text-white font-bold shrink-0 text-[26px]" style="width:68px;height:68px;background-color:rgba(195,22,129,0.7);">P</div>
+                                <div class="flex flex-col items-start">
+                                    <h3 class="font-magistral text-white text-lg leading-tight">Petr Šimek</h3>
+                                    <span class="font-futura text-neutral-400 text-[13px]">před 1 rokem</span>
+                                </div>
+                            </div>
+                            <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Renovace, leštění laku a keramická ochrana aplikována na veteránskou motorku. Perfektní práce, doporučuji.</p>
                         </div>
                     </div>
                 </div>
@@ -443,8 +605,13 @@
                     <p class="font-futura text-[18px] uppercase text-white mb-3 tracking-wider">Zavolejte a objednejte
                         se 24/7</p>
                     <a href="tel:+420603298838"
-                        class="text-[34px] font-magistral text-white mb-8 leading-none tracking-wide block hover:text-magenta transition">+420
+                        class="text-[34px] font-magistral text-white mb-5 leading-none tracking-wide block hover:text-magenta transition">+420
                         603 298 838</a>
+                    <a href="#rezervace"
+                        class="block font-futura text-white uppercase tracking-widest hover:opacity-90 transition mb-6 text-center"
+                        style="background-color:#C31681; padding:14px 0; font-size:22px; width:100%;">
+                        OBJEDNAT SE
+                    </a>
                     <div class="space-y-1">
                         <p class="text-[18px] font-futura text-white leading-relaxed"><strong>Otevírací doba:</strong>
                             Po–Pá 8:00–17:00</p>
@@ -462,7 +629,7 @@
                             class="text-magenta hover:text-white transition block">info@washwrap.cz</a>
                         <a href="https://www.washwrap.cz" target="_blank"
                             class="text-magenta hover:text-white transition block">www.washwrap.cz</a>
-                        <p>IČO: 17833261</p>
+                        <p>IČO: 17832161</p>
                     </div>
                 </div>
 
@@ -482,11 +649,11 @@
                     <!-- Sociální sítě -->
                     <div class="flex-shrink-0 flex items-end">
                         <div class="flex flex-col gap-3">
-                            <a href="#"
+                            <a href="https://www.facebook.com/WashWrap" target="_blank" rel="noopener"
                                 class="w-10 h-10 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
                                 <i class="fab fa-facebook-f text-sm"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://www.instagram.com/washwrap/" target="_blank" rel="noopener"
                                 class="w-10 h-10 border border-white flex items-center justify-center hover:border-magenta hover:text-magenta transition">
                                 <i class="fab fa-instagram text-sm"></i>
                             </a>
@@ -510,21 +677,12 @@
     </footer>
 
 
-    <!-- Lightbox -->
-    <div id="lightbox"
-        style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); cursor:pointer;">
-        <span id="lightbox-close"
-            style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; cursor:pointer; z-index:10000;">&times;</span>
-        <img id="lightbox-img"
-            style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:80%; max-height:calc(100% - 40px);">
-    </div>
-
     <script type="module" src="js/hero-slider.js"></script>
     <script type="module" src="js/portfolio.js"></script>
     <script type="module" src="js/hamburger.js"></script>
     <script type="module" src="js/services.js"></script>
-    <script type="module" src="js/lightbox.js"></script>
     <script type="module" src="js/timeline.js"></script>
+    <script type="module" src="js/rezervace.js"></script>
 
 </body>
 

@@ -821,17 +821,6 @@ nav a {
     object-fit: contain;
 }
 
-/* ============================================
-   LIGHTBOX - vertical inset and sizing
-   Ensures the lightbox image has ~15px spacing top/bottom and is slightly smaller overall.
-   ============================================ */
-#lightbox {
-    /* keep existing fixed positioning, just add vertical padding */
-    box-sizing: border-box;
-    padding: 15px 0;
-}
-
-
 .portfolio-hover-content h3 {
     padding: 0 2rem;
     margin-bottom: 1rem;
@@ -1118,20 +1107,6 @@ nav a {
         margin-top: -16rem;
     }
 
-    /* Lightbox responsive na mobilu */
-    #lightbox-img {
-        max-width: 90% !important;
-        max-height: 80% !important;
-        width: auto !important;
-        height: auto !important;
-    }
-
-    #lightbox-close {
-        top: 10px !important;
-        right: 15px !important;
-        font-size: 30px !important;
-    }
-
     /* Telefon v patičce menší na mobilu */
     footer a[href^="tel:"] {
         font-size: 24px !important;
@@ -1140,24 +1115,95 @@ nav a {
 }
 
 /* ============================================
-   LIGHTBOX
+   REZERVACE - checked states, pseudo-elements
    ============================================ */
-#lightbox {
-    /* vertical inset for lightbox content */
-    box-sizing: border-box;
-    padding: 15px 0;
+.rezervace-vehicle input[type="radio"] { display: none; }
+.rezervace-radio {
+    width: 18px; height: 18px; border-radius: 9999px; position: relative;
+    border: 2px solid #555; transition: border-color 0.2s;
+}
+.rezervace-vehicle input[type="radio"]:checked ~ .rezervace-radio { border-color: #C31681; }
+.rezervace-vehicle input[type="radio"]:checked ~ .rezervace-radio::after {
+    content: ''; position: absolute; border-radius: 9999px;
+    top: 3px; left: 3px; width: 8px; height: 8px; background-color: #C31681;
+}
+.rezervace-vehicle-icon {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(4500%) hue-rotate(310deg) brightness(95%) contrast(100%);
+}
+.rezervace-service input[type="checkbox"] { display: none; }
+.rezervace-checkbox {
+    width: 18px; height: 18px; border-radius: 9999px; flex-shrink: 0; position: relative;
+    border: 2px solid #555; transition: border-color 0.2s;
+}
+.rezervace-service input[type="checkbox"]:checked ~ .rezervace-checkbox,
+.rezervace-service:has(input[type="checkbox"]:checked) .rezervace-checkbox { border-color: #C31681; }
+.rezervace-service input[type="checkbox"]:checked ~ .rezervace-checkbox::after,
+.rezervace-service:has(input[type="checkbox"]:checked) .rezervace-checkbox::after {
+    content: ''; position: absolute; border-radius: 9999px;
+    top: 3px; left: 3px; width: 8px; height: 8px; background-color: #C31681;
+}
+.rezervace-textarea::placeholder { color: #888; font-size: 17px; }
+.rezervace-textarea:focus { outline: none; border-color: #C31681; }
+
+/* ============================================
+   KONTAKT FORM - checked, focus, hover
+   ============================================ */
+.kontakt-input::placeholder { color: #888; }
+.kontakt-input:focus { outline: none; border-color: #C31681; }
+.kontakt-consent input[type="checkbox"] { display: none; }
+.kontakt-consent input[type="checkbox"]:checked ~ .rezervace-checkbox,
+.kontakt-consent:has(input[type="checkbox"]:checked) .rezervace-checkbox { border-color: #C31681; }
+.kontakt-consent input[type="checkbox"]:checked ~ .rezervace-checkbox::after,
+.kontakt-consent:has(input[type="checkbox"]:checked) .rezervace-checkbox::after {
+    content: ''; position: absolute; border-radius: 9999px;
+    top: 3px; left: 3px; width: 8px; height: 8px; background-color: #C31681;
+}
+.kontakt-submit { transition: opacity 0.3s ease; }
+.kontakt-submit:hover { opacity: 0.9; }
+.kontakt-send-icon {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(5%) saturate(500%) hue-rotate(280deg) brightness(103%) contrast(96%);
 }
 
-#lightbox-img {
-    max-width: 80% !important;
-    max-height: calc(100% - 100px) !important;
-    /* 20px top + 20px bottom */
-    object-fit: contain;
+/* Portfolio desktop – smaller strip */
+@media (min-width: 769px) {
+    .portfolio-track { max-height: 420px; overflow: hidden; }
+    .portfolio-item { overflow: hidden; }
 }
 
-#lightbox-close {
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+/* ============================================
+   RECENZE / PORTFOLIO - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    .rezervace-vehicle-icon { width: 80px !important; height: 50px !important; }
+    #rezervace { padding-left: 1rem !important; padding-right: 1rem !important; }
+    #extra-pozadavky { margin-top: 1.5rem !important; }
+
+    /* Recenze – cards stacked, text always visible */
+    .portfolio-slider { overflow: visible !important; padding: 0 1rem !important; }
+    .portfolio-track { flex-direction: column !important; gap: 2.5rem !important; max-height: none !important; }
+    .portfolio-item {
+        width: 100% !important; flex: none !important; height: auto !important;
+        aspect-ratio: unset !important; margin-bottom: 0 !important;
+        display: flex !important; flex-direction: column !important;
+    }
+    .portfolio-item .portfolio-image {
+        width: 100% !important; height: 220px !important; object-fit: cover !important;
+        filter: none !important; transition: none !important;
+        display: block !important; flex-shrink: 0 !important;
+    }
+    .portfolio-item .portfolio-overlay { display: none !important; }
+    .portfolio-item .portfolio-hover-content {
+        position: static !important; opacity: 1 !important; pointer-events: auto !important;
+        transform: none !important; background-color: #1c1c1c !important;
+        padding: 1rem 1rem 1.25rem !important; display: flex !important;
+        flex-direction: column !important; align-items: flex-start !important;
+        justify-content: flex-start !important; text-align: left !important; inset: unset !important;
+    }
+    .portfolio-item .portfolio-hover-content > .absolute {
+        position: static !important; margin-bottom: 0.5rem; justify-content: flex-start !important;
+    }
+    .portfolio-item .portfolio-hover-content > .flex { margin-left: 0 !important; }
+    .portfolio-item .portfolio-hover-content p { font-size: 15px !important; }
 }
 
 /* ============================================
