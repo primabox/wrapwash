@@ -15,7 +15,7 @@ $extra   = trim(strip_tags($_POST['extra']   ?? ''));
 $vehicle = trim(strip_tags($_POST['vehicle'] ?? ''));
 $consent = isset($_POST['consent']) ? true : false;
 
-// Services are sent as an array
+// Services are sent as an array (name="service[]")
 $services = [];
 if (!empty($_POST['service'])) {
     $rawServices = is_array($_POST['service']) ? $_POST['service'] : [$_POST['service']];
